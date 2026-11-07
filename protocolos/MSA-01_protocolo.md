@@ -82,3 +82,7 @@ TRIPOD+AI, EPIFORGE e RECORD. Dados públicos agregados por UF; dispensa de comi
 ### Emenda 1 (7 nov. 2026)
 
 Redação. No segundo parágrafo, a frase "O registro documenta a ordem entre protocolo e resultados; não comprova que os dados não tenham sido explorados antes, e a avaliação retrospectiva não é cega." passa a ser lida como: "Como em toda análise retrospectiva de dados públicos, o registro prévio do protocolo documenta a ordem das etapas, mas não equivale a um estudo cego." A emenda só alinha a redação do protocolo à da nota; não muda perguntas, dados, modelos, medidas, critérios nem resultados. O texto original continua acima, sem alteração.
+
+### Emenda 2 (7 nov. 2026)
+
+Análise adicional, definida depois de conhecidos os resultados principais e identificada assim na nota. Para cada um dos 21 modelos da triagem (6 previsores sozinhos e 15 duplas), com as previsões já publicadas, calculam-se as mesmas medidas da seção 6: início pela regra principal e pela regra estrita, antecedência da janela em relação à semana em que metade das temporadas altas fica evidente, IC 95% por 4.000 reamostragens das temporadas (sem janela contada como zero), fração das reamostragens sem janela, acerto máximo e sensibilidade e especificidade no início. Objetivo: saber quanto cada previsor, sozinho ou em dupla, antecipa a contagem. Não muda o critério M, o desfecho principal nem a frase de conclusão.
