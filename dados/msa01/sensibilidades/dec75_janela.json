@@ -6,33 +6,33 @@
   "antecedencia": 24,
   "antecedencia_ic": [
    16.0,
-   32.0
+   33.0
   ],
   "frac_boot_sem_janela": 0.0,
   "inicio_ic": [
    9.0,
-   26.0
+   25.0
   ],
   "frac_boot_sem_inicio": 0.0,
-  "inicio_estrito": 26,
-  "antecedencia_estrita": 16,
+  "inicio_estrito": 25,
+  "antecedencia_estrita": 17,
   "antecedencia_mediana": 24.0,
   "antecedencia_mediana_ic": [
-   19.0,
-   29.0
+   18.0,
+   28.0
   ],
-  "frac_4mais": 0.8823529411764706,
+  "frac_4mais": 0.8897058823529411,
   "frac_4mais_ic": [
-   0.8266611570247934,
-   0.9407419590643276
+   0.8333333333333334,
+   0.9435483870967742
   ],
-  "frac_antes_do_pico": 0.7734375,
+  "frac_antes_do_pico": 0.7205882352941176,
   "frac_antes_do_pico_ic": [
-   0.6774130048260096,
-   0.8689675697865352
+   0.6134580166651405,
+   0.8247441492964105
   ],
-  "alarme_falso_no_inicio": 0.2546583850931677,
-  "sens_no_inicio": 0.7573529411764706
+  "alarme_falso_no_inicio": 0.2422360248447205,
+  "sens_no_inicio": 0.75
  },
  "pA": {
   "inicio": 10,
@@ -61,10 +61,10 @@
    0.8527111383108935,
    0.9565217391304348
   ],
-  "frac_antes_do_pico": 0.7795275590551181,
+  "frac_antes_do_pico": 0.7279411764705882,
   "frac_antes_do_pico_ic": [
-   0.7184466019417476,
-   0.8333333333333334
+   0.6466953847407226,
+   0.8013245033112583
   ],
   "alarme_falso_no_inicio": 0.19254658385093168,
   "sens_no_inicio": 0.7058823529411765
@@ -76,7 +76,7 @@
   "2016": "lproj",
   "2017": "lproj",
   "2018": "lproj",
-  "2019": "lproj+oni",
+  "2019": "lproj",
   "2020": "lproj+oni",
   "2021": "lproj+oni",
   "2022": "lproj+fora",

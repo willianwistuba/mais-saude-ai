@@ -1,0 +1,146 @@
+{
+ "R0": {
+  "antecedencia_mediana": 30.0,
+  "frac_antecipada": 0.625,
+  "frac_antes_do_pico": 0.625,
+  "alarme_falso": 0.42105263157894735,
+  "n_altas": 40,
+  "n_nao_altas": 95,
+  "altas_censuradas": 15,
+  "antecedencia_mediana_ic": [
+   25.0,
+   35.5
+  ],
+  "frac_antecipada_ic": [
+   0.5517241379310345,
+   0.8181818181818182
+  ],
+  "frac_antes_do_pico_ic": [
+   0.5517241379310345,
+   0.8181818181818182
+  ],
+  "alarme_falso_ic": [
+   0.37662337662337664,
+   0.45132743362831856
+  ],
+  "janela": {
+   "inicio": null,
+   "inicio_estrito": null,
+   "evidencia": 40,
+   "antecedencia": 0,
+   "antecedencia_estrita": 0,
+   "acerto_max": 0.6074074074074074,
+   "brier": 0.21696256052068374
+  }
+ },
+ "A": {
+  "antecedencia_mediana": 21.5,
+  "frac_antecipada": 0.925,
+  "frac_antes_do_pico": 0.725,
+  "alarme_falso": 0.5789473684210527,
+  "n_altas": 40,
+  "n_nao_altas": 95,
+  "altas_censuradas": 15,
+  "antecedencia_mediana_ic": [
+   10.5,
+   34.0
+  ],
+  "frac_antecipada_ic": [
+   0.851063829787234,
+   1.0
+  ],
+  "frac_antes_do_pico_ic": [
+   0.6,
+   0.9545454545454546
+  ],
+  "alarme_falso_ic": [
+   0.11688311688311688,
+   0.8938053097345132
+  ],
+  "janela": {
+   "inicio": 14,
+   "inicio_estrito": 22,
+   "evidencia": 40,
+   "antecedencia": 26,
+   "antecedencia_estrita": 18,
+   "acerto_max": 0.962962962962963,
+   "brier": 0.13708441132882912
+  }
+ },
+ "M": {
+  "antecedencia_mediana": 28.0,
+  "frac_antecipada": 0.9,
+  "frac_antes_do_pico": 0.775,
+  "alarme_falso": 0.4631578947368421,
+  "n_altas": 40,
+  "n_nao_altas": 95,
+  "altas_censuradas": 15,
+  "antecedencia_mediana_ic": [
+   22.0,
+   34.0
+  ],
+  "frac_antecipada_ic": [
+   0.8333333333333334,
+   1.0
+  ],
+  "frac_antes_do_pico_ic": [
+   0.6744186046511628,
+   0.9090909090909091
+  ],
+  "alarme_falso_ic": [
+   0.2839506172839506,
+   0.6083333333333333
+  ],
+  "janela": {
+   "inicio": 24,
+   "inicio_estrito": 28,
+   "evidencia": 40,
+   "antecedencia": 16,
+   "antecedencia_estrita": 12,
+   "acerto_max": 0.9333333333333333,
+   "brier": 0.17841332848292646
+  }
+ },
+ "dupla": {
+  "antecedencia_mediana": 29.0,
+  "frac_antecipada": 0.875,
+  "frac_antes_do_pico": 0.825,
+  "alarme_falso": 0.4,
+  "n_altas": 40,
+  "n_nao_altas": 95,
+  "altas_censuradas": 15,
+  "antecedencia_mediana_ic": [
+   25.0,
+   34.0
+  ],
+  "frac_antecipada_ic": [
+   0.7659574468085106,
+   1.0
+  ],
+  "frac_antes_do_pico_ic": [
+   0.75,
+   0.9545454545454546
+  ],
+  "alarme_falso_ic": [
+   0.30864197530864196,
+   0.46788990825688076
+  ],
+  "janela": {
+   "inicio": 20,
+   "inicio_estrito": 27,
+   "evidencia": 40,
+   "antecedencia": 20,
+   "antecedencia_estrita": 13,
+   "acerto_max": 0.9259259259259259,
+   "brier": 0.1452526943258182
+  }
+ },
+ "_info": {},
+ "_temporadas": [
+  2016,
+  2017,
+  2018,
+  2019,
+  2020
+ ]
+}

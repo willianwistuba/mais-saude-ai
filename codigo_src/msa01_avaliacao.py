@@ -11,7 +11,7 @@ from scipy.optimize import minimize
 from scipy.special import expit, logit
 ap = argparse.ArgumentParser(); ap.add_argument('apur'); ap.add_argument('des'); ap.add_argument('pico'); ap.add_argument('out')
 ap.add_argument('--excluir', default=''); ap.add_argument('--decidido', type=float, default=0.5)
-ap.add_argument('--semente', type=int, default=20261107); ap.add_argument('--B', type=int, default=4000)
+ap.add_argument('--semente', type=int, default=20261107); ap.add_argument('--B', type=int, default=4000); ap.add_argument('--comparar', action='store_true')
 o = ap.parse_args(); os.makedirs(o.out, exist_ok=True); rng = np.random.default_rng(o.semente)
 EXC = [int(x) for x in o.excluir.split(',') if x]
 KS = list(range(43)); AVAL = [t for t in range(2014, 2025) if t not in EXC]; PREV = [t for t in range(2011, 2025) if t not in EXC]
@@ -30,16 +30,22 @@ def fit(X, y, off, lam):
 def std(tr, te, cols):
     mu = tr[cols].mean().fillna(0); sd = tr[cols].std().replace(0, 1).fillna(1)
     return ((tr[cols] - mu) / sd).fillna(0).values, ((te[cols] - mu) / sd).fillna(0).values
-def modelo(tr, te, cols):
+def escolhe_lam(tr, cols, filtro):
     ts = sorted(tr.temporada.unique()); best, bl = 1, 1e9
     for lam in LAMS:
         e = []
         for v in ts[-3:]:
-            a, b = tr[tr.temporada < v], tr[tr.temporada == v]
+            b = tr[tr.temporada == v]
+            a = tr[(tr.temporada < v) & (tr.conhecido <= b.D.min())] if filtro else tr[tr.temporada < v]  # validação interna com desfecho conhecido
             if a.temporada.nunique() < 2: continue
             X, Z = std(a, b, cols); w = fit(X, a.alta.values, a.off.values, lam)
             e.append(np.mean((expit(b.off.values + w[0] + Z @ w[1:]) - b.alta.values) ** 2))
         if e and np.mean(e) < bl: bl, best = np.mean(e), lam
+    return best
+LAMLOG = []
+def modelo(tr, te, cols, log=None):
+    best = escolhe_lam(tr, cols, True)
+    if log is not None and o.comparar: log.append((best, escolhe_lam(tr, cols, False)))
     X, Z = std(tr, te, cols); w = fit(X, tr.alta.values, tr.off.values, best)
     return expit(te.off.values + w[0] + Z @ w[1:])
 def modelo_A(tr, te):
@@ -49,7 +55,7 @@ def treino(sk, te):  # só pares com desfecho conhecido na data mais cedo das pr
     return sk[(sk.temporada >= 2008) & sk.alta.notna() & (sk.conhecido <= te.D.min())]
 
 def roda(cols):
-    out = []
+    out = []; lg = []
     for k in KS:
         sk = A[A.k == k]
         for Y in PREV:
@@ -57,7 +63,8 @@ def roda(cols):
             if len(te) == 0: continue
             tr = treino(sk, te)
             if tr.temporada.nunique() < 3: continue
-            out.append(pd.DataFrame(dict(uf=te.uf.values, temporada=Y, k=k, p=modelo(tr, te, list(cols)))))
+            out.append(pd.DataFrame(dict(uf=te.uf.values, temporada=Y, k=k, p=modelo(tr, te, list(cols), lg))))
+    if o.comparar: pd.DataFrame(lg, columns=['lam_novo', 'lam_antigo']).to_csv(os.path.join(o.out, 'lam_' + '+'.join(cols) + '.csv'), index=False)
     return '+'.join(cols), pd.concat(out)
 CACHE = os.path.join(o.out, 'cache_conjuntos.pkl')
 if os.path.exists(CACHE): RES = pd.read_pickle(CACHE)

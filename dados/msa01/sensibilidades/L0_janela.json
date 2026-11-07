@@ -1,30 +1,30 @@
 {
  "pM": {
-  "inicio": 11,
+  "inicio": 12,
   "evidencia": 29,
   "censurada": false,
-  "antecedencia": 18,
+  "antecedencia": 17,
   "antecedencia_ic": [
    11.0,
    24.0
   ],
   "frac_boot_sem_janela": 0.0,
   "inicio_ic": [
-   7.0,
-   20.0
+   6.0,
+   19.0
   ],
   "frac_boot_sem_inicio": 0.0,
-  "inicio_estrito": 20,
-  "antecedencia_estrita": 9,
+  "inicio_estrito": 19,
+  "antecedencia_estrita": 10,
   "antecedencia_mediana": 22.0,
   "antecedencia_mediana_ic": [
    18.0,
    24.0
   ],
-  "frac_4mais": 0.9411764705882353,
+  "frac_4mais": 0.9485294117647058,
   "frac_4mais_ic": [
-   0.8979554595560852,
-   0.9849652115363035
+   0.911940059042485,
+   0.9851851851851852
   ],
   "frac_antes_do_pico": 0.8529411764705882,
   "frac_antes_do_pico_ic": [

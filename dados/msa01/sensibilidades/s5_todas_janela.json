@@ -16,7 +16,7 @@
   "frac_boot_sem_inicio": 0.0,
   "inicio_estrito": 41,
   "antecedencia_estrita": 0,
-  "antecedencia_mediana": 16.0,
+  "antecedencia_mediana": 20.0,
   "antecedencia_mediana_ic": [
    7.0,
    35.0

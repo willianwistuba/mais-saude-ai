@@ -5,10 +5,10 @@
   "censurada": false,
   "antecedencia": 6,
   "antecedencia_ic": [
-   3.0,
+   2.0,
    14.0
   ],
-  "frac_boot_sem_janela": 0.0035,
+  "frac_boot_sem_janela": 0.00325,
   "inicio_ic": [
    20.0,
    34.0
@@ -16,22 +16,22 @@
   "frac_boot_sem_inicio": 0.0,
   "inicio_estrito": 34,
   "antecedencia_estrita": 1,
-  "antecedencia_mediana": 21.5,
+  "antecedencia_mediana": 21.0,
   "antecedencia_mediana_ic": [
    7.0,
    28.0
   ],
-  "frac_4mais": 0.7132352941176471,
+  "frac_4mais": 0.7205882352941176,
   "frac_4mais_ic": [
-   0.6,
-   0.8248175182481752
+   0.6028321826123714,
+   0.835068114874816
   ],
   "frac_antes_do_pico": 0.5955882352941176,
   "frac_antes_do_pico_ic": [
    0.48483664772727275,
    0.7211805555555556
   ],
-  "alarme_falso_no_inicio": 0.17391304347826086,
+  "alarme_falso_no_inicio": 0.19254658385093168,
   "sens_no_inicio": 0.7058823529411765
  },
  "pA": {
