@@ -5,10 +5,10 @@
  "decimal": ",",
  "articles": {
   "MSA-01": {
-   "title": "Com quanta antecedência os dados públicos preveem uma temporada grande de dengue? Previsores e antecedência por Estado",
+   "title": "Com quanta antecedência, em relação à contagem de casos, os dados públicos preveem uma temporada grande de dengue? Simulação retrospectiva por Estado",
    "short": "Antecedência na previsão da dengue",
    "type": "Nota de trabalho",
-   "abstract": "Contexto: o número de Estados com temporada de dengue de alta incidência (300 ou mais casos prováveis por 100 mil habitantes) variou de 3 a 19 entre 2014/15 e 2024/25. Não se sabe com quanta antecedência, em relação à simples contagem de casos, os dados públicos permitem prever isso. Métodos: cada Estado teve a própria temporada, iniciada na sua semana de menor incidência, e todas as contagens usaram só casos prováveis. Para os 27 Estados e 11 temporadas (297 pares), em cada uma das 43 primeiras semanas da temporada, reconstruindo o que estava disponível em cada data (defasagem de 6 semanas do arquivo aberto do SINAN, atraso de digitação e desfechos passados só depois de conhecidos), seis previsores (projeção da contagem, crescimento recente, casos fora de época, inverno ameno, aptidão térmica e El Niño) foram testados sozinhos e em duplas, em regressões logísticas penalizadas ancoradas no histórico do Estado. O critério M é o modelo de menor erro nas temporadas anteriores, escolhido sem ver a temporada prevista. A antecedência é o número de semanas entre o acerto passar de 75% de forma estável e a contagem de casos prováveis deixar evidente metade das temporadas altas. A incerteza vem de 4.000 reamostragens por temporada. Resultados: casos fora de época foram o previsor que mais acrescentou à projeção da contagem (BSS incremental 0,077; IC 95% 0,029 a 0,131), e M passou a ser projeção e casos fora de época. M passou de 75% de acerto na semana 18 (75,1%; IC 68,7% a 81,5%; sensibilidade 75,7%), e a metade das temporadas altas ficou evidente na semana 35: antecedência de 17 semanas (IC 10 a 25), ou 9 pela regra estrita. A projeção sozinha passou de 75% na semana 10, com 25 semanas de antecedência (IC 14 a 30; 11 pela regra estrita), e acertou tanto quanto M ou mais em quase todas as semanas. Sem defasagem de publicação, as antecedências foram de 18 e 25 semanas. Numa análise adicional, definida depois dos resultados principais, os casos fora de época sozinhos anteciparam 23 semanas (IC 5 a 29), mas só 7 pela regra estrita. Conclusão: com o critério M, composto pela projeção da contagem e pelos casos fora de época, é possível prever uma temporada alta com 17 semanas de antecedência em relação à simples contagem de casos (9 pela regra estrita), nesta reconstrução retrospectiva; a projeção sozinha antecipa ainda mais, e M não mostrou vantagem clara sobre ela.",
+   "abstract": "Contexto: o número de Estados com temporada de dengue de alta incidência (300 ou mais casos prováveis por 100 mil habitantes) variou de 3 a 19 entre 2014/15 e 2024/25. Não se sabe com quanta antecedência, em relação à simples contagem de casos, os dados públicos permitem prever isso. Métodos: cada Estado teve a própria temporada, iniciada na sua semana de menor incidência. Para os 27 Estados e 11 temporadas (297 pares), em cada uma das 43 primeiras semanas da temporada, reconstruindo em parte o que estava disponível em cada data (defasagem de 6 semanas do arquivo aberto do SINAN, atraso de digitação e desfechos passados só depois de conhecidos), seis previsores (projeção da contagem, crescimento recente, casos fora de época, inverno ameno, aptidão térmica e El Niño) foram testados sozinhos e em duplas, em regressões logísticas penalizadas ancoradas no histórico do Estado. O critério M é o procedimento que escolhe, a cada temporada, o modelo de menor erro nas temporadas anteriores. A antecedência é o número de semanas entre o acerto passar de 75% de forma estável e a contagem de casos prováveis deixar evidente metade das temporadas altas. A análise principal usa só casos prováveis, pela classificação final; uma sensibilidade mede o efeito de contar as notificações como apareciam em tempo real. Resultados: casos fora de época foram o previsor que mais acrescentou à projeção (BSS incremental 0,077; IC 95% 0,029 a 0,131), e a composição final de M é projeção e casos fora de época. Na análise principal, M passou de 75% de acerto na semana 18 (75,1%; IC 68,7% a 81,5%) e a metade das temporadas altas ficou evidente na semana 35: antecedência de 17 semanas (IC 10 a 25), ou 9 pela regra estrita; a projeção sozinha teve 25 semanas (11 pela regra estrita) e acertou tanto quanto M ou mais em quase todas as semanas. Com a contagem como em tempo real, nas temporadas 2016/17 a 2020/21, a antecedência caiu de 16 para 11 semanas em M, de 26 para 18 na projeção e de 25 para 14 na dupla, e os casos fora de época sozinhos deixaram de chegar a 75%; somados à projeção, continuaram reduzindo o erro. Conclusão: com o critério M, cuja composição atual é a projeção da contagem com os casos fora de época, é possível prever uma temporada alta com 17 semanas de antecedência em relação à simples contagem de casos na análise principal, mas a antecedência cai bastante com a contagem disponível em tempo real, e M não mostrou vantagem clara sobre a projeção sozinha. São resultados de uma simulação retrospectiva, a confirmar prospectivamente.",
    "plain": [
     [
      "Por que fizemos este estudo?",
@@ -16,7 +16,7 @@
     ],
     [
      "O que fizemos e o que descobrimos?",
-     "Voltamos a onze anos passados e fingimos estar em cada semana, usando só o que já se sabia. Testamos seis pistas, como o calor, o inverno, o El Niño e os casos que aparecem fora da época. A pista mais útil foi a própria soma dos casos, comparada com o ritmo de cada Estado, e a que mais ajudou junto com ela foram os casos fora da época. Com essas pistas, em média, a resposta saiu certa em três de cada quatro previsões alguns meses antes de o resultado ficar óbvio. Em alguns anos acertou mais, em outros menos."
+     "Voltamos a onze anos passados e fingimos estar em cada semana, usando o que já se sabia. Testamos seis pistas, como o calor, o inverno, o El Niño e os casos que aparecem fora da época. A pista mais útil foi a própria soma dos casos, comparada com o ritmo de cada Estado, e a que mais ajudou junto com ela foram os casos fora da época. Com essas pistas, em média, a resposta saiu certa em três de cada quatro previsões alguns meses antes de o resultado ficar óbvio. Mas parte dessa vantagem vinha de já saber quais casos seriam descartados depois. Usando os dados como estavam na época, a vantagem cai, e os casos fora da época sozinhos não bastam."
     ],
     [
      "O que isso quer dizer?",
@@ -218,7 +218,19 @@
    "dados/msa01/sensibilidades/dec75_triagem.csv": "Sensibilidade dec75: triagem",
    "dados/populacao_uf_ano.csv": "População por Estado e ano (IBGE)",
    "msa01_antecedencia_modelos.py": "Análise adicional (emenda 2): antecedência de cada modelo da triagem",
-   "dados/msa01/msa01_antecedencia_modelos.csv": "Antecedência, início e acerto de cada modelo da triagem"
+   "dados/msa01/msa01_antecedencia_modelos.csv": "Antecedência, início e acerto de cada modelo da triagem",
+   "dados/msa01/sensibilidades/todas_por_semana.csv": "S5 misto: por semana",
+   "dados/msa01/sensibilidades/todas_janela.json": "S5 misto: janela",
+   "dados/msa01/sensibilidades/todas_triagem.csv": "S5 misto: triagem",
+   "dados/msa01/sensibilidades/todas_modelos.csv": "S5 misto: modelos",
+   "dados/msa01/sensibilidades/s5_provaveis_por_semana.csv": "S5 limpo, casos prováveis: por semana",
+   "dados/msa01/sensibilidades/s5_provaveis_janela.json": "S5 limpo, casos prováveis: janela",
+   "dados/msa01/sensibilidades/s5_provaveis_triagem.csv": "S5 limpo, casos prováveis: triagem",
+   "dados/msa01/sensibilidades/s5_provaveis_modelos.csv": "S5 limpo, casos prováveis: modelos",
+   "dados/msa01/sensibilidades/s5_todas_por_semana.csv": "S5 limpo, todas as notificações: por semana",
+   "dados/msa01/sensibilidades/s5_todas_janela.json": "S5 limpo, todas as notificações: janela",
+   "dados/msa01/sensibilidades/s5_todas_triagem.csv": "S5 limpo, todas as notificações: triagem",
+   "dados/msa01/sensibilidades/s5_todas_modelos.csv": "S5 limpo, todas as notificações: modelos"
   },
   "empty_title": "Ainda não há scripts publicados.",
   "empty_text": "O código de cada nota entra aqui junto com a publicação da nota.",
