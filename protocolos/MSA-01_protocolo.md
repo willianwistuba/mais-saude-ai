@@ -78,3 +78,7 @@ Na data de 1 nov. 2026 (corte de 20 set. 2026), M, A e R0 com as temporadas de d
 TRIPOD+AI, EPIFORGE e RECORD. Dados públicos agregados por UF; dispensa de comitê de ética (Res. CNS 510/2016; Ofício Circular CONEP 17/2022). Ficha de uso de IA com a declaração de ausência de validação humana independente. Resultado negativo também é publicado.
 
 ## Emendas
+
+### Emenda 1 (7 nov. 2026)
+
+Redação. No segundo parágrafo, a frase "O registro documenta a ordem entre protocolo e resultados; não comprova que os dados não tenham sido explorados antes, e a avaliação retrospectiva não é cega." passa a ser lida como: "Como em toda análise retrospectiva de dados públicos, o registro prévio do protocolo documenta a ordem das etapas, mas não equivale a um estudo cego." A emenda só alinha a redação do protocolo à da nota; não muda perguntas, dados, modelos, medidas, critérios nem resultados. O texto original continua acima, sem alteração.
