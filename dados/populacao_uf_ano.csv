@@ -1,0 +1,541 @@
+uf,ano,pop,fonte
+11,2006,1562417,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2007,1527991,interpolação linear entre 2006 e 2008
+11,2008,1493565,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2009,1503928,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2010,1562409,IBGE Censo 2010 (tabela 1378)
+11,2011,1576455,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2012,1590011,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2013,1728214,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2014,1748531,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2015,1768204,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2016,1787279,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2017,1805788,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2018,1757589,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2019,1777225,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2020,1796460,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2021,1815278,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2022,1581196,IBGE Censo 2022 (tabela 4709)
+11,2023,1663712,interpolação linear entre 2022 e 2024
+11,2024,1746227,"IBGE estimativas (tabela 6579, variável 9324)"
+11,2025,1751950,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2006,686652,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2007,683364,interpolação linear entre 2006 e 2008
+12,2008,680075,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2009,691132,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2010,733559,IBGE Censo 2010 (tabela 1378)
+12,2011,746386,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2012,758786,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2013,776463,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2014,790101,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2015,803513,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2016,816687,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2017,829619,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2018,869265,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2019,881935,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2020,894470,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2021,906876,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2022,830018,IBGE Censo 2022 (tabela 4709)
+12,2023,855324,interpolação linear entre 2022 e 2024
+12,2024,880631,"IBGE estimativas (tabela 6579, variável 9324)"
+12,2025,884372,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2006,3311026,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2007,3326060,interpolação linear entre 2006 e 2008
+13,2008,3341094,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2009,3393369,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2010,3483985,IBGE Censo 2010 (tabela 1378)
+13,2011,3538387,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2012,3590985,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2013,3807921,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2014,3873743,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2015,3938336,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2016,4001667,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2017,4063614,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2018,4080611,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2019,4144597,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2020,4207714,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2021,4269995,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2022,3941613,IBGE Censo 2022 (tabela 4709)
+13,2023,4111411,interpolação linear entre 2022 e 2024
+13,2024,4281209,"IBGE estimativas (tabela 6579, variável 9324)"
+13,2025,4321616,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2006,403344,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2007,408064,interpolação linear entre 2006 e 2008
+14,2008,412783,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2009,421499,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2010,450479,IBGE Censo 2010 (tabela 1378)
+14,2011,460165,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2012,469524,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2013,488072,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2014,496936,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2015,505665,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2016,514229,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2017,522636,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2018,576568,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2019,605761,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2020,631181,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2021,652713,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2022,636707,IBGE Censo 2022 (tabela 4709)
+14,2023,676750,interpolação linear entre 2022 e 2024
+14,2024,716793,"IBGE estimativas (tabela 6579, variável 9324)"
+14,2025,738772,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2006,7110465,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2007,7215978,interpolação linear entre 2006 e 2008
+15,2008,7321490,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2009,7431020,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2010,7581051,IBGE Censo 2010 (tabela 1378)
+15,2011,7688593,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2012,7777543,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2013,7969654,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2014,8073924,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2015,8175113,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2016,8272724,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2017,8366628,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2018,8513497,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2019,8602865,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2020,8690745,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2021,8777124,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2022,8120131,IBGE Censo 2022 (tabela 4709)
+15,2023,8392218,interpolação linear entre 2022 e 2024
+15,2024,8664306,"IBGE estimativas (tabela 6579, variável 9324)"
+15,2025,8711196,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2006,615715,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2007,614440,interpolação linear entre 2006 e 2008
+16,2008,613166,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2009,626609,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2010,669526,IBGE Censo 2010 (tabela 1378)
+16,2011,684309,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2012,698602,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2013,734996,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2014,750912,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2015,766679,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2016,782295,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2017,797722,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2018,829494,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2019,845731,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2020,861773,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2021,877613,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2022,733759,IBGE Censo 2022 (tabela 4709)
+16,2023,768298,interpolação linear entre 2022 e 2024
+16,2024,802837,"IBGE estimativas (tabela 6579, variável 9324)"
+16,2025,806517,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2006,1332441,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2007,1306477,interpolação linear entre 2006 e 2008
+17,2008,1280513,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2009,1292051,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2010,1383445,IBGE Censo 2010 (tabela 1378)
+17,2011,1400892,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2012,1417694,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2013,1478164,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2014,1496880,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2015,1515126,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2016,1532902,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2017,1550194,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2018,1555229,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2019,1572866,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2020,1590248,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2021,1607363,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2022,1511460,IBGE Censo 2022 (tabela 4709)
+17,2023,1544401,interpolação linear entre 2022 e 2024
+17,2024,1577342,"IBGE estimativas (tabela 6579, variável 9324)"
+17,2025,1586859,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2006,6184538,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2007,6245038,interpolação linear entre 2006 e 2008
+21,2008,6305537,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2009,6367138,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2010,6574789,IBGE Censo 2010 (tabela 1378)
+21,2011,6645761,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2012,6714314,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2013,6794301,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2014,6850884,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2015,6904241,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2016,6954036,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2017,7000229,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2018,7035055,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2019,7075181,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2020,7114598,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2021,7153262,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2022,6776699,IBGE Censo 2022 (tabela 4709)
+21,2023,6893830,interpolação linear entre 2022 e 2024
+21,2024,7010960,"IBGE estimativas (tabela 6579, variável 9324)"
+21,2025,7018211,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2006,3036290,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2007,3074086,interpolação linear entre 2006 e 2008
+22,2008,3111881,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2009,3145325,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2010,3118360,IBGE Censo 2010 (tabela 1378)
+22,2011,3140328,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2012,3160748,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2013,3184166,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2014,3194718,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2015,3204028,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2016,3212180,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2017,3219257,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2018,3264531,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2019,3273227,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2020,3281480,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2021,3289290,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2022,3271199,IBGE Censo 2022 (tabela 4709)
+22,2023,3323422,interpolação linear entre 2022 e 2024
+22,2024,3375646,"IBGE estimativas (tabela 6579, variável 9324)"
+22,2025,3384547,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2006,8217085,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2007,8333806,interpolação linear entre 2006 e 2008
+23,2008,8450528,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2009,8547809,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2010,8452381,IBGE Censo 2010 (tabela 1378)
+23,2011,8530155,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2012,8606005,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2013,8778576,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2014,8842791,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2015,8904459,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2016,8963663,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2017,9020460,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2018,9075649,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2019,9132078,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2020,9187103,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2021,9240580,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2022,8794957,IBGE Censo 2022 (tabela 4709)
+23,2023,9014306,interpolação linear entre 2022 e 2024
+23,2024,9233656,"IBGE estimativas (tabela 6579, variável 9324)"
+23,2025,9268836,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2006,3043760,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2007,3075098,interpolação linear entre 2006 e 2008
+24,2008,3106436,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2009,3137541,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2010,3168027,IBGE Censo 2010 (tabela 1378)
+24,2011,3198657,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2012,3228198,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2013,3373959,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2014,3408510,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2015,3442175,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2016,3474998,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2017,3507003,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2018,3479010,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2019,3506853,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2020,3534165,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2021,3560903,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2022,3302729,IBGE Censo 2022 (tabela 4709)
+24,2023,3374400,interpolação linear entre 2022 e 2024
+24,2024,3446071,"IBGE estimativas (tabela 6579, variável 9324)"
+24,2025,3455236,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2006,3623215,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2007,3682910,interpolação linear entre 2006 e 2008
+25,2008,3742604,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2009,3769977,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2010,3766528,IBGE Censo 2010 (tabela 1378)
+25,2011,3791315,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2012,3815171,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2013,3914421,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2014,3943885,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2015,3972202,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2016,3999415,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2017,4025558,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2018,3996496,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2019,4018127,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2020,4039277,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2021,4059905,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2022,3974687,IBGE Censo 2022 (tabela 4709)
+25,2023,4059864,interpolação linear entre 2022 e 2024
+25,2024,4145040,"IBGE estimativas (tabela 6579, variável 9324)"
+25,2025,4164468,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2006,8502603,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2007,8618400,interpolação linear entre 2006 e 2008
+26,2008,8734196,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2009,8810256,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2010,8796448,IBGE Censo 2010 (tabela 1378)
+26,2011,8864906,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2012,8931028,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2013,9208550,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2014,9277727,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2015,9345173,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2016,9410336,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2017,9473266,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2018,9496294,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2019,9557071,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2020,9616621,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2021,9674793,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2022,9058931,IBGE Censo 2022 (tabela 4709)
+26,2023,9298980,interpolação linear entre 2022 e 2024
+26,2024,9539029,"IBGE estimativas (tabela 6579, variável 9324)"
+26,2025,9562007,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2006,3050652,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2007,3089106,interpolação linear entre 2006 e 2008
+27,2008,3127560,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2009,3156108,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2010,3120494,IBGE Censo 2010 (tabela 1378)
+27,2011,3143384,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2012,3165472,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2013,3300935,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2014,3321730,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2015,3340932,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2016,3358963,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2017,3375823,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2018,3322820,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2019,3337357,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2020,3351543,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2021,3365351,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2022,3127683,IBGE Censo 2022 (tabela 4709)
+27,2023,3173894,interpolação linear entre 2022 e 2024
+27,2024,3220104,"IBGE estimativas (tabela 6579, variável 9324)"
+27,2025,3220848,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2006,2000738,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2007,2000056,interpolação linear entre 2006 e 2008
+28,2008,1999374,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2009,2019679,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2010,2068017,IBGE Censo 2010 (tabela 1378)
+28,2011,2089819,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2012,2110867,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2013,2195662,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2014,2219574,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2015,2242937,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2016,2265779,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2017,2288116,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2018,2278308,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2019,2298696,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2020,2318822,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2021,2338474,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2022,2210004,IBGE Censo 2022 (tabela 4709)
+28,2023,2250540,interpolação linear entre 2022 e 2024
+28,2024,2291077,"IBGE estimativas (tabela 6579, variável 9324)"
+28,2025,2299425,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2006,13950146,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2007,14226354,interpolação linear entre 2006 e 2008
+29,2008,14502563,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2009,14637364,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2010,14016906,IBGE Censo 2010 (tabela 1378)
+29,2011,14097534,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2012,14175341,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2013,15044137,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2014,15126371,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2015,15203334,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2016,15276566,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2017,15344447,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2018,14812617,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2019,14873064,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2020,14930634,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2021,14985284,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2022,14141626,IBGE Censo 2022 (tabela 4709)
+29,2023,14496070,interpolação linear entre 2022 e 2024
+29,2024,14850513,"IBGE estimativas (tabela 6579, variável 9324)"
+29,2025,14870907,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2006,19479356,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2007,19664708,interpolação linear entre 2006 e 2008
+31,2008,19850060,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2009,20033665,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2010,19597330,IBGE Censo 2010 (tabela 1378)
+31,2011,19728701,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2012,19855332,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2013,20593356,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2014,20734097,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2015,20869101,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2016,20997560,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2017,21119536,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2018,21040662,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2019,21168791,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2020,21292666,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2021,21411923,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2022,20539989,IBGE Censo 2022 (tabela 4709)
+31,2023,20931340,interpolação linear entre 2022 e 2024
+31,2024,21322691,"IBGE estimativas (tabela 6579, variável 9324)"
+31,2025,21393441,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2006,3464285,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2007,3458966,interpolação linear entre 2006 e 2008
+32,2008,3453646,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2009,3487199,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2010,3514952,IBGE Censo 2010 (tabela 1378)
+32,2011,3547055,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2012,3578067,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2013,3839366,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2014,3885049,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2015,3929911,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2016,3973697,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2017,4016356,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2018,3972388,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2019,4018650,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2020,4064052,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2021,4108508,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2022,3833712,IBGE Censo 2022 (tabela 4709)
+32,2023,3967920,interpolação linear entre 2022 e 2024
+32,2024,4102129,"IBGE estimativas (tabela 6579, variável 9324)"
+32,2025,4126854,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2006,15561720,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2007,15717041,interpolação linear entre 2006 e 2008
+33,2008,15872362,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2009,16010429,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2010,15989929,IBGE Censo 2010 (tabela 1378)
+33,2011,16112678,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2012,16231365,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2013,16369179,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2014,16461173,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2015,16550024,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2016,16635996,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2017,16718956,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2018,17159960,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2019,17264943,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2020,17366189,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2021,17463349,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2022,16055174,IBGE Censo 2022 (tabela 4709)
+33,2023,16637426,interpolação linear entre 2022 e 2024
+33,2024,17219679,"IBGE estimativas (tabela 6579, variável 9324)"
+33,2025,17223547,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2006,41055734,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2007,41033686,interpolação linear entre 2006 e 2008
+35,2008,41011638,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2009,41384039,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2010,41262199,IBGE Censo 2010 (tabela 1378)
+35,2011,41587182,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2012,41901219,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2013,43663669,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2014,44035304,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2015,44396484,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2016,44749699,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2017,45094866,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2018,45538936,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2019,45919049,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2020,46289333,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2021,46649132,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2022,44411238,IBGE Censo 2022 (tabela 4709)
+35,2023,45192216,interpolação linear entre 2022 e 2024
+35,2024,45973194,"IBGE estimativas (tabela 6579, variável 9324)"
+35,2025,46081801,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2006,10387378,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2007,10488774,interpolação linear entre 2006 e 2008
+41,2008,10590171,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2009,10686247,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2010,10444526,IBGE Censo 2010 (tabela 1378)
+41,2011,10512349,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2012,10577755,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2013,10997465,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2014,11081692,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2015,11163018,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2016,11242720,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2017,11320892,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2018,11348937,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2019,11433957,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2020,11516840,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2021,11597484,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2022,11444380,IBGE Censo 2022 (tabela 4709)
+41,2023,11634522,interpolação linear entre 2022 e 2024
+41,2024,11824665,"IBGE estimativas (tabela 6579, variável 9324)"
+41,2025,11890517,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2006,5958266,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2007,6005426,interpolação linear entre 2006 e 2008
+42,2008,6052587,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2009,6118743,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2010,6248436,IBGE Censo 2010 (tabela 1378)
+42,2011,6317054,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2012,6362734,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2013,6634254,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2014,6727148,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2015,6819190,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2016,6910553,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2017,7001161,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2018,7075494,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2019,7164788,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2020,7252502,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2021,7338473,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2022,7610361,IBGE Censo 2022 (tabela 4709)
+42,2023,7834401,interpolação linear entre 2022 e 2024
+42,2024,8058441,"IBGE estimativas (tabela 6579, variável 9324)"
+42,2025,8187029,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2006,10963219,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2007,10909224,interpolação linear entre 2006 e 2008
+43,2008,10855228,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2009,10914128,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2010,10693929,IBGE Censo 2010 (tabela 1378)
+43,2011,10733030,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2012,10768025,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2013,11164043,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2014,11207274,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2015,11247972,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2016,11286500,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2017,11322895,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2018,11329605,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2019,11377239,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2020,11422973,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2021,11466630,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2022,10882965,IBGE Censo 2022 (tabela 4709)
+43,2023,11056440,interpolação linear entre 2022 e 2024
+43,2024,11229915,"IBGE estimativas (tabela 6579, variável 9324)"
+43,2025,11233263,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2006,2297981,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2007,2317020,interpolação linear entre 2006 e 2008
+50,2008,2336060,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2009,2360498,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2010,2449024,IBGE Censo 2010 (tabela 1378)
+50,2011,2477542,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2012,2500365,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2013,2587269,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2014,2619657,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2015,2651235,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2016,2682386,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2017,2713147,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2018,2748023,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2019,2778986,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2020,2809394,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2021,2839188,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2022,2757013,IBGE Censo 2022 (tabela 4709)
+50,2023,2829454,interpolação linear entre 2022 e 2024
+50,2024,2901895,"IBGE estimativas (tabela 6579, variável 9324)"
+50,2025,2924631,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2006,2856999,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2007,2907367,interpolação linear entre 2006 e 2008
+51,2008,2957735,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2009,3001692,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2010,3035122,IBGE Censo 2010 (tabela 1378)
+51,2011,3075936,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2012,3115336,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2013,3182113,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2014,3224357,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2015,3265486,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2016,3305531,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2017,3344544,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2018,3441998,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2019,3484466,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2020,3526220,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2021,3567234,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2022,3658649,IBGE Censo 2022 (tabela 4709)
+51,2023,3747524,interpolação linear entre 2022 e 2024
+51,2024,3836399,"IBGE estimativas (tabela 6579, variável 9324)"
+51,2025,3893659,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2006,5730753,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2007,5787874,interpolação linear entre 2006 e 2008
+52,2008,5844995,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2009,5926300,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2010,6003788,IBGE Censo 2010 (tabela 1378)
+52,2011,6080716,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2012,6154996,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2013,6434048,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2014,6523222,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2015,6610681,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2016,6695855,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2017,6778772,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2018,6921161,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2019,7018354,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2020,7113540,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2021,7206589,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2022,7056495,IBGE Censo 2022 (tabela 4709)
+52,2023,7203489,interpolação linear entre 2022 e 2024
+52,2024,7350483,"IBGE estimativas (tabela 6579, variável 9324)"
+52,2025,7423629,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2006,2383784,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2007,2470472,interpolação linear entre 2006 e 2008
+53,2008,2557159,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2009,2606885,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2010,2570160,IBGE Censo 2010 (tabela 1378)
+53,2011,2609998,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2012,2648532,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2013,2789761,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2014,2852372,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2015,2914830,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2016,2977216,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2017,3039444,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2018,2974703,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2019,3015268,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2020,3055149,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2021,3094325,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2022,2817381,IBGE Censo 2022 (tabela 4709)
+53,2023,2900100,interpolação linear entre 2022 e 2024
+53,2024,2982818,"IBGE estimativas (tabela 6579, variável 9324)"
+53,2025,2996899,"IBGE estimativas (tabela 6579, variável 9324)"

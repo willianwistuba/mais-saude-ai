@@ -1,0 +1,87 @@
+{
+ "pM": {
+  "inicio": 20,
+  "evidencia": 43,
+  "censurada": true,
+  "antecedencia": 23,
+  "antecedencia_ic": [
+   6.0,
+   35.0
+  ],
+  "frac_boot_sem_janela": 0.00075,
+  "inicio_ic": [
+   8.0,
+   37.0
+  ],
+  "frac_boot_sem_inicio": 0.00075,
+  "inicio_estrito": 37,
+  "antecedencia_estrita": 6,
+  "antecedencia_mediana": 30.5,
+  "antecedencia_mediana_ic": [
+   23.0,
+   34.0
+  ],
+  "frac_4mais": 0.7536231884057971,
+  "frac_4mais_ic": [
+   0.6541341561450797,
+   0.8571428571428571
+  ],
+  "frac_antes_do_pico": 0.8727272727272727,
+  "frac_antes_do_pico_ic": [
+   0.8206802262931034,
+   0.9310344827586207
+  ],
+  "alarme_falso_no_inicio": 0.23270440251572327,
+  "sens_no_inicio": 0.7318840579710145
+ },
+ "pA": {
+  "inicio": 9,
+  "evidencia": 43,
+  "censurada": true,
+  "antecedencia": 34,
+  "antecedencia_ic": [
+   4.0,
+   35.0
+  ],
+  "frac_boot_sem_janela": 0.00025,
+  "inicio_ic": [
+   8.0,
+   39.0
+  ],
+  "frac_boot_sem_inicio": 0.0,
+  "inicio_estrito": 39,
+  "antecedencia_estrita": 4,
+  "antecedencia_mediana": 25.0,
+  "antecedencia_mediana_ic": [
+   17.0,
+   28.0
+  ],
+  "frac_4mais": 0.7318840579710145,
+  "frac_4mais_ic": [
+   0.5939790883458647,
+   0.8523543710204784
+  ],
+  "frac_antes_do_pico": 0.8272727272727273,
+  "frac_antes_do_pico_ic": [
+   0.787873599003736,
+   0.8736842105263158
+  ],
+  "alarme_falso_no_inicio": 0.1509433962264151,
+  "sens_no_inicio": 0.6521739130434783
+ },
+ "composicao_final": "lproj+fora",
+ "escolha_por_temporada": {
+  "2014": "lproj",
+  "2015": "lproj",
+  "2016": "lproj",
+  "2017": "lproj+oni",
+  "2018": "lproj+fora",
+  "2019": "lproj+fora",
+  "2020": "lproj+fora",
+  "2021": "lproj+fora",
+  "2022": "lproj+fora",
+  "2023": "lproj+fora",
+  "2024": "lproj+fora"
+ },
+ "decidido_limiar": 0.5
+}
