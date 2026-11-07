@@ -86,3 +86,11 @@ Redação. No segundo parágrafo, a frase "O registro documenta a ordem entre pr
 ### Emenda 2 (7 nov. 2026)
 
 Análise adicional, definida depois de conhecidos os resultados principais e identificada assim na nota. Para cada um dos 21 modelos da triagem (6 previsores sozinhos e 15 duplas), com as previsões já publicadas, calculam-se as mesmas medidas da seção 6: início pela regra principal e pela regra estrita, antecedência da janela em relação à semana em que metade das temporadas altas fica evidente, IC 95% por 4.000 reamostragens das temporadas (sem janela contada como zero), fração das reamostragens sem janela, acerto máximo e sensibilidade e especificidade no início. Objetivo: saber quanto cada previsor, sozinho ou em dupla, antecipa a contagem. Não muda o critério M, o desfecho principal nem a frase de conclusão.
+
+### Emenda 3 (7 nov. 2026)
+
+Correções e análises acrescentadas depois de revisão externa dos resultados, identificadas assim na nota.
+
+1. **Correção de cálculo.** A fração de temporadas altas antecipadas antes do pico passa a usar como denominador todas as temporadas altas; as que o modelo não antecipou contam como não antecipadas.
+2. **Sensibilidade S5 (classificação em tempo real).** Nos arquivos que trazem as notificações descartadas (2007 a 2013 e 2016 a 2021), os previsores de contagem (projeção, crescimento e casos fora de época) passam a usar todas as notificações disponíveis, como as veria quem acompanha o sistema antes da classificação final. O desfecho e a regra de evidência continuam com os casos prováveis. Nos arquivos sem as descartadas (2014, 2015 e 2022 a 2026), nada muda, e isso é declarado.
+3. **Brier agregado.** Relata-se o escore de Brier agregado de A, do procedimento M e da dupla fixa escolhida ao final, separando o desempenho do procedimento (que trocou de modelo ao longo das temporadas) do da composição final, que fica como achado a confirmar.
