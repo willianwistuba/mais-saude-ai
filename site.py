@@ -93,7 +93,7 @@ for lang in LANGS:
     # ---------- início ----------
     steps=''.join(f'<div><span class="n">{i+1:02d}</span><h3>{E(t)}</h3><p>{E(p)}</p></div>' for i,(t,p) in enumerate(hm['steps']))
     items=AG['items']
-    ag_parts=''.join(f'<li><span class="pn">{i+1:02d}</span><a href="{url(lang,"agenda")}#q{i+1}">{E(it["short"])}</a></li>' for i,it in enumerate(items))
+    ag_parts=''.join(f'<li><a href="{url(lang,"agenda")}#q{i+1}">{E(it["short"])}</a></li>' for i,it in enumerate(items))
     home=f'''<section class="hero wrap"><div class="hot"></div><span class="eyebrow">{E(hm['eyebrow'])}</span>
 <h1>{hm['h1']}</h1>
 <p class="lead">{E(hm['lead'])}</p>
@@ -125,7 +125,7 @@ f.addEventListener('input',run);run();})();</script>'''
     wr(url(lang,'notes'),page(lang,ui['notes_title']+' · '+NAME,ui['notes_desc'],notas,('notes',),cur='notes'))
 
     # ---------- agenda de pesquisa ----------
-    al=''.join(f'''<li id="q{i+1}"><span class="pn">{i+1:02d}</span><span class="status">{E(it['status'])}</span><h3>{E(it['title'])}</h3><p>{E(it['text'])}</p></li>''' for i,it in enumerate(items))
+    al=''.join(f'''<li id="q{i+1}"><span class="status">{E(it['status'])}</span><h3>{E(it['title'])}</h3><p>{E(it['text'])}</p></li>''' for i,it in enumerate(items))
     agp=f'''<section class="wrap pagehead"><div class="hot"></div><span class="eyebrow">{E(AG['eyebrow'])}</span><h1>{E(AG['title'])}</h1><p class="lead">{E(AG['lead'])}</p></section>
 <section class="wrap"><ol class="agenda">{al}</ol>
 <div class="callout"><span class="eyebrow">{E(AG['how_title'])}</span><p>{E(AG['how_text'])}</p></div></section>'''

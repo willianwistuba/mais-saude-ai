@@ -3,7 +3,41 @@
  "locale": "es-419",
  "name": "Español",
  "decimal": ",",
- "articles": {},
+ "articles": {
+  "MSA-01": {
+   "title": "¿Con cuánta anticipación pronostican los datos públicos una temporada grande de dengue? Predictores y anticipación por estado de Brasil",
+   "short": "Anticipación en el pronóstico del dengue",
+   "type": "Nota de trabajo",
+   "abstract": "Contexto: el número de estados de Brasil con temporada de dengue de alta incidencia (300 o más casos probables por 100 mil habitantes) varió de 3 a 19 entre 2014/15 y 2024/25. No se sabe con cuánta anticipación, respecto del simple conteo de casos, los datos públicos permiten pronosticarlo. Métodos: cada estado tuvo su propia temporada, iniciada en su semana de menor incidencia, y todos los conteos usaron solo casos probables. Para los 27 estados y 11 temporadas (297 pares), en cada una de las 43 primeras semanas de la temporada, reconstruyendo lo disponible en cada fecha (desfase de 6 semanas del archivo abierto del SINAN, retraso de digitación y desenlaces pasados solo una vez conocidos), seis predictores (proyección del conteo, crecimiento reciente, casos fuera de temporada, invierno templado, aptitud térmica y El Niño) se probaron solos y en pares, en regresiones logísticas penalizadas ancladas en el histórico del estado. El criterio M es el modelo de menor error en las temporadas anteriores, elegido sin ver la temporada pronosticada. La anticipación es el número de semanas entre que el acierto supera 75% de forma estable y que el conteo de casos probables deja evidente la mitad de las temporadas altas. La incertidumbre proviene de 4.000 remuestreos por temporada. Resultados: los casos fuera de temporada fueron el predictor que más sumó a la proyección del conteo (BSS incremental 0,077; IC 95% 0,029 a 0,131), y M pasó a ser proyección y casos fuera de temporada. M superó 75% de acierto en la semana 18 (75,1%; IC 68,7% a 81,5%; sensibilidad 75,7%), y la mitad de las temporadas altas se hizo evidente en la semana 35: anticipación de 17 semanas (IC 10 a 25), o 9 con la regla estricta. La proyección sola superó 75% en la semana 10, con 25 semanas de anticipación (IC 14 a 30; 11 con la regla estricta), y acertó tanto como M o más en casi todas las semanas. Sin desfase de publicación, las anticipaciones fueron de 18 y 25 semanas. Conclusión: con el criterio M, compuesto por la proyección del conteo y los casos fuera de temporada, es posible pronosticar una temporada alta con 17 semanas de anticipación respecto del simple conteo de casos (9 con la regla estricta), en esta reconstrucción retrospectiva; la proyección sola anticipa aún más, y M no mostró ventaja clara sobre ella.",
+   "plain": [
+    [
+     "¿Por qué hicimos este estudio?",
+     "Algunos años tienen mucho dengue y otros poco. Quienes cuidan la salud de cada estado necesitan saber pronto si el año será malo. Queríamos saber con cuánto tiempo de margen los datos que publica el gobierno ya dan esa respuesta, antes de que la suma de casos lo deje todo obvio."
+    ],
+    [
+     "¿Qué hicimos y qué encontramos?",
+     "Volvimos a once años pasados e hicimos como si estuviéramos en cada semana, usando solo lo que ya se sabía. Probamos seis pistas, como el calor, el invierno, El Niño y los casos que aparecen fuera de temporada. La pista más útil fue la propia suma de casos, comparada con el ritmo de cada estado, y la que más ayudó junto con ella fueron los casos fuera de temporada. Con esas pistas, en promedio, la respuesta salió correcta en tres de cada cuatro pronósticos algunos meses antes de que el resultado fuera obvio. Algunos años acertó más y otros menos."
+    ],
+    [
+     "¿Qué quiere decir esto?",
+     "Los datos públicos ya dan un aviso temprano, pero la prueba se hizo mirando hacia atrás. Falta ver si funciona de verdad en los próximos años. Esta nota no dice nada sobre la salud de ninguna persona."
+    ]
+   ],
+   "kw": [
+    "dengue",
+    "pronóstico",
+    "anticipación",
+    "predictores",
+    "SINAN",
+    "estados de Brasil"
+   ],
+   "date_long": "7 de noviembre de 2026",
+   "date_short": "7 nov. 2026",
+   "date_rfc": "Sat, 07 Nov 2026 12:00:00 -0300",
+   "version_note": "1 (7 nov. 2026)",
+   "ai_card": "<b>Herramientas:</b> Claude Opus 5.5 (Anthropic), en una sesión del 7 nov. 2026. <b>Etapas con IA:</b> búsqueda de literatura, diseño del protocolo, todo el código (recolección, base, señales, modelos, evaluación, figuras), ejecución de los análisis, redacción y traducción al inglés y al español. <b>Verificación:</b> solo automática: el código corre de punta a punta desde los archivos brutos con hash SHA-256; los números del texto se verificaron por script contra los archivos de resultados; se verificaron DOIs y enlaces. No hubo validación humana independiente de las etapas hechas con IA, y los resultados pueden contener errores o lagunas por eso; el autor revisó el texto final. <b>Limitaciones de la herramienta:</b> puede equivocarse en el código y en la lectura de la literatura sin que las verificaciones automáticas lo detecten. <b>Registro:</b> protocolo, código y resultados versionados en el repositorio público del programa (github.com/willianwistuba/mais-saude-ai), con el protocolo en el commit a9c960e y el pronóstico 2026/27 en el commit dba78f5. <b>Conflictos y financiación:</b> ninguno."
+  }
+ },
  "ui": {
   "skip": "Ir al contenido",
   "nav_notes": "Notas",
@@ -125,9 +159,9 @@
   "items": [
    {
     "short": "¿Por qué el dengue llega en olas?",
-    "status": "En preparación",
+    "status": "Próxima pregunta",
     "title": "¿Por qué el dengue llega en olas y no igual todos los años?",
-    "text": "Brasil alterna años de epidemias muy grandes con años más tranquilos, y el clima por sí solo no explica ese ritmo. Existen cuatro tipos del virus, y la infección por uno protege contra los demás solo por un tiempo. Tres explicaciones compiten: esa protección temporal, la mayor gravedad y transmisión de la segunda infección, y el clima. La idea es ponerlas a competir con más de dos décadas de datos públicos brasileños y estimar cuánto dura, aquí, la protección cruzada entre los tipos del virus. Etapa actual: comprobar si las bases públicas registran información suficiente sobre qué tipo de virus circuló en cada lugar y año."
+    "text": "Brasil alterna años de epidemias muy grandes con años más tranquilos, y el clima por sí solo no explica ese ritmo. Existen cuatro tipos del virus, y la infección por uno protege contra los demás solo por un tiempo. Tres explicaciones compiten: esa protección temporal, la mayor gravedad y transmisión de la segunda infección, y el clima. La idea es ponerlas a competir con más de dos décadas de datos públicos brasileños y estimar cuánto dura, aquí, la protección cruzada entre los tipos del virus."
    }
   ]
  },
@@ -144,7 +178,46 @@
   "intro": "Cada nota indica los archivos que usa. Los scripts están escritos en Python y leen datos públicos descargados de fuentes oficiales, con la fecha y la huella digital de cada archivo bruto.",
   "th_file": "Archivo",
   "th_what": "Qué hace",
-  "files": {},
+  "files": {
+   "protocolos/MSA-01_protocolo.md": "Protocolo de la nota MSA-01 (preguntas, modelos, medidas, criterios y análisis de sensibilidad)",
+   "msa01_coleta.py": "Descarga los archivos DENGBR de OpenDataSUS y registra hashes SHA-256 y fechas",
+   "msa01_clima.py": "Temperatura diaria por estado (NASA POWER), ponderada por la población de 6 puntos",
+   "msa01_base.py": "Agrega las notificaciones por estado y semana de síntomas, notificación y digitación",
+   "msa01_apuracao.py": "Reconstruye lo que se sabía cada semana (desfase, digitación) y calcula las señales",
+   "msa01_avaliacao.py": "Ajusta R0, A y M con ventana creciente, mide el acierto, el bootstrap y la ventana útil",
+   "msa01_pico.py": "Semana del pico de las temporadas de alta incidencia",
+   "dados/msa01/msa01_por_semana.csv": "Acierto, intervalos, probabilidad de 75% y puntuaciones por semana (resultado principal)",
+   "dados/msa01/msa01_janela.json": "Inicio y fin de la ventana, con intervalos del remuestreo",
+   "dados/msa01/msa01_previsoes.csv.gz": "Todos los pronósticos por estado, temporada y semana",
+   "dados/msa01/msa01_apuracao.csv.gz": "Señales disponibles en cada fecha, por estado",
+   "dados/msa01/msa01_desfecho.csv": "Incidencia final y desenlace de cada temporada por estado",
+   "dados/msa01/msa01_previsao_2026_27.csv": "Pronóstico registrado para 2026/27 (1 nov. 2026)",
+   "dados/msa01/msa01_pico.csv": "Semana del pico por estado y temporada",
+   "dados/msa01/clima_pontos.csv": "Puntos usados para la temperatura de cada estado",
+   "dados/msa01/sinan_SHA256SUMS.txt": "Hashes de los archivos brutos del SINAN",
+   "dados/msa01/sinan_coleta.log": "Registro de la recolección (URL, fecha, tamaño)",
+   "dados/msa01/sensibilidades/L0_por_semana.csv": "Sensibilidad L0: acierto por semana",
+   "dados/msa01/sensibilidades/L0_janela.json": "Sensibilidad L0: ventana",
+   "dados/msa01/sensibilidades/L10_por_semana.csv": "Sensibilidad L10: acierto por semana",
+   "dados/msa01/sensibilidades/L10_janela.json": "Sensibilidad L10: ventana",
+   "dados/msa01/sensibilidades/excl_por_semana.csv": "Sensibilidad excl: acierto por semana",
+   "dados/msa01/sensibilidades/excl_janela.json": "Sensibilidad excl: ventana",
+   "dados/msa01/sensibilidades/dec25_por_semana.csv": "Sensibilidad dec25: acierto por semana",
+   "dados/msa01/sensibilidades/dec25_janela.json": "Sensibilidad dec25: ventana",
+   "dados/msa01/sensibilidades/dec75_por_semana.csv": "Sensibilidad dec75: acierto por semana",
+   "dados/msa01/sensibilidades/dec75_janela.json": "Sensibilidad dec75: ventana",
+   "dados/msa01/msa01_semana_vale.json": "Semana de inicio de la temporada (valle) de cada estado",
+   "dados/msa01/msa01_triagem.csv": "Cribado de los 21 modelos (predictores solos y en pares)",
+   "dados/msa01/msa01_antecedencia_M.csv": "Anticipación por temporada alta, criterio M",
+   "dados/msa01/msa01_antecedencia_A.csv": "Anticipación por temporada alta, proyección A",
+   "dados/msa01/sensibilidades/L0_triagem.csv": "Sensibilidad L0: cribado",
+   "dados/msa01/sensibilidades/L10_triagem.csv": "Sensibilidad L10: cribado",
+   "dados/msa01/sensibilidades/excl_triagem.csv": "Sensibilidad excl: cribado",
+   "dados/msa01/sensibilidades/nac_triagem.csv": "Sensibilidad nac: cribado",
+   "dados/msa01/sensibilidades/dec25_triagem.csv": "Sensibilidad dec25: cribado",
+   "dados/msa01/sensibilidades/dec75_triagem.csv": "Sensibilidad dec75: cribado",
+   "dados/populacao_uf_ano.csv": "Población por estado y año (IBGE)"
+  },
   "empty_title": "Todavía no hay scripts publicados.",
   "empty_text": "El código de cada nota se añade aquí cuando se publica la nota.",
   "note": "Los scripts son notas de trabajo, escritos para la claridad y no para el rendimiento. Licencia MIT."

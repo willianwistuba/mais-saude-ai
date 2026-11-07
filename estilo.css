@@ -224,7 +224,7 @@ code{font-family:var(--fm);font-size:.88em;background:var(--soft);padding:1px 6p
 .plain h2{font-family:var(--fm);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .plain p{font-size:17px;margin:8px 0 0}
 .agenda{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
-.agenda li{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;border-bottom:1px solid var(--line);padding:22px 0}
+.agenda li{display:grid;grid-template-columns:1fr;gap:6px 18px;border-bottom:1px solid var(--line);padding:22px 0}
 .agenda .pn{font-size:22px;font-family:var(--fd);font-weight:800;color:var(--hot);padding-top:0;min-width:36px;grid-row:span 3}
 .agenda h3{font-size:21px}
 .agenda p{color:var(--muted);margin:0;max-width:70ch}
