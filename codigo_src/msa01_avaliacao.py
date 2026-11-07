@@ -171,7 +171,7 @@ for m in ['pM', 'pA']:
     L = lead_tab(m); L.to_csv(os.path.join(o.out, f'msa01_antecedencia_{m[1]}.csv'), index=False)
     Ls = {s: L[L.temporada == s] for s in seas}
     def est(ix):
-        x = pd.concat([Ls[s] for s in ix]); return float(np.median(x.antecedencia)), float(np.mean(x.antecedencia >= 4)), float(np.mean(x.antes_do_pico.dropna() > 0))
+        x = pd.concat([Ls[s] for s in ix]); return float(np.median(x.antecedencia)), float(np.mean(x.antecedencia >= 4)), float(np.mean(x.antes_do_pico.fillna(-1) > 0))  # denominador: todas as temporadas altas
     bt = [est(ix) for ix in boots]; e0 = est(seas)
     i0 = J[m]['inicio']; fa = float(np.mean(P[(P.alta == 0) & (P.k == i0)][m] >= 0.5)) if i0 is not None else None
     J[m].update(antecedencia_mediana=e0[0], antecedencia_mediana_ic=q([b[0] for b in bt]), frac_4mais=e0[1], frac_4mais_ic=q([b[1] for b in bt]),

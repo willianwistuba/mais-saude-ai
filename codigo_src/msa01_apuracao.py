@@ -10,6 +10,7 @@ Uso: python3 msa01_apuracao.py <base.csv.gz> <populacao_uf_ano.csv> <clima_uf_di
 import sys, os, json, numpy as np, pandas as pd
 BASE, POP, CLIMA, ONI, LAG, OUT = sys.argv[1:7]; LAG = int(LAG); NAC = '--nacional' in sys.argv; os.makedirs(OUT, exist_ok=True)
 EXC = [int(x) for x in sys.argv[sys.argv.index('--excluir') + 1].split(',')] if '--excluir' in sys.argv else []
+TODAS = '--todas' in sys.argv  # S5: previsores de contagem com todas as notificações onde o arquivo as traz
 UFS = ['11','12','13','14','15','16','17','21','22','23','24','25','26','27','28','29','31','32','33','35','41','42','43','50','51','52','53']
 DAY = pd.Timedelta(days=1); WK = 7 * DAY; KMAX = 42; FIM_DADOS = pd.Timestamp('2026-11-01')
 
@@ -24,7 +25,7 @@ def domingo(Y, s):  # domingo de início da semana epidemiológica s do ano Y
 
 pop = pd.read_csv(POP, dtype={'uf': str}).set_index(['uf', 'ano'])['pop']
 P = lambda uf, a: float(pop.get((uf, min(max(a, 2006), 2025))))
-b = pd.read_csv(BASE, dtype={'uf': str}, parse_dates=['sem_sin', 'sem_not', 'sem_dig']); b = b[b.uf.isin(UFS) & (b.grupo == 'provavel')].copy()
+b = pd.read_csv(BASE, dtype={'uf': str}, parse_dates=['sem_sin', 'sem_not', 'sem_dig']); b = b[b.uf.isin(UFS) & ((b.grupo == 'provavel') | TODAS)].copy()
 
 # semana de vale por UF (2007 a 2013)
 pv = b[b.grupo == 'provavel'].groupby(['uf', 'sem_sin']).n.sum().reset_index()
@@ -82,13 +83,13 @@ for uf in UFS:
         g = bu[(bu.sem_sin >= ini) & (bu.sem_sin < fim)]
         popm = (P(uf, ini.year) + P(uf, (fim - DAY).year)) / 2
         if fim <= pd.Timestamp('2026-09-20'):
-            pr = g.n.sum()
+            pr = g[g.grupo == 'provavel'].n.sum()
             des.append(dict(uf=uf, temporada=Y, inicio=ini.date(), fim=fim.date(), conhecido=(fim + (LAG + 8) * WK).date(), casos_provaveis=int(pr), pop=popm,
                             incidencia=pr / popm * 1e5, alta=int(pr / popm * 1e5 >= 300)))
         n = g.n.values.astype(float); sin = g.sem_sin.values; dig = g.sem_dig.values; nt = g.sem_not
         has = ~pd.isna(g.sem_dig).values; mm = nt.dt.month.values
         cd = np.array([CDF[a][0].get((uf, x), CDF[a][1]) for a, x in zip(g.arquivo.values, mm)]) if len(g) else np.zeros((0, 105))
-        baixa = sin < np.datetime64(ini + 13 * WK)
+        baixa = sin < np.datetime64(ini + 13 * WK); prov = (g.grupo == 'provavel').values
         for k in range(KMAX + 1):
             D = ini + k * WK
             if D > FIM_DADOS: break
@@ -105,7 +106,7 @@ for uf in UFS:
             ap = CL[uf][(CL[uf].index >= Cc - 56 * DAY) & (CL[uf].index < Cc)].mean()
             iv = IV[uf][(IV[uf].index >= Cc - 365 * DAY) & (IV[uf].index < Cc)].mean()
             yy, w = ew(D)
-            rows.append(dict(uf=uf, temporada=Y, k=k, D=D.date(), ano_ew=yy, semana=w, corte=C.date(), disp=e.sum(), disp_baixa=e[baixa].sum(),
+            rows.append(dict(uf=uf, temporada=Y, k=k, D=D.date(), ano_ew=yy, semana=w, corte=C.date(), disp=e.sum(), disp_prov=e[prov].sum(), disp_baixa=e[baixa].sum(),
                              cresc=np.polyfit(np.arange(4), np.log(np.array(wk_) + 1), 1)[0], apt=ap, inverno=iv,
                              oni=oni.get(D.to_period('M') - 2, np.nan), pop=popm))
     print('UF', uf, 'vale', VALE[uf], flush=True)
@@ -124,7 +125,7 @@ for r in A.itertuples():
     prev = [t for t in range(2007, r.temporada) if (r.uf, t, r.k) in DK and t not in EXC]
     fb = [np.log(DK[(r.uf, t, r.k)][1] / fin.loc[(r.uf, t), 'pop'] * 1e5 + 1) for t in prev if (r.uf, t) in fin.index]
     fora.append(np.log(r.disp_baixa / r.pop * 1e5 + 1) - np.median(fb) if len(fb) >= 3 else np.nan)
-    deci.append(int(r.disp / r.pop * 1e5 >= 300))
+    deci.append(int(r.disp_prov / r.pop * 1e5 >= 300))
 A['proj_inc'] = proj; A['fora'] = fora; A['decidido'] = deci; A['p0'] = p0
 A.to_csv(os.path.join(OUT, 'msa01_apuracao.csv.gz'), index=False); Dd.to_csv(os.path.join(OUT, 'msa01_desfecho.csv'), index=False)
 print(VALE)
