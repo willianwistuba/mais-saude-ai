@@ -26,7 +26,7 @@ def build_tex(a,lang,L):
 \usepackage{mathptmx}\usepackage{amsmath,amssymb}\usepackage{microtype}\usepackage{graphicx}
 \usepackage{array}\usepackage{xcolor}\definecolor{fraccent}{HTML}{007A55}\definecolor{frhot}{HTML}{C2185B}\definecolor{frink}{HTML}{111318}
 \usepackage{pgfplots}\pgfplotsset{compat=1.16}\usetikzlibrary{babel}
-\usepackage{hyperref}\usepackage{orcidlink}""")
+\usepackage{framed}\setlength{\FrameSep}{4pt}\usepackage{hyperref}\usepackage{orcidlink}""")
     T.append(r"\hypersetup{colorlinks=true,urlcolor=fraccent,linkcolor=fraccent,citecolor=fraccent,pdfauthor={"+AUTHOR+"},pdftitle={"+esc_text(m['title'])+"},pdfkeywords={"+esc_text(', '.join(m['kw']))+"},pdflang={"+HREFLANG[lang]+"}}\n")
     T.append(r"\AtBeginDocument{\renewcommand{\figurename}{"+esc_text(ui['figure'])+r"}\renewcommand{\tablename}{"+esc_text(ui['table'])+r"}\renewcommand{\refname}{"+esc_text(ui['references'])+r"}\renewcommand{\abstractname}{"+esc_text(ui['abstract'])+"}}\n")
     if lang=='es': T.append(r"\AtBeginDocument{\shorthandoff{<>}}"+"\n")
@@ -44,9 +44,9 @@ def build_tex(a,lang,L):
     T.append(r"\\[2pt]\noindent\url{"+aurl+"}"+tn+"\n")
     T.append(r"\end{abstract}"+"\n"+r"\maketitle"+"\n")
     # bloco extra em linguagem simples, separado do resumo
-    T.append(r"\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{\textbf{"+esc_text(ui['plain_title'])+r"}\\[2pt]"+(''.join(r'\textit{'+esc_text(q)+r'} '+esc_text(a_)+r'\\[2pt]' for q,a_ in m['plain']) if isinstance(m['plain'],list) else esc_text(m['plain']))+"}}\n\n")
+    T.append(r"\begin{framed}\noindent\textbf{"+esc_text(ui['plain_title'])+r"}\par\vspace{2pt}"+(''.join(r'\noindent\textit{'+esc_text(q)+r'} '+esc_text(a_)+r'\par\vspace{2pt}' for q,a_ in m['plain']) if isinstance(m['plain'],list) else esc_text(m['plain']))+"\\end{framed}\n\n")
     T.append(body+"\n")
-    T.append(r"\section*{"+esc_text(ui['aviso_title'])+"}\n"+r"\noindent\fbox{\parbox{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}{\small "+esc_text(ui['aviso_text'])+"}}\n")
+    T.append(r"\section*{"+esc_text(ui['aviso_title'])+"}\n"+r"\begin{framed}\noindent\small "+esc_text(ui['aviso_text'])+"\\end{framed}\n")
     T.append(r"\section*{"+esc_text(ui['backmatter_ai_title'])+"}\n"+ai+"\n")
     T.append(r"\section*{"+esc_text(ui['backmatter_data_title'])+"}\n"+data+"\n")
     T.append(r"\section*{"+esc_text(ui['backmatter_ethics_title'])+"}\n"+esc_text(ui['backmatter_ethics_text'])+"\n")
@@ -69,6 +69,6 @@ def main(only=None):
                 print('ERRO',name); print(r.stdout[-3000:]); sys.exit(1)
             shutil.copy(f'texbuild/{name}.pdf', f"{od}/{a['slug']}.pdf")
             log=open(f'texbuild/{name}.log',errors='replace').read()
-            ov=log.count('Overfull \\hbox')
+            ov=log.count('Overfull \\')
             print('ok',lang,a['code'],os.path.getsize(f"{od}/{a['slug']}.pdf")//1024,'KB overfull',ov)
 if __name__=='__main__': main(sys.argv[1] if len(sys.argv)>1 else None)
