@@ -123,3 +123,7 @@ Duas análises adicionais, registradas antes de qualquer cálculo. São análise
    - **Interior (int):** o mesmo para as notificações fora da capital. No Distrito Federal, que não tem interior, int = 0.
    - A triagem passa a ter 8 previsores sozinhos e 28 duplas (36 modelos); o procedimento M escolhe entre os 36, com as mesmas regras. Relatam-se o ganho incremental de proj+cap e proj+int sobre a projeção, a antecedência de cada modelo novo (emenda 2) e a regra de alerta da emenda 5 para M e para essas duas duplas. O teste da emenda 5 é refeito com os 36 modelos (escolha em 2011/12 a 2018/19, avaliação em 2020/21 a 2024/25), relatado só como descrição. Todas as sensibilidades rodam de novo.
    - A frase de conclusão segue a seção 6, com a composição de M que resultar.
+
+### Emenda 7 (8 nov. 2026)
+
+Correção da regra de três estados da emenda 6. O piso da incidência já disponível passa a valer para os dois limites da faixa, e não só para o inferior, porque aplicá-lo só ao inferior podia deixar o limite inferior acima do superior. Na S5 limpa com todas as notificações, a faixa é calculada sem esse piso, porque a incidência disponível de casos prováveis depende da classificação final. A tabela da regra passa a relatar também a fração das temporadas altas declaradas baixa em alguma semana; quando não há nenhum alarme falso, relata-se a contagem, sem intervalo. Relata-se ainda a fração de notificações prováveis sem município de residência válido, por Estado e ano.

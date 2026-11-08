@@ -7,6 +7,8 @@
  "nao_altas_declaradas_baixa": 0.9578947368421052,
  "n_altas": 40,
  "n_nao_altas": 95,
+ "n_alarme_falso": 2,
+ "n_altas_declaradas_baixa": 9,
  "antecedencia_mediana_ic": [
   0.0,
   5.0
@@ -24,6 +26,8 @@
   0.042139588100686624
  ],
  "q_inferior": 0.1,
+ "piso": true,
+ "n_invertidas": 0,
  "acerto_decididos": 0.9597042513863216,
  "frac_indefinida": 0.5340223944875108,
  "cobertura": 0.7188545150501672,

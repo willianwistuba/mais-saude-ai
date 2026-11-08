@@ -7,6 +7,8 @@
  "nao_altas_declaradas_baixa": 0.8526315789473684,
  "n_altas": 40,
  "n_nao_altas": 95,
+ "n_alarme_falso": 0,
+ "n_altas_declaradas_baixa": 10,
  "antecedencia_mediana_ic": [
   0.0,
   0.0
@@ -24,8 +26,10 @@
   0.0
  ],
  "q_inferior": 0.1,
- "acerto_decididos": 0.9470763977806231,
- "frac_indefinida": 0.5963824289405685,
+ "piso": false,
+ "n_invertidas": 0,
+ "acerto_decididos": 0.9455574912891986,
+ "frac_indefinida": 0.6044788975021533,
  "cobertura": 0.7265979381443299,
  "temporadas": [
   2016,
@@ -247,7 +251,7 @@
    "k": 17,
    "proj_inc": 11.58205585839761,
    "disp_inc": 2.1187076275165997,
-   "inf": 2.1187076275165997,
+   "inf": 1.824430742140187,
    "sup": 47.337764866671684,
    "estado": "baixa"
   }
