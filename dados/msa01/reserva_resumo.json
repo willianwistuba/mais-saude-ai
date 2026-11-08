@@ -68,41 +68,41 @@
   }
  },
  "escolhido": {
-  "antecedencia_mediana": 23.0,
-  "frac_antecipada": 0.9295774647887324,
-  "frac_antes_do_pico": 0.7605633802816901,
-  "alarme_falso": 0.296875,
+  "antecedencia_mediana": 28.0,
+  "frac_antecipada": 0.9859154929577465,
+  "frac_antes_do_pico": 0.8732394366197183,
+  "alarme_falso": 0.421875,
   "n_altas": 71,
   "n_nao_altas": 64,
   "altas_censuradas": 19,
   "antecedencia_mediana_ic": [
-   17.0,
-   27.0
+   26.0,
+   32.0
   ],
   "frac_antecipada_ic": [
-   0.864406779661017,
-   0.9866666666666667
+   0.9594594594594594,
+   1.0
   ],
   "frac_antes_do_pico_ic": [
-   0.582089552238806,
-   0.92
+   0.775,
+   0.9558823529411765
   ],
   "alarme_falso_ic": [
-   0.2153846153846154,
-   0.40298507462686567
+   0.3114754098360656,
+   0.5166666666666667
   ],
   "janela": {
-   "inicio": 20,
-   "inicio_estrito": 30,
+   "inicio": 8,
+   "inicio_estrito": 26,
    "evidencia": 35,
-   "antecedencia": 15,
-   "antecedencia_estrita": 5,
-   "acerto_max": 0.8962962962962964,
-   "brier": 0.16004063636944388
+   "antecedencia": 27,
+   "antecedencia_estrita": 9,
+   "acerto_max": 0.9259259259259259,
+   "brier": 0.1291164105675694
   }
  },
  "_info": {
-  "escolhido": "lproj+oni",
+  "escolhido": "lproj+int",
   "brier_2011_2018": {
    "lproj": 0.16122371983417652,
    "cresc": 0.2211489452847382,
@@ -124,7 +124,22 @@
    "fora+oni": 0.18675850050293857,
    "inverno+apt": 0.22620300580245345,
    "inverno+oni": 0.21894597277568092,
-   "apt+oni": 0.21466200741770197
+   "apt+oni": 0.21466200741770197,
+   "cap": 0.19870930657472402,
+   "int": 0.1736062672154578,
+   "lproj+cap": 0.16943637874715795,
+   "lproj+int": 0.1555506459519972,
+   "cresc+cap": 0.19987758754850804,
+   "cresc+int": 0.1755766934947074,
+   "fora+cap": 0.18901098171726904,
+   "fora+int": 0.17957171114516257,
+   "inverno+cap": 0.20269863318424078,
+   "inverno+int": 0.17759200958126992,
+   "apt+cap": 0.2033908312000182,
+   "apt+int": 0.1784071910541595,
+   "oni+cap": 0.19134908925466063,
+   "oni+int": 0.17347042943520513,
+   "cap+int": 0.1791547527408392
   }
  },
  "_temporadas": [

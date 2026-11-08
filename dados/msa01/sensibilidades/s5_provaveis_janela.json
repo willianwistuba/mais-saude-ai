@@ -10,29 +10,29 @@
   ],
   "frac_boot_sem_janela": 0.0,
   "inicio_ic": [
-   21.0,
-   28.0
+   20.0,
+   27.0
   ],
   "frac_boot_sem_inicio": 0.0,
-  "inicio_estrito": 28,
-  "antecedencia_estrita": 12,
-  "antecedencia_mediana": 15.5,
+  "inicio_estrito": 27,
+  "antecedencia_estrita": 13,
+  "antecedencia_mediana": 19.5,
   "antecedencia_mediana_ic": [
    10.0,
    34.5
   ],
-  "frac_4mais": 0.825,
+  "frac_4mais": 0.85,
   "frac_4mais_ic": [
-   0.6808510638297872,
+   0.75,
    1.0
   ],
-  "frac_antes_do_pico": 0.675,
+  "frac_antes_do_pico": 0.7,
   "frac_antes_do_pico_ic": [
-   0.5106382978723404,
+   0.5833333333333334,
    0.9090909090909091
   ],
   "alarme_falso_no_inicio": 0.2,
-  "sens_no_inicio": 0.675
+  "sens_no_inicio": 0.65
  },
  "pA": {
   "inicio": 14,
@@ -69,13 +69,13 @@
   "alarme_falso_no_inicio": 0.1368421052631579,
   "sens_no_inicio": 0.525
  },
- "composicao_final": "lproj",
+ "composicao_final": "lproj+int",
  "escolha_por_temporada": {
   "2016": "lproj+inverno",
   "2017": "lproj+inverno",
   "2018": "lproj",
   "2019": "lproj",
-  "2020": "lproj"
+  "2020": "lproj+int"
  },
  "decidido_limiar": 0.5
 }

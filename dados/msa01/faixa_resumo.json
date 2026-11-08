@@ -1,0 +1,261 @@
+{
+ "antecedencia_mediana": 4.0,
+ "frac_antecipada": 0.75,
+ "frac_antes_do_pico": 0.39705882352941174,
+ "alarme_falso": 0.018633540372670808,
+ "altas_declaradas_baixa": 0.15441176470588236,
+ "nao_altas_declaradas_baixa": 0.8633540372670807,
+ "n_altas": 136,
+ "n_nao_altas": 161,
+ "antecedencia_mediana_ic": [
+  2.0,
+  10.0
+ ],
+ "frac_antecipada_ic": [
+  0.6344827586206897,
+  0.8509316770186336
+ ],
+ "frac_antes_do_pico_ic": [
+  0.28419746173945504,
+  0.504003305785124
+ ],
+ "alarme_falso_ic": [
+  0.0,
+  0.03871092773193299
+ ],
+ "q_inferior": 0.1,
+ "acerto_decididos": 0.9574115044247787,
+ "frac_indefinida": 0.575287761334273,
+ "cobertura": 0.7821735435747332,
+ "temporadas": [
+  2014,
+  2015,
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024
+ ],
+ "prospectivo_2026_11_01": [
+  {
+   "uf": "22",
+   "k": 2,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "26",
+   "k": 2,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "14",
+   "k": 3,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "23",
+   "k": 3,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "24",
+   "k": 3,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "28",
+   "k": 3,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "33",
+   "k": 4,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "29",
+   "k": 5,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "41",
+   "k": 5,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "32",
+   "k": 6,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "53",
+   "k": 6,
+   "proj_inc": NaN,
+   "disp_inc": 0.0,
+   "inf": NaN,
+   "sup": NaN,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "17",
+   "k": 8,
+   "proj_inc": 3418.752779819228,
+   "disp_inc": 7.751161256293092,
+   "inf": 416.3751291823583,
+   "sup": 9448.632948813507,
+   "estado": "alta"
+  },
+  {
+   "uf": "31",
+   "k": 8,
+   "proj_inc": 5853.981027493205,
+   "disp_inc": 3.501073062533512,
+   "inf": 713.5906795167256,
+   "sup": 16177.778173258015,
+   "estado": "alta"
+  },
+  {
+   "uf": "35",
+   "k": 8,
+   "proj_inc": 1543.809464954718,
+   "disp_inc": 1.9204978555417138,
+   "inf": 187.54142141575747,
+   "sup": 4267.695241896032,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "42",
+   "k": 8,
+   "proj_inc": 42095.40005936605,
+   "disp_inc": 0.8427965749235772,
+   "inf": 5136.7954911170245,
+   "sup": 116321.89075833377,
+   "estado": "alta"
+  },
+  {
+   "uf": "11",
+   "k": 9,
+   "proj_inc": 1658.4169210368789,
+   "disp_inc": 4.166785581780302,
+   "inf": 280.3707722702328,
+   "sup": 4981.790858562096,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "13",
+   "k": 9,
+   "proj_inc": 509.64372218366896,
+   "disp_inc": 3.008133994320643,
+   "inf": 85.58476157757103,
+   "sup": 1532.328266466653,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "51",
+   "k": 9,
+   "proj_inc": 2435.66243351315,
+   "disp_inc": 8.244173411179561,
+   "inf": 412.1605396979214,
+   "sup": 7315.6539072799815,
+   "estado": "alta"
+  },
+  {
+   "uf": "52",
+   "k": 9,
+   "proj_inc": 9594.125858838226,
+   "disp_inc": 29.904511661345143,
+   "inf": 1625.9497669364748,
+   "sup": 28810.629440477034,
+   "estado": "alta"
+  },
+  {
+   "uf": "12",
+   "k": 11,
+   "proj_inc": 1687.617678412775,
+   "disp_inc": 16.73503910119271,
+   "inf": 320.43000662016885,
+   "sup": 4937.133771205977,
+   "estado": "alta"
+  },
+  {
+   "uf": "50",
+   "k": 12,
+   "proj_inc": 1771.1000913873447,
+   "disp_inc": 12.30924516631329,
+   "inf": 380.96722017944944,
+   "sup": 5444.373843173218,
+   "estado": "alta"
+  },
+  {
+   "uf": "15",
+   "k": 15,
+   "proj_inc": 322.53081292479425,
+   "disp_inc": 14.728172801989531,
+   "inf": 77.92766889333473,
+   "sup": 1037.0438444607817,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "16",
+   "k": 16,
+   "proj_inc": 147.66734788615037,
+   "disp_inc": 9.795205804713353,
+   "inf": 35.94204507322373,
+   "sup": 461.1529375642974,
+   "estado": "indefinida"
+  },
+  {
+   "uf": "43",
+   "k": 17,
+   "proj_inc": 139.4683490796089,
+   "disp_inc": 2.1187076275165997,
+   "inf": 35.999092465710504,
+   "sup": 475.38653117444596,
+   "estado": "indefinida"
+  }
+ ]
+}

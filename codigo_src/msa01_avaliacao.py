@@ -15,7 +15,7 @@ ap.add_argument('--semente', type=int, default=20261107); ap.add_argument('--B',
 o = ap.parse_args(); os.makedirs(o.out, exist_ok=True); rng = np.random.default_rng(o.semente)
 EXC = [int(x) for x in o.excluir.split(',') if x]
 KS = list(range(43)); AVAL = [t for t in range(2014, 2025) if t not in EXC]; PREV = [t for t in range(2011, 2025) if t not in EXC]
-LAMS = [0.01, 0.1, 1, 10, 100]; PRED = ['lproj', 'cresc', 'fora', 'inverno', 'apt', 'oni']
+LAMS = [0.01, 0.1, 1, 10, 100]; PRED = ['lproj', 'cresc', 'fora', 'inverno', 'apt', 'oni', 'cap', 'int']  # cap e int: emenda 6
 CONJ = [(p,) for p in PRED] + list(itertools.combinations(PRED, 2))
 A = pd.read_csv(o.apur, dtype={'uf': str}, parse_dates=['D']); D = pd.read_csv(o.des, dtype={'uf': str}, parse_dates=['conhecido'])
 A = A.merge(D[['uf', 'temporada', 'alta', 'incidencia', 'conhecido']], on=['uf', 'temporada'], how='left')
@@ -67,10 +67,12 @@ def roda(cols):
     if o.comparar: pd.DataFrame(lg, columns=['lam_novo', 'lam_antigo']).to_csv(os.path.join(o.out, 'lam_' + '+'.join(cols) + '.csv'), index=False)
     return '+'.join(cols), pd.concat(out)
 CACHE = os.path.join(o.out, 'cache_conjuntos.pkl')
-if os.path.exists(CACHE): RES = pd.read_pickle(CACHE)
-else:
-    with Pool(min(8, os.cpu_count())) as pool: RES = dict(pool.map(roda, CONJ))
+RES = pd.read_pickle(CACHE) if os.path.exists(CACHE) else {}
+FALTA = [c for c in CONJ if '+'.join(c) not in RES]  # o cache só é reaproveitado para modelos cujas entradas não mudaram
+if FALTA:
+    with Pool(min(8, os.cpu_count())) as pool: RES.update(dict(pool.map(roda, FALTA)))
     pd.to_pickle(RES, CACHE)
+RES = {'+'.join(c): RES['+'.join(c)] for c in CONJ}
 base = []
 for k in KS:
     sk = A[A.k == k]

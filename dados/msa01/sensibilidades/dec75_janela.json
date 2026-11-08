@@ -1,16 +1,16 @@
 {
  "pM": {
-  "inicio": 18,
+  "inicio": 17,
   "evidencia": 42,
   "censurada": false,
-  "antecedencia": 24,
+  "antecedencia": 25,
   "antecedencia_ic": [
-   16.0,
-   33.0
+   17.0,
+   34.0
   ],
   "frac_boot_sem_janela": 0.0,
   "inicio_ic": [
-   9.0,
+   8.0,
    25.0
   ],
   "frac_boot_sem_inicio": 0.0,
@@ -21,18 +21,18 @@
    18.0,
    28.0
   ],
-  "frac_4mais": 0.8897058823529411,
+  "frac_4mais": 0.9044117647058824,
   "frac_4mais_ic": [
-   0.8333333333333334,
-   0.9435483870967742
+   0.8540103874227961,
+   0.9518120481927711
   ],
-  "frac_antes_do_pico": 0.7205882352941176,
+  "frac_antes_do_pico": 0.7352941176470589,
   "frac_antes_do_pico_ic": [
-   0.6134580166651405,
-   0.8247441492964105
+   0.650340909090909,
+   0.823943661971831
   ],
-  "alarme_falso_no_inicio": 0.2422360248447205,
-  "sens_no_inicio": 0.75
+  "alarme_falso_no_inicio": 0.2795031055900621,
+  "sens_no_inicio": 0.7867647058823529
  },
  "pA": {
   "inicio": 10,
@@ -69,19 +69,19 @@
   "alarme_falso_no_inicio": 0.19254658385093168,
   "sens_no_inicio": 0.7058823529411765
  },
- "composicao_final": "lproj+fora",
+ "composicao_final": "lproj+int",
  "escolha_por_temporada": {
   "2014": "lproj+inverno",
   "2015": "lproj",
   "2016": "lproj",
   "2017": "lproj",
-  "2018": "lproj",
-  "2019": "lproj",
-  "2020": "lproj+oni",
-  "2021": "lproj+oni",
-  "2022": "lproj+fora",
-  "2023": "lproj+fora",
-  "2024": "lproj+fora"
+  "2018": "lproj+int",
+  "2019": "lproj+int",
+  "2020": "lproj+int",
+  "2021": "lproj+int",
+  "2022": "lproj+int",
+  "2023": "lproj+int",
+  "2024": "lproj+int"
  },
  "decidido_limiar": 0.75
 }

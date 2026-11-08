@@ -26,6 +26,7 @@ def domingo(Y, s):  # domingo de início da semana epidemiológica s do ano Y
 pop = pd.read_csv(POP, dtype={'uf': str}).set_index(['uf', 'ano'])['pop']
 P = lambda uf, a: float(pop.get((uf, min(max(a, 2006), 2025))))
 b = pd.read_csv(BASE, dtype={'uf': str}, parse_dates=['sem_sin', 'sem_not', 'sem_dig']); b = b[b.uf.isin(UFS) & ((b.grupo == 'provavel') | TODAS)].copy()
+if 'cap' not in b.columns: b['cap'] = 0  # emenda 6: capital (1) e interior (0)
 
 # semana de vale por UF (2007 a 2013)
 pv = b[b.grupo == 'provavel'].groupby(['uf', 'sem_sin']).n.sum().reset_index()
@@ -89,7 +90,7 @@ for uf in UFS:
         n = g.n.values.astype(float); sin = g.sem_sin.values; dig = g.sem_dig.values; nt = g.sem_not
         has = ~pd.isna(g.sem_dig).values; mm = nt.dt.month.values
         cd = np.array([CDF[a][0].get((uf, x), CDF[a][1]) for a, x in zip(g.arquivo.values, mm)]) if len(g) else np.zeros((0, 105))
-        baixa = sin < np.datetime64(ini + 13 * WK); prov = (g.grupo == 'provavel').values
+        baixa = sin < np.datetime64(ini + 13 * WK); prov = (g.grupo == 'provavel').values; capm = (g.cap == 1).values
         for k in range(KMAX + 1):
             D = ini + k * WK
             if D > FIM_DADOS: break
@@ -106,15 +107,15 @@ for uf in UFS:
             ap = CL[uf][(CL[uf].index >= Cc - 56 * DAY) & (CL[uf].index < Cc)].mean()
             iv = IV[uf][(IV[uf].index >= Cc - 365 * DAY) & (IV[uf].index < Cc)].mean()
             yy, w = ew(D)
-            rows.append(dict(uf=uf, temporada=Y, k=k, D=D.date(), ano_ew=yy, semana=w, corte=C.date(), disp=e.sum(), disp_prov=e[prov].sum(), disp_baixa=e[baixa].sum(),
+            rows.append(dict(uf=uf, temporada=Y, k=k, D=D.date(), ano_ew=yy, semana=w, corte=C.date(), disp=e.sum(), disp_prov=e[prov].sum(), disp_baixa=e[baixa].sum(), disp_cap=e[capm].sum(),
                              cresc=np.polyfit(np.arange(4), np.log(np.array(wk_) + 1), 1)[0], apt=ap, inverno=iv,
                              oni=oni.get(D.to_period('M') - 2, np.nan), pop=popm))
     print('UF', uf, 'vale', VALE[uf], flush=True)
 A = pd.DataFrame(rows); Dd = pd.DataFrame(des)
 Dd['conhecido'] = pd.to_datetime(Dd.conhecido)
 fin = Dd.set_index(['uf', 'temporada'])
-DK = {(r.uf, r.temporada, r.k): (r.disp, r.disp_baixa) for r in A.itertuples()}
-proj, fora, deci, p0 = [], [], [], []
+DK = {(r.uf, r.temporada, r.k): (r.disp, r.disp_baixa, r.disp_cap) for r in A.itertuples()}
+proj, fora, deci, p0, capv, intv = [], [], [], [], [], []
 for r in A.itertuples():
     D = pd.Timestamp(r.D)
     con = [t for t in range(2007, r.temporada) if (r.uf, t) in fin.index and t not in EXC and fin.loc[(r.uf, t), 'conhecido'] <= D]
@@ -125,7 +126,12 @@ for r in A.itertuples():
     prev = [t for t in range(2007, r.temporada) if (r.uf, t, r.k) in DK and t not in EXC]
     fb = [np.log(DK[(r.uf, t, r.k)][1] / fin.loc[(r.uf, t), 'pop'] * 1e5 + 1) for t in prev if (r.uf, t) in fin.index]
     fora.append(np.log(r.disp_baixa / r.pop * 1e5 + 1) - np.median(fb) if len(fb) >= 3 else np.nan)
+    # emenda 6: capital e interior, cada um comparado com ele mesmo nas temporadas anteriores (contagens)
+    pc = [np.log(DK[(r.uf, t, r.k)][2] + 1) for t in prev if (r.uf, t) in fin.index]
+    pi = [np.log(max(DK[(r.uf, t, r.k)][0] - DK[(r.uf, t, r.k)][2], 0) + 1) for t in prev if (r.uf, t) in fin.index]
+    capv.append(np.log(r.disp_cap + 1) - np.median(pc) if len(pc) >= 3 else np.nan)
+    intv.append(0.0 if r.uf == '53' else (np.log(max(r.disp - r.disp_cap, 0) + 1) - np.median(pi) if len(pi) >= 3 else np.nan))
     deci.append(int(r.disp_prov / r.pop * 1e5 >= 300))
-A['proj_inc'] = proj; A['fora'] = fora; A['decidido'] = deci; A['p0'] = p0
+A['proj_inc'] = proj; A['fora'] = fora; A['cap'] = capv; A['int'] = intv; A['decidido'] = deci; A['p0'] = p0
 A.to_csv(os.path.join(OUT, 'msa01_apuracao.csv.gz'), index=False); Dd.to_csv(os.path.join(OUT, 'msa01_desfecho.csv'), index=False)
 print(VALE)

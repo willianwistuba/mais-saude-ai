@@ -4,7 +4,7 @@ Alerta: primeira semana k (1 a 42) com probabilidade >= 0,5 em k e em k - 1; só
 Temporada alta: antecedência = semana de evidência (casos prováveis disponíveis >= 300/100 mil; 43 se não ocorrer, censura)
 menos a semana do alerta, ou zero se não houve alerta antes da evidência; antes do pico se o alerta veio antes da semana do pico.
 Temporada não alta: alarme falso se houve alerta. IC 95% por 4.000 reamostragens das temporadas.
-Reserva: escolhe-se entre os 21 modelos o de menor Brier nas temporadas 2011/12 a 2018/19 (cache da avaliação);
+Reserva: escolhe-se entre os modelos da triagem (21; 36 com a emenda 6) o de menor Brier nas temporadas 2011/12 a 2018/19 (cache da avaliação);
 ele, A e R0 são avaliados só em 2020/21 a 2024/25.
 Uso: python3 msa01_alerta.py <dir_avaliacao> <pico.csv> <saida_prefixo> [--reserva --desfecho <msa01_desfecho.csv>]
 """
@@ -15,6 +15,8 @@ PK = {(r.uf, r.temporada): r.k_pico for r in pd.read_csv(PICO).itertuples()}
 rng = np.random.default_rng(20261107); B = 4000
 q = lambda v: [float(np.percentile(v, 2.5)), float(np.percentile(v, 97.5))]
 MODELOS = {'R0': 'p0', 'A': 'pA', 'M': 'pM', 'dupla': 'p_lproj+fora'}
+for nm in ['lproj+cap', 'lproj+int']:  # emenda 6
+    if 'p_' + nm in P.columns: MODELOS[nm.replace('lproj', 'proj')] = 'p_' + nm
 info = {}
 if RES:
     C = pd.read_pickle(f'{D}/cache_conjuntos.pkl')
