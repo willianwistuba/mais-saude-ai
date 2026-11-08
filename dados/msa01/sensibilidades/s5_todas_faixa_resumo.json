@@ -21,10 +21,8 @@
   0.13953488372093023,
   0.2727272727272727
  ],
- "alarme_falso_ic": [
-  0.0,
-  0.0
- ],
+ "alarme_falso_ic": null,
+ "alarme_falso_ic_motivo": "nenhum alarme falso observado; a reamostragem por temporadas não estima a incerteza sem eventos",
  "q_inferior": 0.1,
  "piso": false,
  "n_invertidas": 0,

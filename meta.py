@@ -20,7 +20,7 @@ def url(lang,kind,slug=None):
 # Notas de trabalho publicadas. Cada entrada: slug, src (src/<idioma>/<src>), part, code ('MSA-NN'),
 # date_iso, version_num, refs [(texto, url ou None)]. Textos (título, resumo, resumo simples,
 # palavras-chave) ficam em i18n/<idioma>.json, em articles['MSA-NN'].
-ARTS=[dict(slug='janela-previsao-dengue', src='a01.html', part=1, code='MSA-01', date_iso='2026-11-07', version_num='1', refs=[
+ARTS=[dict(slug='janela-previsao-dengue', src='a01.html', part=1, code='MSA-01', date_iso='2026-11-08', version_num='1', refs=[
   ("Mordecai EA, Cohen JM, Evans MV et al. Detecting the impact of temperature on transmission of Zika, dengue, and chikungunya using mechanistic models. PLOS Negl Trop Dis. 2017;11:e0005568.","https://doi.org/10.1371/journal.pntd.0005568"),
   ("Codeço CT, Cruz OG, Riback TIS et al. InfoDengue: a nowcasting system for the surveillance of dengue fever transmission. bioRxiv. 2016.","https://doi.org/10.1101/046193"),
   ("Lowe R, Barcellos C, Coelho CAS et al. Dengue outlook for the World Cup in Brazil: an early warning model framework driven by real-time seasonal climate forecasts. Lancet Infect Dis. 2014;14:619-626.","https://doi.org/10.1016/S1473-3099(14)70781-9"),

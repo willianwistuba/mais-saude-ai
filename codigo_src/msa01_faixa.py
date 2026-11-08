@@ -78,6 +78,8 @@ def resumo(x):
 G = {s: L[L.temporada == s] for s in seas}; r = resumo(L); bt = [resumo(pd.concat([G[s] for s in ix])) for ix in boots]
 for kk in ['antecedencia_mediana', 'frac_antecipada', 'frac_antes_do_pico', 'alarme_falso']:
     r[kk + '_ic'] = q([b[kk] for b in bt if not np.isnan(b[kk])])
+if r['n_alarme_falso'] == 0:  # sem nenhum evento, a reamostragem devolve sempre zero e não mede a incerteza
+    r['alarme_falso_ic'] = None; r['alarme_falso_ic_motivo'] = 'nenhum alarme falso observado; a reamostragem por temporadas não estima a incerteza sem eventos'
 # acerto entre decididos e fração indefinida, no total
 r.update(q_inferior=QL, piso=PISO, n_invertidas=int((T.inf > T.sup).sum()), acerto_decididos=float(T.certo.mean()), frac_indefinida=float(1 - T.dec.mean()), cobertura=float(T.dentro.mean()),
          temporadas=[int(s) for s in seas])
