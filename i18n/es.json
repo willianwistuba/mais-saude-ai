@@ -37,6 +37,39 @@
    "date_rfc": "Sat, 07 Nov 2026 12:00:00 -0300",
    "version_note": "1 (8 nov. 2026)",
    "ai_card": "<b>Herramientas:</b> Claude Opus 5.5 (Anthropic), en sesiones del 7 y 8 nov. 2026. <b>Etapas con IA:</b> búsqueda de literatura, diseño del protocolo, todo el código (recolección, base, señales, modelos, evaluación, figuras), ejecución de los análisis, redacción y traducción al inglés y al español. <b>Verificación:</b> solo automática: el código corre de punta a punta desde los archivos brutos con hash SHA-256; los números del texto se verificaron por script contra los archivos de resultados; se verificaron DOIs y enlaces. No hubo validación humana independiente de las etapas hechas con IA, y los resultados pueden contener errores o lagunas por eso; el autor revisó el texto final. <b>Limitaciones de la herramienta:</b> puede equivocarse en el código y en la lectura de la literatura sin que las verificaciones automáticas lo detecten. <b>Registro:</b> protocolo, código y resultados versionados en el repositorio público del programa (github.com/willianwistuba/mais-saude-ai), con el protocolo en el commit a9c960e, el pronóstico 2026/27 en el commit dba78f5, la enmienda 6 en el commit 3149434, sus resultados en el commit 252e1a5 y la enmienda 7, con sus resultados, en el commit c054974. <b>Conflictos y financiación:</b> ninguno."
+  },
+  "MSA-02": {
+   "title": "Pruebas en grupo para la carga viral del VIH: simulación del uso de reacciones y del tiempo hasta la confirmación de falla, con parámetros de la red pública brasileña",
+   "short": "Pruebas en grupo para la carga viral del VIH",
+   "type": "Nota de trabajo",
+   "abstract": "Contexto: en programas de tratamiento del VIH con alta supresión viral, la mayoría de los exámenes de carga viral de rutina sale sin virus detectable. En Brasil, cerca del 89% de los resultados de quienes están en tratamiento desde hace seis meses o más quedan por debajo de 50 copias/mL, y la red pública contrata alrededor de 1,1 millones de exámenes por año. Analizar muestras en grupo ahorra reacciones cuando la mayoría es negativa, pero la dilución y la viremia baja pueden retrasar la detección de falla en el corte de 200 copias/mL. Esta nota registra la técnica y estima su potencial, usando parámetros brasileños como caso de referencia. Métodos: simulación con la distribución nacional de la carga viral (2022) y con la detección, la cuantificación y la reproducibilidad descritas en las instrucciones de uso de los kits usados en la red (cobas HIV-1 en los sistemas 5800 y 4800). Las reglas de reprueba se limitaron a las que el kit permite ejecutar: volver a analizar cualquier mezcla detectada, incluso \"detectado, inferior a 20 cp/mL\" (regla D), o solo las cuantificadas con 20 cp/mL o más (regla Q20). En la etapa transversal (400 mil tomas de muestra), las estrategias se compararon por subrango, con discordancias en los dos sentidos. En la etapa longitudinal, una cohorte de 200 mil adultos suprimidos se siguió durante 24 meses, con tomas de muestra semestrales y confirmación en una nueva toma 28 días después del informe. La variación proviene de 40 réplicas. Resultados: en el escenario principal, los grupos de 4 con la regla D usaron un 37,9% menos de reacciones por toma de muestra (intervalo empírico entre réplicas del 37,6% al 38,3%), sin ningún caso detectable por el examen individual que dejara de ir a reprueba. En el seguimiento, usaron un 48,5% menos de reacciones (48,4% a 48,7%), con una diferencia simulada cercana a cero en la confirmación en hasta 60 días (0,0 punto; −0,4 a 0,2) y una mediana de 47 días hasta la confirmación, frente a 42 en el individual. La regla Q20 ahorró de 4 a 5 puntos más, con pérdidas pequeñas justo por encima del corte. La decodificación cuantitativa ahorró el 57% de las reacciones, pero detectó solo el 38,5% de las cargas entre 200 y 249, frente al 65,5% del individual. La preconcentración del plasma no aportó ganancia. Conclusión: en esta simulación, la técnica reduce del 38% al 49% las reacciones sin pérdida medible en la detección de falla. Si convergen la validación de laboratorio del procedimiento, su admisión en las reglas de ejecución y una remuneración que refleje el número de reacciones, la reducción de costo frente a la práctica actual sería una fracción de esos porcentajes, proporcional al peso de la reacción en el precio por examen: por ejemplo, del 11% al 29% del valor anual para pesos del 30% al 60%.",
+   "plain": [
+    [
+     "¿Por qué hicimos este estudio?",
+     "Quien vive con el VIH y está en tratamiento repite un análisis de sangre algunas veces al año para ver si el virus está controlado. Casi siempre el resultado dice que no hay virus. Queríamos saber si se pueden gastar menos pruebas sin tardar más en notar cuándo el tratamiento deja de funcionar."
+    ],
+    [
+     "¿Qué hicimos y qué encontramos?",
+     "Simulamos en la computadora una idea antigua: juntar un poco de la sangre de cuatro personas y analizar la mezcla una sola vez. Si la mezcla no muestra virus, nadie del grupo necesita otra prueba. Si lo muestra, cada persona se analiza por separado. Usamos los números de la prueba que se usa en Brasil. La idea gastaría entre un tercio y la mitad menos de pruebas y encontraría los mismos casos con problemas, con unos cinco días más de espera. También probamos una idea más atrevida, y no ayudó."
+    ],
+    [
+     "¿Qué quiere decir esto?",
+     "La idea funciona bien en la computadora, pero todavía hay que probarla en un laboratorio. Para que se convierta en ahorro de dinero, también habría que cambiar reglas y la forma de pagar las pruebas. La nota deja las cuentas registradas para cuando eso sea posible. No dice nada sobre la salud de ninguna persona."
+    ]
+   ],
+   "kw": [
+    "carga viral del VIH",
+    "pruebas en grupo",
+    "simulación",
+    "falla virológica",
+    "costo de exámenes",
+    "informática en salud"
+   ],
+   "date_long": "9 de noviembre de 2026",
+   "date_short": "9 nov. 2026",
+   "date_rfc": "Mon, 09 Nov 2026 12:00:00 -0300",
+   "version_note": "1 (9 nov. 2026)",
+   "ai_card": "<b>Herramientas:</b> Claude Opus 5.5 (Anthropic), en sesiones del 8 y 9 nov. 2026. <b>Etapas con IA:</b> formulación de las hipótesis, búsqueda de literatura, consulta al Portal Nacional de Contrataciones Públicas, lectura de los documentos públicos y de las instrucciones de uso de los kits, escritura de todo el código, ejecución de las simulaciones, redacción y traducción al inglés y al español. <b>Verificación:</b> solo automática: los números del texto se copiaron de las salidas de los scripts, y los scripts publicados se ejecutaron de nuevo para verificar que reproducen esas salidas; el modelo de detección se comparó con las tablas de las instrucciones de uso; los fragmentos de documentos se verificaron mediante la lectura de los PDF. Revisiones hechas por otra herramienta de IA señalaron problemas que se corrigieron antes de la publicación. No hubo validación humana independiente de las etapas hechas con IA, y los resultados pueden contener errores o lagunas por eso; el autor revisa el texto final. <b>Limitaciones de la herramienta:</b> puede equivocarse en el código, en la lectura de figuras y en la lectura de la literatura sin que el error aparezca en las verificaciones automáticas. <b>Registro:</b> código y salidas versionados en el repositorio público del programa (github.com/willianwistuba/mais-saude-ai), en codigo_src/msa02_*.py y dados/msa02/; no hubo protocolo registrado antes de los análisis. <b>Conflictos y financiación:</b> ninguno."
   }
  },
  "ui": {
@@ -239,7 +272,14 @@
    "dados/msa01/reserva_por_temporada.csv": "Temporadas reservadas: por temporada",
    "dados/msa01/validacao_interna_lam.csv": "Penalización elegida antes y después de la corrección",
    "dados/msa01/sensibilidades/s5_provaveis_alerta_resumo.json": "Regla de alerta: s5 provaveis",
-   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Regla de alerta: s5 todas"
+   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Regla de alerta: s5 todas",
+   "msa02_base.py": "MSA-02: distribución de la carga viral, modelo de detección y de medición del kit, examen individual y grupo",
+   "msa02_regras.py": "MSA-02: reglas ejecutables de reprueba (D y Q20), detección por subrango y discordancias en los dos sentidos",
+   "msa02_longitudinal.py": "MSA-02: cohorte de adultos suprimidos durante 24 meses, rebotes, viremia transitoria y plazo hasta la confirmación",
+   "msa02_simulacao.py": "MSA-02: genera todas las tablas de la nota en los tres escenarios de ensayo y la sensibilidad longitudinal",
+   "msa02_replicas.py": "MSA-02: 40 réplicas con semillas diferentes en el escenario principal (intervalos empíricos)",
+   "dados/msa02/saida_simulacao.txt": "MSA-02: salida de msa02_simulacao.py",
+   "dados/msa02/saida_replicas.txt": "MSA-02: salida de msa02_replicas.py"
   },
   "empty_title": "Todavía no hay scripts publicados.",
   "empty_text": "El código de cada nota se añade aquí cuando se publica la nota.",

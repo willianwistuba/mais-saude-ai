@@ -20,7 +20,8 @@ def build_tex(a,lang,L):
     bab=BABEL[lang]
     others=','.join(BABEL[x] for x in LANGS if x!=lang)
     T=[]
-    T.append(r"""\documentclass[aps,pre,twocolumn,nofootinbib,floatfix,preprintnumbers,10pt]{revtex4-2}
+    T.append(r"""\PassOptionsToPackage{hyphens}{url}
+\documentclass[aps,pre,twocolumn,nofootinbib,floatfix,preprintnumbers,10pt]{revtex4-2}
 \usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{textcomp}
 \usepackage["""+others+','+bab+r"""]{babel}
 \usepackage{mathptmx}\usepackage{amsmath,amssymb}\usepackage{microtype}\usepackage{graphicx}

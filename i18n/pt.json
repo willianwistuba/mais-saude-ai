@@ -37,6 +37,39 @@
    "date_rfc": "Sat, 07 Nov 2026 12:00:00 -0300",
    "version_note": "1 (8 nov. 2026)",
    "ai_card": "<b>Ferramentas:</b> Claude Opus 5.5 (Anthropic), em sessões de 7 e 8 nov. 2026. <b>Etapas com IA:</b> busca de literatura, desenho do protocolo, escrita de todo o código (coleta, base, sinais, modelos, avaliação, figuras), execução das análises, redação e tradução para inglês e espanhol. <b>Conferência:</b> só automática: o código roda de ponta a ponta a partir dos arquivos brutos com assinatura SHA-256; os números do texto foram conferidos por script contra os arquivos de resultado; DOIs e links foram verificados. Não houve validação humana independente das etapas feitas por IA, e os resultados podem conter erros ou lacunas por causa disso; o autor revisou o texto final. <b>Limitações da ferramenta:</b> pode errar em código e em leitura de literatura sem que o erro apareça nas checagens automáticas. <b>Registro:</b> protocolo, código e resultados versionados no repositório público do programa (github.com/willianwistuba/mais-saude-ai), com o protocolo no commit a9c960e, a previsão 2026/27 no commit dba78f5, a emenda 6 no commit 3149434, os resultados dela no commit 252e1a5 e a emenda 7, com seus resultados, no commit c054974. <b>Conflitos e financiamento:</b> nenhum."
+  },
+  "MSA-02": {
+   "title": "Testagem em grupo para carga viral do HIV: simulação do uso de reações e do tempo até a confirmação de falha, com parâmetros da rede pública brasileira",
+   "short": "Testagem em grupo para carga viral do HIV",
+   "type": "Nota de trabalho",
+   "abstract": "Contexto: em programas de tratamento do HIV com alta supressão viral, a maioria dos exames de carga viral de rotina vem sem vírus detectável. No Brasil, cerca de 89% dos resultados de quem está em tratamento há seis meses ou mais ficam abaixo de 50 cópias/mL, e a rede pública contrata em torno de 1,1 milhão de exames por ano. Testar amostras em grupo poupa reações quando a maioria é negativa, mas a diluição e a viremia baixa podem atrasar a detecção de falha no corte de 200 cópias/mL. Esta nota registra a técnica e estima seu potencial, usando parâmetros brasileiros como caso de referência. Métodos: simulação com a distribuição nacional da carga viral (2022) e com a detecção, a quantificação e a reprodutibilidade descritas nas instruções de uso dos kits usados na rede (cobas HIV-1 nos sistemas 5800 e 4800). As regras de reteste foram restritas às que o kit permite executar: retestar qualquer mistura detectada, inclusive \"detectado, inferior a 20 cp/mL\" (regra D), ou só as quantificadas com 20 cp/mL ou mais (regra Q20). Na etapa transversal (400 mil coletas), as estratégias foram comparadas por subfaixa, com discordâncias nos dois sentidos. Na etapa longitudinal, uma coorte de 200 mil adultos suprimidos foi acompanhada por 24 meses, com coletas semestrais e confirmação em nova coleta 28 dias após o laudo. A variação vem de 40 réplicas. Resultados: no cenário principal, grupos de 4 com a regra D usaram 37,9% menos reações por coleta (intervalo empírico entre réplicas de 37,6% a 38,3%), sem caso detectável pelo exame individual que deixasse de ir a reteste. No acompanhamento, usaram 48,5% menos reações (48,4% a 48,7%), com diferença simulada próxima de zero na confirmação em até 60 dias (0,0 ponto; −0,4 a 0,2) e mediana de 47 dias até a confirmação, contra 42 no individual. A regra Q20 poupou 4 a 5 pontos a mais, com perdas pequenas logo acima do corte. A decodificação quantitativa poupou 57% das reações, mas detectou só 38,5% das cargas entre 200 e 249, contra 65,5% no individual. A pré-concentração do plasma não trouxe ganho. Conclusão: nesta simulação, a técnica reduz de 38% a 49% as reações sem perda mensurável na detecção de falha. Se convergirem a validação laboratorial do procedimento, sua admissão nas regras de execução e uma remuneração que reflita o número de reações, a redução de custo frente à prática atual seria uma fração desses percentuais, proporcional ao peso da reação no preço por exame: por exemplo, de 11% a 29% do valor anual para pesos de 30% a 60%.",
+   "plain": [
+    [
+     "Por que fizemos este estudo?",
+     "Quem vive com HIV e faz tratamento repete um exame de sangue algumas vezes por ano para ver se o vírus está controlado. Quase sempre o resultado diz que não há vírus. Queríamos saber se dá para gastar menos testes sem demorar mais para descobrir quando o tratamento deixa de funcionar."
+    ],
+    [
+     "O que fizemos e o que descobrimos?",
+     "Simulamos no computador uma ideia antiga: juntar um pouco do sangue de quatro pessoas e testar a mistura uma vez só. Se a mistura não mostra vírus, ninguém do grupo precisa de novo teste. Se mostra, cada pessoa é testada sozinha. Usamos os números do teste usado no Brasil. A ideia gastaria entre um terço e metade a menos de testes e acharia os mesmos casos de problema, com uns cinco dias a mais de espera. Também testamos uma ideia mais ousada, e ela não ajudou."
+    ],
+    [
+     "O que isso quer dizer?",
+     "A ideia funciona bem no computador, mas ainda precisa ser testada em laboratório. Para virar economia de dinheiro, também seria preciso mudar regras e a forma de pagar pelos testes. A nota deixa as contas registradas para quando isso for possível. Ela não diz nada sobre a saúde de nenhuma pessoa."
+    ]
+   ],
+   "kw": [
+    "carga viral do HIV",
+    "testagem em grupo",
+    "simulação",
+    "falha virológica",
+    "custo de exames",
+    "informática em saúde"
+   ],
+   "date_long": "9 de novembro de 2026",
+   "date_short": "9 nov. 2026",
+   "date_rfc": "Mon, 09 Nov 2026 12:00:00 -0300",
+   "version_note": "1 (9 nov. 2026)",
+   "ai_card": "<b>Ferramentas:</b> Claude Opus 5.5 (Anthropic), em sessões de 8 e 9 nov. 2026. <b>Etapas com IA:</b> formulação das hipóteses, busca de literatura, consulta ao Portal Nacional de Contratações Públicas, leitura dos documentos públicos e das instruções de uso dos kits, escrita de todo o código, execução das simulações, redação e tradução para inglês e espanhol. <b>Conferência:</b> só automática: os números do texto foram copiados das saídas dos scripts, e os scripts publicados foram rodados de novo para conferir que reproduzem essas saídas; o modelo de detecção foi comparado com as tabelas das instruções de uso; trechos de documentos foram conferidos pela leitura dos PDFs. Revisões por outra ferramenta de IA apontaram problemas que foram corrigidos antes da publicação. Não houve validação humana independente das etapas feitas por IA, e os resultados podem conter erros ou lacunas por causa disso; o autor revisa o texto final. <b>Limitações da ferramenta:</b> pode errar em código, na leitura de figuras e na leitura de literatura sem que o erro apareça nas checagens automáticas. <b>Registro:</b> código e saídas versionados no repositório público do programa (github.com/willianwistuba/mais-saude-ai), em codigo_src/msa02_*.py e dados/msa02/; não houve protocolo registrado antes das análises. <b>Conflitos e financiamento:</b> nenhum."
   }
  },
  "ui": {
@@ -239,7 +272,14 @@
    "dados/msa01/reserva_por_temporada.csv": "Temporadas reservadas: por temporada",
    "dados/msa01/validacao_interna_lam.csv": "Penalização escolhida antes e depois da correção",
    "dados/msa01/sensibilidades/s5_provaveis_alerta_resumo.json": "Regra de alerta: s5 provaveis",
-   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Regra de alerta: s5 todas"
+   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Regra de alerta: s5 todas",
+   "msa02_base.py": "MSA-02: distribuição da carga viral, modelo de detecção e medição do kit, exame individual e grupo",
+   "msa02_regras.py": "MSA-02: regras executáveis de reteste (D e Q20), detecção por subfaixa e discordâncias nos dois sentidos",
+   "msa02_longitudinal.py": "MSA-02: coorte de adultos suprimidos por 24 meses, rebotes, viremia transitória e prazo até a confirmação",
+   "msa02_simulacao.py": "MSA-02: gera todas as tabelas da nota nos três cenários de ensaio e a sensibilidade longitudinal",
+   "msa02_replicas.py": "MSA-02: 40 réplicas com sementes diferentes no cenário principal (intervalos empíricos)",
+   "dados/msa02/saida_simulacao.txt": "MSA-02: saída de msa02_simulacao.py",
+   "dados/msa02/saida_replicas.txt": "MSA-02: saída de msa02_replicas.py"
   },
   "empty_title": "Ainda não há scripts publicados.",
   "empty_text": "O código de cada nota entra aqui junto com a publicação da nota.",

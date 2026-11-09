@@ -1,6 +1,6 @@
 SITE='https://mais-saude-ai.vercel.app'
 NAME='Mais Saúde AI'
-DATE='2026-11-07'
+DATE='2026-11-09'
 LANGS=['pt','en','es']
 BABEL={'pt':'brazilian','en':'english','es':'spanish'}
 HREFLANG={'pt':'pt-BR','en':'en','es':'es'}
@@ -42,3 +42,25 @@ ARTS=[dict(slug='janela-previsao-dengue', src='a01.html', part=1, code='MSA-01',
   ("Kelvins. municipios-brasileiros: coordenadas dos municípios (CSV).","https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/csv/municipios.csv"),
   ("Mosqlimate. API de dados e modelos de arboviroses, documentação.","https://api.mosqlimate.org/docs/"),
  ])]
+ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, code='MSA-02', date_iso='2026-11-09', version_num='1', refs=[
+  ("Dorfman R. The detection of defective members of large populations. Ann Math Stat. 1943;14:436-440.","https://doi.org/10.1214/aoms/1177731363"),
+  ("Roth WK, Weber M, Seifried E. Feasibility and efficacy of routine PCR screening of blood donations for hepatitis C virus, hepatitis B virus, and HIV-1 in a blood-bank setting. Lancet. 1999;353:359-363.","https://doi.org/10.1016/S0140-6736(98)06318-1"),
+  ("Smith DM, May SJ, Pérez-Santiago J et al. The use of pooled viral load testing to identify antiretroviral treatment failure. AIDS. 2009;23(16):2151-2158.","https://doi.org/10.1097/QAD.0b013e3283313ca9"),
+  ("May S, Gamst A, Haubrich R, Benson C, Smith DM. Pooled nucleic acid testing to identify antiretroviral treatment failure during HIV infection. J Acquir Immune Defic Syndr. 2010;53(2):194-201.","https://doi.org/10.1097/QAI.0b013e3181ba37a7"),
+  ("van Zyl GU, Preiser W, Potschka S et al. Pooling strategies to reduce the cost of HIV-1 RNA load monitoring in a resource-limited setting. Clin Infect Dis. 2011;52(2):264-270.","https://doi.org/10.1093/cid/ciq084"),
+  ("Liu T, Hogan JW, Daniels MJ et al. Improved HIV-1 viral load monitoring capacity using pooled testing with marker-assisted deconvolution. J Acquir Immune Defic Syndr. 2017;75(5):580-587.","https://doi.org/10.1097/QAI.0000000000001424"),
+  ("Brand A, May S, Hughes JP, Nakigozi G, Reynolds SJ, Gabriel EE. Prediction-driven pooled testing methods: application to HIV treatment monitoring in Rakai, Uganda. Stat Med. 2021;40(19):4185-4199.","https://doi.org/10.1002/sim.9022"),
+  ("Fosah Tayong GE et al. Implementation of pooled testing to increase access to routine viral load monitoring for people living with HIV on antiretroviral therapy. Sci Rep. 2025;15:14713.","https://doi.org/10.1038/s41598-025-92709-y"),
+  ("Ministério da Saúde. Relatório de Monitoramento Clínico do HIV 2022. Brasília; 2022. Figura 76.",None),
+  ("Roche Molecular Systems. cobas HIV-1: teste quantitativo de ácidos nucleicos para utilização com os cobas 5800/6800/8800 Systems. Instruções de uso, 09198911001-02PT, Doc Rev. 2.0.",None),
+  ("Roche Molecular Systems. cobas HIV-1: teste de ácidos nucleicos para uso no sistema cobas 4800. Instruções de uso, 08793026001-02PTBR, Doc. Rev 5.0.",None),
+  ("Ministério da Saúde. Nota Técnica nº 74/2026-CGHA/DATHI/SVSA/MS.","https://www.gov.br/aids/pt-br/central-de-conteudo/notas-tecnicas/2026/nota-tecnica-no-74_2026_cgha_dathi_svsa_ms.pdf"),
+  ("Ministério da Saúde. Nota Técnica nº 286/2023-CGAHV/DATHI/SVSA/MS. SEI 0036440153.","https://www.gov.br/aids/pt-br/central-de-conteudo/notas-tecnicas/2023/nota-tecnica-no-286-2023-cv-hiv-da-sensibilidade-e-implicacoes-laboratorios.pdf"),
+  ("Ministério da Saúde. Primeiro Termo Aditivo ao Contrato 386/2022. Processo 25000.176067/2020-05. SEI 0031447991.",None),
+  ("Ministério da Saúde. Quinto Termo Aditivo ao Contrato 386/2022. Processo 25000.176067/2020-05. SEI 0052604814.",None),
+  ("Ministério da Saúde. Edital do Pregão Eletrônico 108/2022, UASG 250005, e Termo de Referência SEI 0023622980 (processo 25000.176067/2020-05). Itens 17.1.2 a 17.1.4.","https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/pregoes/2022/pregao-eletronico-no-108-2022-uasg-250005-departamento-de-logistica-em-saude-dlog/edital-e-anexos-do-pe-tradicional-no-108-2022.pdf"),
+  ("Ministério da Saúde. Reabertura do edital do Pregão Eletrônico SRP 90146/2025 e Termo de Referência 25/2026 (processo 25000.157431/2025-34). Itens 3.10.3, 7.1.2 e 7.1.4.","https://www.gov.br/saude/pt-br/acesso-a-informacao/licitacoes-e-contratos/pregoes/2025/pregao-eletronico-no-90146-2025-dlog/reabertura-edital-pe-srp-no-90146_2025"),
+  ("Yukl SA, Li P, Fujimoto K et al. Modification of the Abbott RealTime assay for detection of HIV-1 plasma RNA viral loads less than one copy per milliliter. J Virol Methods. 2011;175(2):261-265.","https://doi.org/10.1016/j.jviromet.2011.04.015"),
+  ("Monks T, Currie CSM, Onggo BS et al. Strengthening the reporting of empirical simulation studies: introducing the STRESS guidelines. J Simul. 2019;13(1):55-67.","https://doi.org/10.1080/17477778.2018.1442155"),
+  ("Husereau D, Drummond M, Augustovski F et al. Consolidated Health Economic Evaluation Reporting Standards 2022 (CHEERS 2022) statement. BMJ. 2022;376:e067975.","https://doi.org/10.1136/bmj-2021-067975"),
+ ]))

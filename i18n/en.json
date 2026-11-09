@@ -37,6 +37,39 @@
    "date_rfc": "Sat, 07 Nov 2026 12:00:00 -0300",
    "version_note": "1 (Nov 8, 2026)",
    "ai_card": "<b>Tools:</b> Claude Opus 5.5 (Anthropic), in sessions on 7 and 8 Nov 2026. <b>Steps with AI:</b> literature search, protocol design, all code (collection, database, signals, models, evaluation, figures), running the analyses, writing and translation into English and Spanish. <b>Checking:</b> automatic only: the code runs end to end from raw files with SHA-256 hashes; the numbers in the text were checked by script against the result files; DOIs and links were verified. There was no independent human validation of the AI steps, and the results may contain errors or gaps because of this; the author reviewed the final text. <b>Tool limitations:</b> it can make mistakes in code and in reading the literature that automatic checks do not catch. <b>Record:</b> protocol, code and results versioned in the program's public repository (github.com/willianwistuba/mais-saude-ai), with the protocol in commit a9c960e, the 2026/27 forecast in commit dba78f5, amendment 6 in commit 3149434, its results in commit 252e1a5 and amendment 7, with its results, in commit c054974. <b>Conflicts and funding:</b> none."
+  },
+  "MSA-02": {
+   "title": "Pooled testing for HIV viral load: simulation of reaction use and time to confirmation of failure, with parameters from the Brazilian public network",
+   "short": "Pooled testing for HIV viral load",
+   "type": "Working note",
+   "abstract": "Background: in HIV treatment programs with high viral suppression, most routine viral load tests come back with no detectable virus. In Brazil, about 89% of results from people on treatment for six months or more are below 50 copies/mL, and the public network contracts around 1.1 million tests per year. Testing samples in pools saves reactions when most are negative, but dilution and low-level viremia may delay the detection of failure at the 200 copies/mL cutoff. This note records the technique and estimates its potential, using Brazilian parameters as a reference case. Methods: simulation with the national viral load distribution (2022) and with the detection, quantification and reproducibility described in the instructions for use of the kits used in the network (cobas HIV-1 on the 5800 and 4800 systems). Retest rules were restricted to those the kit allows to be executed: retest any detected pool, including \"detectado, inferior a 20 cp/mL\" (rule D), or only those quantified at 20 cp/mL or more (rule Q20). In the cross-sectional stage (400,000 collections), strategies were compared by subrange, with discordances in both directions. In the longitudinal stage, a cohort of 200,000 suppressed adults was followed for 24 months, with collections every six months and confirmation in a new collection 28 days after the report. Variation comes from 40 replicates. Results: in the main scenario, pools of 4 with rule D used 37.9% fewer reactions per collection (empirical interval across replicates 37.6% to 38.3%), with no case detectable by individual testing failing to go to retest. During follow-up, they used 48.5% fewer reactions (48.4% to 48.7%), with a simulated difference close to zero in confirmation within 60 days (0.0 point; −0.4 to 0.2) and a median of 47 days until confirmation, against 42 for individual testing. Rule Q20 saved 4 to 5 more points, with small losses just above the cutoff. Quantitative deconvolution saved 57% of reactions, but detected only 38.5% of loads between 200 and 249, against 65.5% for individual testing. Pre-concentration of plasma brought no gain. Conclusion: in this simulation, the technique reduces reactions by 38% to 49% with no measurable loss in the detection of failure. If laboratory validation of the procedure, its admission into the execution rules and payment that reflects the number of reactions converge, the cost reduction compared with current practice would be a fraction of these percentages, proportional to the weight of the reaction in the price per test: for example, 11% to 29% of the annual value for weights of 30% to 60%.",
+   "plain": [
+    [
+     "Why did we do this study?",
+     "People who live with HIV and take treatment repeat a blood test a few times a year to see if the virus is under control. Almost always the result says there is no virus. We wanted to know if it is possible to use fewer tests without taking longer to find out when the treatment stops working."
+    ],
+    [
+     "What did we do and what did we find?",
+     "We used a computer to try out an old idea: mix a little of the blood of four people and test the mix only once. If the mix shows no virus, no one in the group needs a new test. If it does, each person is tested alone. We used the numbers of the test used in Brazil. The idea would use between a third and a half fewer tests and would find the same problem cases, with about five more days of waiting. We also tried a bolder idea, and it did not help."
+    ],
+    [
+     "What does this mean?",
+     "The idea works well on the computer, but it still needs to be tried in a lab. To turn into money saved, rules and the way the tests are paid for would also need to change. The note keeps the numbers on record for when this is possible. It says nothing about the health of any person."
+    ]
+   ],
+   "kw": [
+    "HIV viral load",
+    "pooled testing",
+    "simulation",
+    "virological failure",
+    "test costs",
+    "health informatics"
+   ],
+   "date_long": "November 9, 2026",
+   "date_short": "Nov 9, 2026",
+   "date_rfc": "Mon, 09 Nov 2026 12:00:00 -0300",
+   "version_note": "1 (Nov 9, 2026)",
+   "ai_card": "<b>Tools:</b> Claude Opus 5.5 (Anthropic), in sessions on Nov 8 and 9, 2026. <b>Steps with AI:</b> formulation of the hypotheses, literature search, queries to the National Public Procurement Portal, reading of the public documents and of the kits' instructions for use, writing of all the code, running of the simulations, writing and translation into English and Spanish. <b>Checking:</b> automatic only: the numbers in the text were copied from the scripts' outputs, and the published scripts were run again to check that they reproduce those outputs; the detection model was compared with the tables in the instructions for use; excerpts from documents were checked by reading the PDFs. Reviews by another AI tool pointed out problems that were corrected before publication. There was no independent human validation of the steps carried out by AI, and the results may contain errors or gaps because of this; the author reviews the final text. <b>Tool limitations:</b> it may make mistakes in code, in reading figures and in reading literature without the error showing up in the automatic checks. <b>Record:</b> code and outputs versioned in the program's public repository (github.com/willianwistuba/mais-saude-ai), in codigo_src/msa02_*.py and dados/msa02/; there was no protocol registered before the analyses. <b>Conflicts and funding:</b> none."
   }
  },
  "ui": {
@@ -239,7 +272,14 @@
    "dados/msa01/reserva_por_temporada.csv": "Held-out seasons: by season",
    "dados/msa01/validacao_interna_lam.csv": "Penalty chosen before and after the fix",
    "dados/msa01/sensibilidades/s5_provaveis_alerta_resumo.json": "Alert rule: s5 provaveis",
-   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Alert rule: s5 todas"
+   "dados/msa01/sensibilidades/s5_todas_alerta_resumo.json": "Alert rule: s5 todas",
+   "msa02_base.py": "MSA-02: viral load distribution, kit detection and measurement model, individual testing and pooling",
+   "msa02_regras.py": "MSA-02: executable retest rules (D and Q20), detection by subrange and discordances in both directions",
+   "msa02_longitudinal.py": "MSA-02: cohort of suppressed adults over 24 months, rebounds, transient viremia and time to confirmation",
+   "msa02_simulacao.py": "MSA-02: generates all the note's tables in the three assay scenarios and the longitudinal sensitivity analysis",
+   "msa02_replicas.py": "MSA-02: 40 replicates with different seeds in the main scenario (empirical intervals)",
+   "dados/msa02/saida_simulacao.txt": "MSA-02: output of msa02_simulacao.py",
+   "dados/msa02/saida_replicas.txt": "MSA-02: output of msa02_replicas.py"
   },
   "empty_title": "No scripts published yet.",
   "empty_text": "The code for each note is added here when the note is published.",
