@@ -42,7 +42,7 @@ ARTS=[dict(slug='janela-previsao-dengue', src='a01.html', part=1, code='MSA-01',
   ("Kelvins. municipios-brasileiros: coordenadas dos municípios (CSV).","https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/csv/municipios.csv"),
   ("Mosqlimate. API de dados e modelos de arboviroses, documentação.","https://api.mosqlimate.org/docs/"),
  ])]
-ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, code='MSA-02', date_iso='2026-11-09', date_modified='2026-11-09', version_num='1.2', refs=[
+ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, code='MSA-02', date_iso='2026-11-09', date_modified='2026-11-09', version_num='1.2', doi='10.5281/zenodo.24074089', refs=[
   ("Dorfman R. The detection of defective members of large populations. Ann Math Stat. 1943;14:436-440.","https://doi.org/10.1214/aoms/1177731363"),
   ("Roth WK, Weber M, Seifried E. Feasibility and efficacy of routine PCR screening of blood donations for hepatitis C virus, hepatitis B virus, and HIV-1 in a blood-bank setting. Lancet. 1999;353:359-363.","https://doi.org/10.1016/S0140-6736(98)06318-1"),
   ("Smith DM, May SJ, Pérez-Santiago J et al. The use of pooled viral load testing to identify antiretroviral treatment failure. AIDS. 2009;23(16):2151-2158.","https://doi.org/10.1097/QAD.0b013e3283313ca9"),
