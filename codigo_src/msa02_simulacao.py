@@ -1,4 +1,6 @@
-"""Versão 1.1 (9 nov. 2026): RNA residual abaixo de 50 cp/mL (25% no cenário principal), regra Q20
+"""Versão 1.2 (9 nov. 2026): acrescenta faixa do RNA residual, pré-concentração com gatilho equivalente
+à Q20 (56 cp/mL no concentrado = 20 na mistura x 4 amostras x recuperação 0,7) e, em msa02_replicas.py,
+confirmação por faixa de rebote. Versão 1.1: RNA residual abaixo de 50 cp/mL (25% no cenário principal), regra Q20
 como principal e denominador comum no acompanhamento. A saída da versão 1 está em dados/msa02/saida_simulacao_v1.txt.
 Números consolidados do rascunho da MSA-02 (cenário principal: bula do cobas HIV-1 5800).
 Rodar: python3 msa02_simulacao.py. Depende de msa02_base.py, msa02_regras.py e msa02_longitudinal.py."""
@@ -39,12 +41,13 @@ def mpa(vl, k, T, rng):
     return dict(reacoes=reac, chama=chama.ravel(), gat=np.nan, n=n)
 
 
-def concentrado(vl, k, rec, falha, rng):
+def concentrado(vl, k, rec, falha, rng, gatilho=None):
+    """gatilho=None: regra D; número: reteste quando o concentrado mede esse valor ou mais (versão 1.2)."""
     n = len(vl) // k * k
     V = vl[:n].reshape(-1, k)
     R = s.recuperacao(V.shape[0], rec, falha, rng)
     med = s.medir(R * V.sum(1), rng)            # 1 mL de cada amostra concentrado
-    flag = med > 0                              # regra D
+    flag = (med > 0) if gatilho is None else (med >= gatilho)
     chama = (s.medir(V, rng) >= 200) & flag[:, None]
     return dict(reacoes=V.shape[0] + flag.sum() * k, chama=chama.ravel(), gat=flag.mean(), n=n)
 
@@ -89,6 +92,8 @@ if __name__ == "__main__":
         print(linha("Grupo de 5, decodificação (T=250)", v4.resumo(vl, mpa(vl, 5, 250, rng))))
         for f in (0.0, 0.02, 0.05):
             print(linha(f"Concentrado k=4, R=0,7, falhas {f:.0%}", v4.resumo(vl, concentrado(vl, 4, 0.7, f, rng))))
+        for f in (0.0, 0.05):
+            print(linha(f"Concentrado k=4, gatilho 56, falhas {f:.0%}", v4.resumo(vl, concentrado(vl, 4, 0.7, f, rng, 56))))
         if cen.startswith("5800"):
             for k, r in ((4, "Q20"), (4, "D")):
                 print(f"Discordâncias grupo {k} regra {r}:")
@@ -112,6 +117,20 @@ if __name__ == "__main__":
               f"acompanhamento D4 {1 - bd['reac'] / a['reac']:.1%} Q20-4 {1 - bq['reac'] / a['reac']:.1%} | "
               f"<=60d ind {a['ate60']:.1%} D4 {bd['ate60']:.1%} Q20-4 {bq['ate60']:.1%}")
     s.RESIDUAL_FRAC = RESID
+    print("\n===== Faixa do RNA residual (5800, fração 25%) =====")
+    for lo in (1.0, 20.0, 40.0):
+        s.RESIDUAL_MIN = lo
+        rng = np.random.default_rng(11)
+        vl = s.gerar(rng)
+        d = v4.resumo(vl, v4.transversal(vl, 4, "D", rng))
+        q = v4.resumo(vl, v4.transversal(vl, 4, "Q20", rng))
+        sem = sum(c for lab, n, a, b, c in v4.discordancias(vl, 4, "Q20", np.random.default_rng(21)))
+        L.N = 200_000
+        a = L.resumir("i", L.simular("individual", seed=3))
+        bq = L.resumir("g", L.simular("grupo", 4, "Q20", seed=3))
+        print(f"faixa {lo:.0f}-49: coleta D4 {1 - d['reac']:.1%} Q20-4 {1 - q['reac']:.1%} (sem reteste 200-999: {sem}) | "
+              f"acompanhamento Q20-4 {1 - bq['reac'] / a['reac']:.1%} | <=60d ind {a['ate60']:.1%} Q20-4 {bq['ate60']:.1%}")
+    s.RESIDUAL_MIN = 1.0
     print("\n===== Sensibilidade longitudinal (5800, residual 25%, grupo 4 regra Q20) =====")
     for h in (0.03, 0.06, 0.10):
         for pb in (0.04, 0.08):

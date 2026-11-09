@@ -1,4 +1,4 @@
-"""Versão 1.1: regra Q20, RNA residual de 25% e denominador comum. Réplicas da MSA-02 no cenário principal (cobas 5800): 40 sementes, intervalo empírico 2,5% a 97,5%.
+"""Versão 1.2: acrescenta confirmação em 60 dias por faixa de rebote. Versão 1.1: regra Q20, RNA residual de 25% e denominador comum. Réplicas da MSA-02 no cenário principal (cobas 5800): 40 sementes, intervalo empírico 2,5% a 97,5%.
 Rodar: python3 msa02_replicas.py. Depende de msa02_simulacao.py e seus módulos."""
 import numpy as np
 import msa02_base as s, msa02_regras as v4, msa02_longitudinal as L
@@ -21,3 +21,28 @@ for i in range(40):
     b = L.resumir("g", L.simular("grupo", 4, "Q20", seed=3000 + i))
     e.append(1 - b["reac"] / a["reac"]); d.append(b["ate60"] - a["ate60"]); m.append(b["mediana"] - a["mediana"])
 print("Longitudinal, grupo de 4 regra Q20: reações a menos (%)", q(e), "| dif. confirmados em 60 dias (pontos)", q(d), "| dif. mediana (dias)", q(m, 1))
+
+
+def faixa(r, vf, lo, hi):
+    p = L.primeira_coorte(r["onset"])
+    ep = ~np.isnan(p) & (p <= 18) & (vf >= lo) & (vf < hi)
+    d = (r["t_conf"][ep] - p[ep]) * 30
+    d = np.where(np.isnan(d), np.inf, np.maximum(d, 0))
+    return (d <= 60).mean(), ep.sum()
+
+
+print("\nConfirmação em até 60 dias por faixa de rebote, grupo de 4 regra Q20 (40 réplicas; pontos percentuais)")
+for cen in ("5800 (principal)", "robustez (DP 0,40 perto do limite)"):
+    usar(cen)
+    s.RESIDUAL_FRAC = 0.25
+    L.N = 200_000
+    onset, vf = L.coorte(np.random.default_rng(1))
+    A = [L.simular("individual", seed=2000 + i) for i in range(40)]
+    B = [L.simular("grupo", 4, "Q20", seed=3000 + i) for i in range(40)]
+    for lo, hi in ((200, 250), (250, 300), (300, 500), (500, 1000), (1000, np.inf)):
+        xa = [faixa(a, vf, lo, hi)[0] for a in A]
+        xb = [faixa(b, vf, lo, hi)[0] for b in B]
+        n = faixa(A[0], vf, lo, hi)[1]
+        dif = np.array(xb) - np.array(xa)
+        print(f"{cen}: rebote {lo}-{hi:g} (n={n}): individual {np.mean(xa)*100:.1f} grupo {np.mean(xb)*100:.1f} "
+              f"dif. {dif.mean()*100:.1f} ({np.percentile(dif,2.5)*100:.1f} a {np.percentile(dif,97.5)*100:.1f})")

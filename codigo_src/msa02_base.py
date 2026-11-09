@@ -23,16 +23,17 @@ EXAMES_ANO = 1_200_000   # quantidade contratada (termo de referência de 2020);
 # Na versão 1, todas eram zero (RESIDUAL_FRAC = 0). Só sorteia quando a fração é positiva,
 # para que a versão 1 continue reproduzível.
 RESIDUAL_FRAC = 0.0
+RESIDUAL_MIN = 1.0       # versão 1.2: limite inferior da faixa sorteada (1, 20 ou 40 cp/mL)
 RESIDUAL_MAX = 49.0
 
 
 def residual(vl, rng):
-    """Põe RNA residual numa fração RESIDUAL_FRAC das cargas iguais a zero."""
+    """Põe RNA residual (log-uniforme entre RESIDUAL_MIN e RESIDUAL_MAX) numa fração RESIDUAL_FRAC das cargas iguais a zero."""
     if RESIDUAL_FRAC <= 0:
         return vl
     z = np.flatnonzero(vl == 0)
     k = z[rng.random(z.size) < RESIDUAL_FRAC]
-    vl[k] = 10 ** rng.uniform(0, np.log10(RESIDUAL_MAX), k.size)
+    vl[k] = 10 ** rng.uniform(np.log10(RESIDUAL_MIN), np.log10(RESIDUAL_MAX), k.size)
     return vl
 
 

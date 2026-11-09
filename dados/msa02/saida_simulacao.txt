@@ -12,6 +12,8 @@ Grupo de 5, decodificação (T=250)            56.3%   35.0%   62.5%   83.9%   9
 Concentrado k=4, R=0,7, falhas 0%             6.3%   66.8%   89.0%   99.2%  100.0%  100.0%
 Concentrado k=4, R=0,7, falhas 2%             6.7%   68.6%   88.4%   99.1%   99.8%  100.0%
 Concentrado k=4, R=0,7, falhas 5%             7.4%   65.0%   88.7%   98.9%   99.9%  100.0%
+Concentrado k=4, gatilho 56, falhas 0%       39.3%   66.6%   89.3%   98.8%  100.0%  100.0%
+Concentrado k=4, gatilho 56, falhas 5%       40.0%   62.7%   83.9%   95.9%   98.7%   99.8%
 Discordâncias grupo 4 regra Q20:
    200-249: n=1106 só individual 249 só grupo 219 sem reteste 2
    250-299: n=894 só individual 83 só grupo 71 sem reteste 0
@@ -40,6 +42,8 @@ Grupo de 5, decodificação (T=250)            56.4%   35.0%   57.4%   83.0%   9
 Concentrado k=4, R=0,7, falhas 0%             6.9%   66.1%   90.0%   99.6%  100.0%  100.0%
 Concentrado k=4, R=0,7, falhas 2%             7.4%   67.4%   90.5%   99.8%  100.0%  100.0%
 Concentrado k=4, R=0,7, falhas 5%             8.0%   67.5%   89.7%   99.5%   99.7%  100.0%
+Concentrado k=4, gatilho 56, falhas 0%       39.3%   64.8%   91.9%   99.5%  100.0%  100.0%
+Concentrado k=4, gatilho 56, falhas 5%       40.1%   64.2%   87.5%   96.1%   98.3%   99.8%
 --- longitudinal (17301 episódios, denominador comum): individual <=60d 97.1% <=240d 98.5% mediana 42d
 grupo 4 Q20: econ 50.7% <=60d 97.2% <=240d 98.6% mediana 47d
 grupo 4 D: econ 24.6% <=60d 97.3% <=240d 98.7% mediana 47d
@@ -58,6 +62,8 @@ Grupo de 5, decodificação (T=250)            54.7%   31.0%   45.2%   70.2%   9
 Concentrado k=4, R=0,7, falhas 0%             6.8%   59.1%   79.5%   94.7%   99.9%  100.0%
 Concentrado k=4, R=0,7, falhas 2%             7.2%   59.9%   77.1%   93.8%   99.9%  100.0%
 Concentrado k=4, R=0,7, falhas 5%             7.8%   61.2%   76.3%   94.0%   99.7%  100.0%
+Concentrado k=4, gatilho 56, falhas 0%       38.2%   57.5%   76.1%   94.7%  100.0%  100.0%
+Concentrado k=4, gatilho 56, falhas 5%       39.0%   57.2%   74.6%   91.4%   97.9%   99.8%
 --- longitudinal (17301 episódios, denominador comum): individual <=60d 95.1% <=240d 97.6% mediana 42d
 grupo 4 Q20: econ 49.8% <=60d 94.9% <=240d 97.4% mediana 47d
 grupo 4 D: econ 24.1% <=60d 95.2% <=240d 97.5% mediana 47d
@@ -68,6 +74,11 @@ residual 0%: coleta D4 37.6% Q20-4 41.6% (sem reteste 200-999: 2) | acompanhamen
 residual 10%: coleta D4 28.1% Q20-4 41.0% (sem reteste 200-999: 2) | acompanhamento D4 37.7% Q20-4 52.1% | <=60d ind 96.8% D4 96.9% Q20-4 97.1%
 residual 25%: coleta D4 16.0% Q20-4 39.5% (sem reteste 200-999: 2) | acompanhamento D4 23.6% Q20-4 50.5% | <=60d ind 96.9% D4 97.0% Q20-4 96.9%
 residual 40%: coleta D4 6.1% Q20-4 37.7% (sem reteste 200-999: 2) | acompanhamento D4 11.9% Q20-4 48.3% | <=60d ind 97.1% D4 97.0% Q20-4 96.9%
+
+===== Faixa do RNA residual (5800, fração 25%) =====
+faixa 1-49: coleta D4 16.0% Q20-4 39.5% (sem reteste 200-999: 2) | acompanhamento Q20-4 50.5% | <=60d ind 96.9% Q20-4 96.9%
+faixa 20-49: coleta D4 0.1% Q20-4 32.1% (sem reteste 200-999: 0) | acompanhamento Q20-4 42.1% | <=60d ind 96.8% Q20-4 96.9%
+faixa 40-49: coleta D4 -2.8% Q20-4 26.0% (sem reteste 200-999: 0) | acompanhamento Q20-4 35.2% | <=60d ind 97.0% Q20-4 96.9%
 
 ===== Sensibilidade longitudinal (5800, residual 25%, grupo 4 regra Q20) =====
 risco 3% blip 4%: econ 56% <=60d ind 97.0% grupo 96.8%
