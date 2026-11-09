@@ -31,7 +31,7 @@ def vl_em(t, onset, vf, rng):
     v = np.where(onset <= t, vf, 0.0)
     blip = (onset > t) & (rng.random(N) < P_BLIP)
     v[blip] = 10 ** rng.uniform(np.log10(50), np.log10(200), blip.sum())
-    return v
+    return s.residual(v, rng)                               # RNA residual (versão 1.1)
 
 
 def simular(estrategia, k=4, gatilho=50, seed=3):
@@ -75,13 +75,23 @@ def simular(estrategia, k=4, gatilho=50, seed=3):
     return dict(t_conf=t_conf, primeira=primeira_elev, onset=onset, reacoes=reacoes)
 
 
-def resumir(nome, r):
-    ep = ~np.isnan(r["primeira"]) & (r["primeira"] <= 18)  # há uma rodada seguinte observável
-    d = (r["t_conf"][ep] - r["primeira"][ep]) * 30           # dias
-    d = np.where(np.isnan(d), np.inf, d)
+def primeira_coorte(onset):
+    """Versão 1.1: primeira rodada de rotina com carga real >=200, calculada só pela coorte,
+    igual para todos os braços (denominador comum)."""
+    R = np.array(RODADAS, float)
+    i = np.searchsorted(R, onset)                          # primeira rodada >= início do rebote
+    return np.where(i < len(R), R[np.minimum(i, len(R) - 1)], np.nan)
+
+
+def resumir(nome, r, comum=True):
+    """comum=True (versão 1.1): mesmos episódios em todos os braços. comum=False: versão 1."""
+    p = primeira_coorte(r["onset"]) if comum else r["primeira"]
+    ep = ~np.isnan(p) & (p <= 18)                          # há uma rodada seguinte observável
+    d = (r["t_conf"][ep] - p[ep]) * 30                     # dias
+    d = np.where(np.isnan(d), np.inf, np.maximum(d, 0))    # confirmação antes da rodada conta como 0
     out = dict(nome=nome, episodios=ep.sum(), reac=r["reacoes"],
                ate60=(d <= 60).mean(), ate90=(d <= 90).mean(),
-               ate_prox=(d <= 6 * 30 + 60).mean(),
+               ate240=(d <= 6 * 30 + 60).mean(), ate_prox=(d <= 6 * 30 + 60).mean(),
                mediana=np.median(d[np.isfinite(d)]))
     return out
 

@@ -1,69 +1,78 @@
 
-===== 5800 (principal) | transversal (400 mil coletas) =====
+===== 5800 (principal) | RNA residual 25% | transversal (400 mil coletas) =====
 Estratégia                                    econ  200-249 250-299 300-499 500-999  >=1000
 Individual                                    0.0%   65.5%   89.1%   99.1%  100.0%  100.0%
-Grupo de 3, regra D                          37.0%   68.4%   88.0%   99.1%  100.0%  100.0%
-Grupo de 4, regra D                          37.6%   66.4%   89.6%   99.0%  100.0%  100.0%
-Grupo de 4, regra Q20                        41.6%   67.9%   85.7%   99.1%  100.0%  100.0%
-Grupo de 5, regra D                          35.9%   64.0%   88.5%   99.2%  100.0%  100.0%
-Grupo de 8, regra D                          27.5%   65.6%   88.3%   98.9%  100.0%  100.0%
-Grupo de 5, decodificação (T=250)            56.7%   38.5%   58.4%   83.2%   95.0%   98.6%
-Concentrado k=4, R=0,7, falhas 0%            37.4%   67.9%   88.3%   99.3%  100.0%  100.0%
-Concentrado k=4, R=0,7, falhas 2%            37.5%   65.3%   87.6%   98.9%   99.9%  100.0%
-Concentrado k=4, R=0,7, falhas 5%            37.6%   66.3%   88.0%   99.0%   99.9%  100.0%
-Discordâncias grupo 4 regra D:
-   200-249: n=1106 só individual 247 só grupo 220 sem reteste 0
-   250-299: n=894 só individual 83 só grupo 71 sem reteste 0
-   300-499: n=2567 só individual 16 só grupo 13 sem reteste 0
-   500-999: n=3512 só individual 0 só grupo 0 sem reteste 0
+Grupo de 3, regra D                          14.9%   69.4%   89.4%   99.2%  100.0%  100.0%
+Grupo de 4, regra D                          16.0%   67.0%   88.3%   99.1%  100.0%  100.0%
+Grupo de 3, regra Q20                        36.3%   67.5%   87.5%   99.0%  100.0%  100.0%
+Grupo de 4, regra Q20                        39.4%   67.5%   88.6%   99.3%  100.0%  100.0%
+Grupo de 5, regra Q20                        40.0%   65.1%   87.9%   98.8%  100.0%  100.0%
+Grupo de 8, regra Q20                        36.5%   60.4%   81.2%   98.3%  100.0%  100.0%
+Grupo de 5, decodificação (T=250)            56.3%   35.0%   62.5%   83.9%   95.6%   98.6%
+Concentrado k=4, R=0,7, falhas 0%             6.3%   66.8%   89.0%   99.2%  100.0%  100.0%
+Concentrado k=4, R=0,7, falhas 2%             6.7%   68.6%   88.4%   99.1%   99.8%  100.0%
+Concentrado k=4, R=0,7, falhas 5%             7.4%   65.0%   88.7%   98.9%   99.9%  100.0%
 Discordâncias grupo 4 regra Q20:
    200-249: n=1106 só individual 249 só grupo 219 sem reteste 2
    250-299: n=894 só individual 83 só grupo 71 sem reteste 0
    300-499: n=2567 só individual 16 só grupo 13 sem reteste 0
    500-999: n=3512 só individual 0 só grupo 0 sem reteste 0
---- longitudinal (17294 episódios): individual <=60d 97.0% até rotina seguinte 98.5% mediana 42d
-grupo 4 D: econ 48.5% <=60d 97.1% até rotina seguinte 98.6% mediana 47d
-grupo 4 Q20: econ 52.9% <=60d 97.0% até rotina seguinte 98.7% mediana 47d
-grupo 3 D: econ 45.8% <=60d 97.0% até rotina seguinte 98.5% mediana 47d
+Discordâncias grupo 4 regra D:
+   200-249: n=1106 só individual 247 só grupo 220 sem reteste 0
+   250-299: n=894 só individual 83 só grupo 71 sem reteste 0
+   300-499: n=2567 só individual 16 só grupo 13 sem reteste 0
+   500-999: n=3512 só individual 0 só grupo 0 sem reteste 0
+--- longitudinal (17301 episódios, denominador comum): individual <=60d 96.9% <=240d 98.5% mediana 42d
+grupo 4 Q20: econ 50.5% <=60d 96.9% <=240d 98.7% mediana 47d
+grupo 4 D: econ 23.6% <=60d 97.0% <=240d 98.5% mediana 47d
+grupo 3 Q20: econ 45.1% <=60d 97.1% <=240d 98.6% mediana 47d
 
-===== 4800 (sensibilidade) | transversal (400 mil coletas) =====
+===== 4800 (sensibilidade) | RNA residual 25% | transversal (400 mil coletas) =====
 Estratégia                                    econ  200-249 250-299 300-499 500-999  >=1000
 Individual                                    0.0%   65.6%   90.6%   99.6%  100.0%  100.0%
-Grupo de 3, regra D                          37.0%   68.7%   89.5%   99.6%  100.0%  100.0%
-Grupo de 4, regra D                          37.6%   67.0%   91.6%   99.5%  100.0%  100.0%
-Grupo de 4, regra Q20                        41.7%   68.0%   88.8%   99.6%  100.0%  100.0%
-Grupo de 5, regra D                          36.0%   64.6%   90.5%   99.8%  100.0%  100.0%
-Grupo de 8, regra D                          27.6%   65.7%   91.3%   99.6%  100.0%  100.0%
-Grupo de 5, decodificação (T=250)            56.6%   36.4%   57.8%   81.7%   95.0%   98.9%
-Concentrado k=4, R=0,7, falhas 0%            37.4%   64.9%   91.7%   99.6%  100.0%  100.0%
-Concentrado k=4, R=0,7, falhas 2%            37.5%   65.2%   90.9%   99.2%   99.9%  100.0%
-Concentrado k=4, R=0,7, falhas 5%            37.6%   65.5%   90.7%   99.6%   99.9%  100.0%
---- longitudinal (17292 episódios): individual <=60d 97.1% até rotina seguinte 98.7% mediana 42d
-grupo 4 D: econ 48.6% <=60d 97.2% até rotina seguinte 98.7% mediana 47d
-grupo 4 Q20: econ 52.9% <=60d 97.2% até rotina seguinte 98.5% mediana 47d
-grupo 3 D: econ 45.7% <=60d 97.2% até rotina seguinte 98.5% mediana 47d
+Grupo de 3, regra D                          15.7%   70.0%   91.2%   99.7%  100.0%  100.0%
+Grupo de 4, regra D                          16.8%   67.4%   90.9%   99.6%  100.0%  100.0%
+Grupo de 3, regra Q20                        36.4%   67.5%   89.9%   99.7%  100.0%  100.0%
+Grupo de 4, regra Q20                        39.5%   67.2%   91.4%   99.6%  100.0%  100.0%
+Grupo de 5, regra Q20                        40.1%   64.8%   89.5%   99.6%  100.0%  100.0%
+Grupo de 8, regra Q20                        36.6%   60.3%   82.7%   98.3%  100.0%  100.0%
+Grupo de 5, decodificação (T=250)            56.4%   35.0%   57.4%   83.0%   95.0%   98.7%
+Concentrado k=4, R=0,7, falhas 0%             6.9%   66.1%   90.0%   99.6%  100.0%  100.0%
+Concentrado k=4, R=0,7, falhas 2%             7.4%   67.4%   90.5%   99.8%  100.0%  100.0%
+Concentrado k=4, R=0,7, falhas 5%             8.0%   67.5%   89.7%   99.5%   99.7%  100.0%
+--- longitudinal (17301 episódios, denominador comum): individual <=60d 97.1% <=240d 98.5% mediana 42d
+grupo 4 Q20: econ 50.7% <=60d 97.2% <=240d 98.6% mediana 47d
+grupo 4 D: econ 24.6% <=60d 97.3% <=240d 98.7% mediana 47d
+grupo 3 Q20: econ 45.2% <=60d 97.2% <=240d 98.5% mediana 47d
 
-===== robustez (DP 0,40 perto do limite) | transversal (400 mil coletas) =====
+===== robustez (DP 0,40 perto do limite) | RNA residual 25% | transversal (400 mil coletas) =====
 Estratégia                                    econ  200-249 250-299 300-499 500-999  >=1000
 Individual                                    0.0%   60.1%   73.6%   94.1%   99.9%  100.0%
-Grupo de 3, regra D                          37.0%   62.5%   77.5%   93.7%   99.9%  100.0%
-Grupo de 4, regra D                          37.6%   59.8%   78.4%   94.8%   99.9%  100.0%
-Grupo de 4, regra Q20                        42.5%   57.3%   71.5%   93.2%  100.0%  100.0%
-Grupo de 5, regra D                          36.0%   57.9%   77.1%   94.7%  100.0%  100.0%
-Grupo de 8, regra D                          27.6%   59.3%   76.2%   94.0%   99.9%  100.0%
-Grupo de 5, decodificação (T=250)            55.2%   35.4%   47.5%   69.0%   91.5%   98.4%
-Concentrado k=4, R=0,7, falhas 0%            37.4%   59.8%   77.5%   94.2%  100.0%  100.0%
-Concentrado k=4, R=0,7, falhas 2%            37.5%   61.5%   77.7%   94.0%   99.9%  100.0%
-Concentrado k=4, R=0,7, falhas 5%            37.6%   60.8%   78.1%   94.4%   99.9%  100.0%
---- longitudinal (17279 episódios): individual <=60d 95.0% até rotina seguinte 97.6% mediana 42d
-grupo 4 D: econ 48.2% <=60d 95.1% até rotina seguinte 97.6% mediana 47d
-grupo 4 Q20: econ 53.4% <=60d 94.6% até rotina seguinte 97.2% mediana 47d
-grupo 3 D: econ 45.5% <=60d 95.2% até rotina seguinte 97.6% mediana 47d
+Grupo de 3, regra D                          15.5%   62.2%   78.6%   94.8%  100.0%  100.0%
+Grupo de 4, regra D                          16.6%   60.6%   75.8%   94.1%   99.9%  100.0%
+Grupo de 3, regra Q20                        36.1%   58.6%   75.7%   93.5%  100.0%  100.0%
+Grupo de 4, regra Q20                        39.2%   56.2%   73.4%   93.9%  100.0%  100.0%
+Grupo de 5, regra Q20                        39.7%   53.6%   70.5%   92.1%   99.9%  100.0%
+Grupo de 8, regra Q20                        36.1%   50.0%   62.1%   86.8%   98.9%  100.0%
+Grupo de 5, decodificação (T=250)            54.7%   31.0%   45.2%   70.2%   91.6%   98.3%
+Concentrado k=4, R=0,7, falhas 0%             6.8%   59.1%   79.5%   94.7%   99.9%  100.0%
+Concentrado k=4, R=0,7, falhas 2%             7.2%   59.9%   77.1%   93.8%   99.9%  100.0%
+Concentrado k=4, R=0,7, falhas 5%             7.8%   61.2%   76.3%   94.0%   99.7%  100.0%
+--- longitudinal (17301 episódios, denominador comum): individual <=60d 95.1% <=240d 97.6% mediana 42d
+grupo 4 Q20: econ 49.8% <=60d 94.9% <=240d 97.4% mediana 47d
+grupo 4 D: econ 24.1% <=60d 95.2% <=240d 97.5% mediana 47d
+grupo 3 Q20: econ 44.5% <=60d 95.1% <=240d 97.5% mediana 47d
 
-===== Sensibilidade longitudinal (5800, grupo 4 regra D) =====
-risco 3% blip 4%: econ 54% <=60d ind 96.9% grupo 96.9%
-risco 3% blip 8%: econ 42% <=60d ind 96.9% grupo 97.1%
-risco 6% blip 4%: econ 49% <=60d ind 97.0% grupo 97.1%
-risco 6% blip 8%: econ 37% <=60d ind 96.9% grupo 96.9%
-risco 10% blip 4%: econ 42% <=60d ind 96.7% grupo 96.9%
-risco 10% blip 8%: econ 32% <=60d ind 96.9% grupo 96.8%
+===== Sensibilidade ao RNA residual abaixo de 50 (5800) =====
+residual 0%: coleta D4 37.6% Q20-4 41.6% (sem reteste 200-999: 2) | acompanhamento D4 48.5% Q20-4 52.9% | <=60d ind 97.0% D4 97.1% Q20-4 97.0%
+residual 10%: coleta D4 28.1% Q20-4 41.0% (sem reteste 200-999: 2) | acompanhamento D4 37.7% Q20-4 52.1% | <=60d ind 96.8% D4 96.9% Q20-4 97.1%
+residual 25%: coleta D4 16.0% Q20-4 39.5% (sem reteste 200-999: 2) | acompanhamento D4 23.6% Q20-4 50.5% | <=60d ind 96.9% D4 97.0% Q20-4 96.9%
+residual 40%: coleta D4 6.1% Q20-4 37.7% (sem reteste 200-999: 2) | acompanhamento D4 11.9% Q20-4 48.3% | <=60d ind 97.1% D4 97.0% Q20-4 96.9%
+
+===== Sensibilidade longitudinal (5800, residual 25%, grupo 4 regra Q20) =====
+risco 3% blip 4%: econ 56% <=60d ind 97.0% grupo 96.8%
+risco 3% blip 8%: econ 47% <=60d ind 96.8% grupo 97.1%
+risco 6% blip 4%: econ 51% <=60d ind 96.9% grupo 96.9%
+risco 6% blip 8%: econ 42% <=60d ind 96.9% grupo 96.9%
+risco 10% blip 4%: econ 44% <=60d ind 96.9% grupo 96.9%
+risco 10% blip 8%: econ 36% <=60d ind 96.8% grupo 97.0%

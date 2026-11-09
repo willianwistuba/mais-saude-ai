@@ -19,6 +19,23 @@ BANDAS = [(0.89, None), (0.04, (50, 200)), (0.02, (200, 1000)),
 PRECO = 65.84
 EXAMES_ANO = 1_200_000   # quantidade contratada (termo de referência de 2020); ordem de grandeza
 
+# Versão 1.1: fração das coletas abaixo de 50 cp/mL com RNA residual (log-uniforme de 1 a 49 cp/mL).
+# Na versão 1, todas eram zero (RESIDUAL_FRAC = 0). Só sorteia quando a fração é positiva,
+# para que a versão 1 continue reproduzível.
+RESIDUAL_FRAC = 0.0
+RESIDUAL_MAX = 49.0
+
+
+def residual(vl, rng):
+    """Põe RNA residual numa fração RESIDUAL_FRAC das cargas iguais a zero."""
+    if RESIDUAL_FRAC <= 0:
+        return vl
+    z = np.flatnonzero(vl == 0)
+    k = z[rng.random(z.size) < RESIDUAL_FRAC]
+    vl[k] = 10 ** rng.uniform(0, np.log10(RESIDUAL_MAX), k.size)
+    return vl
+
+
 CFG = dict(lod95=14.0, sd_baixo=0.30, sd_200=0.15, sd_alto=0.10)
 CENARIOS = {
     "base (DP 0,30 perto do limite)": dict(lod95=14.0, sd_baixo=0.30, sd_200=0.15, sd_alto=0.10),
@@ -36,7 +53,7 @@ def gerar(rng):
         if faixa:
             lo, hi = faixa
             vl[m] = 10 ** rng.uniform(np.log10(lo), np.log10(hi), m.sum())
-    return vl
+    return residual(vl, rng)
 
 
 def sd_de(c):

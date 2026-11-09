@@ -1,16 +1,19 @@
+<div class="box"><p class="boxt">Revision note (version 1.1, Nov 9, 2026)</p><p>Version 1 assumed that all collections below 50 cp/mL had no RNA at all. A review of the code showed that this premise underpinned the savings of rule D, which retests any detected pool. The literature indicates that a relevant share of suppressed people have detectable residual RNA below 20 cp/mL. Version 1.1 includes this residual RNA (25% of collections below 50 in the main scenario, with sensitivity from 0% to 40%), replaces the main rule with rule Q20, which retests only quantified pools and is barely affected by it, uses the same episodes in both arms of the follow-up, renames the secondary outcome to confirmation within 240 days and now shows the economic estimate as a gross scenario, to be multiplied by the eligible fraction. Version 1 remains accessible in the public repository, at commit 10f9dcd.</p></div>
 <h2>Introduction</h2>
 <h3>The problem and why it matters</h3>
-<p>The viral load test is the main way to know whether HIV treatment is working. The more effective the treatment, the larger the share of routine tests with no detectable virus. In Brazil, in 2022, 89% of people on treatment for six months or more had fewer than 50 copies/mL (Table II), and the public network works with about 1.1 million HIV viral load tests per year, at a reference price of R$ 67.31 per test in 2026 <cite>15</cite>.</p>
-<p>When most samples are negative, testing them in pools can save reactions. The technical question is whether this is possible without delaying the detection of those in failure, which, under the operational rule used in this note, means two consecutive results of 200 copies/mL or more, with at least 4 weeks between collections <cite>12</cite>.</p>
+<p>The viral load test is the main way to know whether HIV treatment is working. The more effective the treatment, the larger the share of routine tests with no quantifiable virus. In Brazil, in 2022, 89% of people on treatment for six months or more had fewer than 50 copies/mL (Table II), and the public network works with about 1.1 million HIV viral load tests per year, at a reference price of R$ 67.31 per test in 2026 <cite>15</cite>.</p>
+<p>When most samples are below the cutoff, testing them in pools can save reactions. The technical question is whether this is possible without delaying the identification of those in failure, which, under the operational rule used in this note, means two consecutive results of 200 copies/mL or more, with at least 4 weeks between collections <cite>12</cite>.</p>
 <h3>What is already known</h3>
 <p>Pooled testing was proposed in the 1940s <cite>1</cite> and has been used for decades in blood banks, including with plasma concentration by centrifugation to offset dilution <cite>2</cite>.</p>
 <p>For HIV viral load during treatment, studies from 2009 to 2017 evaluated pools of 5 and 10 × 10 matrices with quantitative deconvolution, with reductions from one third to more than half in the number of tests <cite>3,4,5,6</cite>. There are also prediction-guided methods <cite>7</cite>. In 2025, a reference laboratory in Cameroon reported routine use of pools of 3, with 0.55 assays per result <cite>8</cite>.</p>
-<p>These works were found through a general internet search and by reading abstracts, on Nov 8, 2026. There was no systematic literature search: PubMed, SciELO, LILACS, Europe PMC and other databases were not searched systematically, and the full texts were not read. For this reason, this note does not claim that the approach is new. As far as the search reached, many earlier studies prioritized thresholds higher than 200 copies/mL and used kits that predate the current ones.</p>
+<p>Below 50 copies/mL, "suppressed" does not mean free of RNA. Current kits distinguish "não detectado" from "detectado, inferior a 20". In a Spanish service, 25.3% of people on suppressive treatment had between 20 and 49 copies/mL with an earlier kit <cite>22</cite>; a review reports very low-level viremia in 20% to 60% of people on suppressive treatment, depending on the kit <cite>23</cite>; and, in a French cohort, switching to the cobas 6800 system doubled the share of patients with some result of 20 copies/mL or more, from 18.5% to 37.0% <cite>21</cite>. This matters for pooled testing because a rule that retests any detection also ends up retesting these pools.</p>
+<p>These works were found through a general internet search and by reading abstracts, on Nov 8 and 9, 2026. There was no systematic literature search: PubMed, SciELO, LILACS, Europe PMC and other databases were not searched systematically, and most of the full texts were not read. For this reason, this note does not claim that the approach is new. As far as the search reached, many earlier studies prioritized thresholds higher than 200 copies/mL and used kits that predate the current ones.</p>
 <h3>The question</h3>
 <p>This note asks, with Brazilian public parameters:</p>
 <ul>
 <li><b>Performance per collection:</b> how many reactions does each pooling strategy save, and how does it compare with individual testing in detecting loads between 200 and 249, 250 and 299, 300 and 499 and 500 and 999 copies/mL?</li>
 <li><b>Performance during follow-up:</b> among suppressed adults, does the best strategy confirm virological failure within 60 days in the same proportion as individual testing, and with how much delay?</li>
+<li><b>Residual RNA:</b> how much do the savings of each rule depend on the share of collections with detectable RNA below 50 copies/mL?</li>
 <li><b>First principles:</b> does concentrating the pool's plasma, to avoid dilution, improve the result?</li>
 <li><b>Potential:</b> if the conditions for adoption converged, how large would the cost reduction be compared with current practice?</li>
 </ul>
@@ -19,13 +22,14 @@
 
 <h2>Data</h2>
 <div class="tblwrap"><p class="cap">Public sources used, with period and main limitation.</p><table><thead><tr><th>Source</th><th>What it provides</th><th>Period</th><th>Main limitation</th></tr></thead><tbody>
-<tr><td>HIV Clinical Monitoring Report 2022, Figure 76 <cite>9</cite></td><td>national distribution of viral load by range</td><td>Jan to Sep 2022</td><td>includes everyone on treatment for 6 months or more, not only routine tests of suppressed people; values read from a chart</td></tr>
+<tr><td>HIV Clinical Monitoring Report 2022, Figure 76 <cite>9</cite></td><td>national distribution of viral load by range</td><td>Jan to Sep 2022</td><td>includes everyone on treatment for 6 months or more, not only routine tests of suppressed people; does not separate "não detectado" from "detectado" below 50; values read from a chart</td></tr>
 <tr><td>Instructions for use of cobas HIV-1 for cobas 5800/6800/8800 <cite>10</cite></td><td>detection near the limit, limit of quantification, reproducibility, minimum volume, how results are reported</td><td>version consulted on Nov 8, 2026</td><td>precision measured on the 6800/8800 systems; no imprecision data below 50 cp/mL</td></tr>
 <tr><td>Instructions for use of cobas HIV-1 for cobas 4800 <cite>11</cite></td><td>the same items for the 4800</td><td>version consulted on Nov 8, 2026</td><td>no imprecision data below 77 cp/mL</td></tr>
+<tr><td>Studies on residual RNA during suppressive treatment <cite>21,22,23</cite></td><td>order of magnitude of the share of people with detectable RNA below 50 cp/mL</td><td>2010 to 2022</td><td>services in other countries, different kits and definitions; shares per person, not per collection</td></tr>
 <tr><td>Technical Notes 286/2023 and 74/2026 <cite>13,12</cite></td><td>network kits and result categories; operational definition of confirmed failure</td><td>2023 to 2026</td><td>summary of the instructions for use; genotyping context</td></tr>
 <tr><td>Network procurement documents <cite>14,15,16,17</cite></td><td>annual scale, reference price, payment model and execution rules of current practice</td><td>2021 to 2026</td><td>contracted quantities, not performed</td></tr>
 </tbody></table></div>
-<div class="tblwrap"><p class="cap">Viral load distribution used in the simulations: people aged 2 years or older, on treatment for at least six months, Brazil, January to September 2022 <cite>9</cite>.</p><table><thead><tr><th>Range (copies/mL)</th><th>Proportion</th></tr></thead><tbody>
+<div class="tblwrap"><p class="cap">Viral load distribution used in the simulations: people aged 2 years or older, on treatment for at least six months, Brazil, January to September 2022 <cite>9</cite>. The range below 50 receives residual RNA in a share of collections (section III).</p><table><thead><tr><th>Range (copies/mL)</th><th>Proportion</th></tr></thead><tbody>
 <tr><td>below 50</td><td>89%</td></tr>
 <tr><td>50 to 199</td><td>4%</td></tr>
 <tr><td>200 to 999</td><td>2%</td></tr>
@@ -51,107 +55,119 @@
 <p>The chance that the kit detects the virus in a reaction with concentration \(c\) was modeled as</p>
 <div class="eq">\[ P(\text{detect}) = 1 - e^{-3c/L} \]</div>
 <p>where \(L\) is the 95% limit of detection: with \(c = L\), the chance is \(1 - e^{-3} \approx 95\%\). The model reproduces the detection rates in the instructions for use at 20, 10 and 5 cp/mL with a difference of up to 2 points (Table III) and overestimates detection at 2.5 cp/mL (43% against 35%), which only sends some pools to unnecessary retest. The measured value follows a lognormal distribution around the true value, with the standard deviation in Table III.</p>
+<h3>Residual RNA below 50</h3>
+<p>In a fraction \(f\) of collections below 50 cp/mL, the true load is drawn uniformly on a log scale between 1 and 49 cp/mL; in the others, it is zero. With this shape, about 23% of collections with residual RNA fall between 20 and 49, and the rest below 20. The main scenario uses \(f = 25\%\), in the order of magnitude of the studies cited <cite>21,22,23</cite>; the sensitivity analysis uses 0% (the premise of version 1), 10% and 40%. During follow-up, the draw is repeated at each collection, for those who are not in rebound or in transient viremia.</p>
 <h3>Reference</h3>
 <p><b>Individual testing.</b> Each sample is tested once; the result is elevated when the measurement is 200 cp/mL or more.</p>
 <h3>Pooling strategies</h3>
 <p>The pool receives equal parts of \(k\) samples. The retest rules were restricted to those executable with the kit's output:</p>
 <ul>
-<li><b>Rule D:</b> the pool goes to retest whenever the kit detects virus, including when the result is "detectado, inferior a 20 cp/mL", with no numerical value.</li>
-<li><b>Rule Q20:</b> the pool goes to retest only when it is quantified at 20 cp/mL or more. In a pool of 4, this is equivalent to 80 cp/mL per sample.</li>
+<li><b>Rule Q20 (main):</b> the pool goes to retest only when it is quantified at 20 cp/mL or more. In a pool of 4, this is equivalent to 80 cp/mL per sample.</li>
+<li><b>Rule D (comparison):</b> the pool goes to retest whenever the kit detects virus, including when the result is "detectado, inferior a 20 cp/mL", with no numerical value.</li>
 </ul>
-<p>Numerical triggers below 20 cp/mL in the pool were not used, because the kit does not report a value in that range. The retest is a new measurement of the stored sample, independent of the measurement in the individual arm. Pools of 3, 4, 5 and 8 were evaluated with rule D, and of 4 with rule Q20. Two comparisons complete the set:</p>
+<p>Numerical triggers below 20 cp/mL in the pool were not used, because the kit does not report a value in that range. The retest is a new measurement of the stored sample, independent of the measurement in the individual arm. Pools of 3, 4, 5 and 8 were evaluated with rule Q20, and of 3 and 4 with rule D. Two comparisons complete the set:</p>
 <ul>
 <li><b>Quantitative deconvolution</b> with pools of 5 and a threshold of 250 cp/mL (configuration simulated from <cite>3,4</cite>): if the pool indicates 250 or more per sample, the samples are tested one by one, and the value of each is subtracted from the estimated total until the remainder falls below the threshold. Only quantified values enter the calculations.</li>
 <li><b>Pre-concentration:</b> 1 mL from each of 4 samples is concentrated into the volume of one reaction, with mean recovery of 0.7 and 0%, 2% or 5% of poor recoveries (between 0 and 0.2), with rule D.</li>
 </ul>
-<div class="box"><p class="boxt">Example</p><p>In a pool of 4 with one sample at 240 cp/mL and three with no virus, the pool has about 60 cp/mL. The kit detects and quantifies it, and the pool goes to retest under both rules. If imprecision makes the pool measure 15, the result comes out "detectado, inferior a 20": the pool goes to retest under rule D and does not under rule Q20.</p></div>
+<div class="box"><p class="boxt">Example</p><p>In a pool of 4 with one sample at 240 cp/mL and three with no virus, the pool has about 60 cp/mL: the kit quantifies it, and the pool goes to retest under both rules. If, instead of the sample at 240, the pool has one person with residual RNA of 15 cp/mL, the pool will have about 4 cp/mL: the kit may report "detectado, inferior a 20", and the pool goes to retest under rule D, but not under rule Q20.</p></div>
 <h3>Cross-sectional stage</h3>
-<p>400,000 collections were simulated with the distribution in Table II, drawn uniformly on a log scale within each range. For each strategy, reactions per sample and the share detected as 200 or more in each subrange were measured. Discordances with individual testing were counted in both directions, with independent measurements in both arms. The loss caused by the retest rule was separated out: cases that individual testing detects and whose pool did not go to retest.</p>
+<p>400,000 collections were simulated with the distribution in Table II, drawn uniformly on a log scale within each range, with the residual RNA described above. For each strategy, reactions per sample and the share detected as 200 or more in each subrange were measured. Discordances with individual testing were counted in both directions, with independent measurements in both arms. The loss caused by the retest rule was separated out: cases that individual testing detects and whose pool did not go to retest.</p>
 <h3>Longitudinal stage</h3>
 <p>A cohort of 200,000 suppressed adults was followed for 24 months, with routine collections at months 6, 12, 18 and 24.</p>
 <ul>
 <li>Sustained rebounds arise with an annual risk of 6%. Two in seven stay between 200 and 999 cp/mL, and the rest above 1,000, in the proportion of Table II.</li>
 <li>Transient viremias between 50 and 199 cp/mL appear in 4% of collections, as in Table II.</li>
 <li>Each elevated collection triggers a new collection 28 days after the report, always tested individually. Two results of 200 or more confirm failure, and the person leaves the pools.</li>
-<li>The report takes 7 days, plus 5 days when the pool goes to retest.</li>
+<li>The report takes 7 days, plus 5 days when the pool goes to retest. This addition is fixed in the model and on its own explains the difference in median between the arms.</li>
 </ul>
 <p>The operational rule follows Technical Note 74/2026 (≥ 200 cp/mL); the 2024 PCDT uses the wording "&gt; 200", and the difference does not change the simulation.</p>
-<p><b>Primary outcome:</b> proportion of episodes confirmed within 60 days after the first routine collection with a true load of 200 or more, counting in the denominator the episodes that the strategy missed. <b>Secondary outcomes:</b> confirmation by the next routine collection (second opportunity, six months later) and median days until confirmation. Episodes whose first elevated collection was up to month 18 are included.</p>
+<p><b>Episodes:</b> the same in both arms, defined by the cohort alone: the first routine collection after the start of the rebound, up to month 18 (17,301 episodes). <b>Primary outcome:</b> proportion of episodes confirmed within 60 days after that collection, counting in the denominator the episodes that the strategy missed. <b>Secondary outcomes:</b> confirmation within 240 days (the time to the next routine collection, six months later, plus 60 days) and median days until confirmation.</p>
 <h3>Economic potential</h3>
-<p>The reduction in reactions does not convert fully into a cost reduction, because the price per test also includes equipment, collection, transport, maintenance, technical support and training <cite>16,17</cite>. The potential was estimated as</p>
-<div class="eq">\[ \text{annual reduction} = R \times w \times V \]</div>
-<p>where \(R\) is the reduction in reactions, \(w\) is the weight of the reaction in the price per test and \(V\) is the annual reference value (1.1 million tests at R$ 67.31, about R$ 74 million <cite>15</cite>). As \(w\) is not public, illustrative values of 30%, 50% and 60% were used. For example, with \(R = 38\%\) and \(w = 30\%\), the reduction would be 11.4% of the annual value.</p>
+<p>The reduction in reactions does not convert fully into a cost reduction, because the price per test also includes equipment, collection, transport, maintenance, technical support and training <cite>16,17</cite>, and because only part of the tests would be eligible. The potential was estimated as</p>
+<div class="eq">\[ \text{annual reduction} = R \times e \times w \times V \]</div>
+<p>where \(R\) is the reduction in reactions among eligible tests, \(e\) is the eligible fraction of the volume, \(w\) is the weight of the reaction in the price per test and \(V\) is the annual reference value (1.1 million tests at R$ 67.31, about R$ 74 million <cite>15</cite>). As \(e\) and \(w\) are not public, the note shows the gross scenario with \(e = 100\%\) and illustrative weights of 30%, 50% and 60%, and an example with \(e = 60\%\). The additional costs of the pooled workflow (handling, tracking, reporting systems) were not deducted.</p>
 <h3>Variation</h3>
-<p>The intervals are empirical across 40 replicates with different seeds (2.5% to 97.5%). They describe the variation under the simulated model, not the uncertainty of the parameters, which was explored through the scenarios and the sensitivity analysis.</p>
+<p>The intervals are empirical across 40 replicates with different seeds (2.5% to 97.5%). They describe the variation under the simulated model, not the uncertainty of the parameters, which was explored through the scenarios and the sensitivity analysis. Numbers from different tables may vary in the decimal place because they come from different draws.</p>
 <h3>Sensitivity analyses</h3>
 <ul>
+<li>Share of collections below 50 with residual RNA: 0%, 10%, 25% and 40%.</li>
 <li>cobas 4800 parameters instead of the 5800.</li>
 <li>Robustness scenario with greater imprecision (Table III).</li>
 <li>Annual rebound risk of 3%, 6% and 10%, crossed with transient viremia in 4% and 8% of collections.</li>
 </ul>
 <h3>Protocol deviations</h3>
-<p>Not applicable: the protocol has not yet been registered. The rules and configurations were revised during exploration, after earlier results had been examined, including through an external review that pointed out a trigger that could not be executed with the kit. In a confirmatory version, the main rule (D), the handling of non-quantifiable results and the 60-day outcome will be fixed before the run.</p>
+<p>Not applicable: the protocol has not yet been registered. The rules and configurations were revised during exploration, after earlier results had been examined, including through external reviews that pointed out a trigger that could not be executed with the kit (before version 1) and the premise of zero load below 50 (version 1.1). In a confirmatory version, the main rule, the share of residual RNA, the handling of non-quantifiable results and the 60-day outcome will be fixed before the run.</p>
 
 <h2>Results</h2>
-<div class="box"><p class="boxt">How to read these results</p><ul><li>"Fewer reactions" compares with individual testing on the same collections.</li><li>Detection is the share of samples in each subrange that received a result of 200 or more. Individual testing does not reach 100% near the cutoff because imprecision pushes part of the loads close to 200 below it.</li><li>Differences of 1 to 3 points in a subrange are within the variation expected between two measurements of the same sample (Table V).</li></ul></div>
+<div class="box"><p class="boxt">How to read these results</p><ul><li>"Fewer reactions" compares with individual testing on the same collections.</li><li>Detection is the share of samples in each subrange that received a result of 200 or more. Individual testing does not reach 100% near the cutoff because imprecision pushes part of the loads close to 200 below it.</li><li>Differences of 1 to 3 points in a subrange are within the variation expected between two measurements of the same sample (Table V).</li><li>Unless otherwise stated, the results use the main scenario: cobas 5800 and residual RNA in 25% of collections below 50.</li></ul></div>
 <h3>Performance per collection</h3>
-<div class="tblwrap"><p class="cap">Cross-sectional stage, main scenario (cobas 5800): fewer reactions and detection by subrange (cp/mL). In bold, the main strategy.</p><table><thead><tr><th>Strategy</th><th>Fewer reactions</th><th>200 to 249</th><th>250 to 299</th><th>300 to 499</th><th>500 to 999</th><th>1,000 or more</th></tr></thead><tbody>
+<div class="tblwrap"><p class="cap">Cross-sectional stage, main scenario (cobas 5800, residual RNA of 25%): fewer reactions and detection by subrange (cp/mL). In bold, the main strategy.</p><table><thead><tr><th>Strategy</th><th>Fewer reactions</th><th>200 to 249</th><th>250 to 299</th><th>300 to 499</th><th>500 to 999</th><th>1,000 or more</th></tr></thead><tbody>
 <tr><td>Individual</td><td>0%</td><td>65.5%</td><td>89.1%</td><td>99.1%</td><td>100%</td><td>100%</td></tr>
-<tr><td>Pool of 3, rule D</td><td>37.0%</td><td>68.4%</td><td>88.0%</td><td>99.1%</td><td>100%</td><td>100%</td></tr>
-<tr><td><b>Pool of 4, rule D</b></td><td><b>37.6%</b></td><td><b>66.4%</b></td><td><b>89.6%</b></td><td><b>99.0%</b></td><td><b>100%</b></td><td><b>100%</b></td></tr>
-<tr><td>Pool of 4, rule Q20</td><td>41.6%</td><td>67.9%</td><td>85.7%</td><td>99.1%</td><td>100%</td><td>100%</td></tr>
-<tr><td>Pool of 5, rule D</td><td>35.9%</td><td>64.0%</td><td>88.5%</td><td>99.2%</td><td>100%</td><td>100%</td></tr>
-<tr><td>Pool of 8, rule D</td><td>27.5%</td><td>65.6%</td><td>88.3%</td><td>98.9%</td><td>100%</td><td>100%</td></tr>
-<tr><td>Pool of 5, deconvolution (threshold 250)</td><td>56.7%</td><td>38.5%</td><td>58.4%</td><td>83.2%</td><td>95.0%</td><td>98.6%</td></tr>
-<tr><td>Pre-concentration of 4, no failures</td><td>37.4%</td><td>67.9%</td><td>88.3%</td><td>99.3%</td><td>100%</td><td>100%</td></tr>
-<tr><td>Pre-concentration of 4, 5% failures</td><td>37.6%</td><td>66.3%</td><td>88.0%</td><td>99.0%</td><td>99.9%</td><td>100%</td></tr>
+<tr><td>Pool of 3, rule Q20</td><td>36.3%</td><td>67.5%</td><td>87.5%</td><td>99.0%</td><td>100%</td><td>100%</td></tr>
+<tr><td><b>Pool of 4, rule Q20</b></td><td><b>39.4%</b></td><td><b>67.5%</b></td><td><b>88.6%</b></td><td><b>99.3%</b></td><td><b>100%</b></td><td><b>100%</b></td></tr>
+<tr><td>Pool of 5, rule Q20</td><td>40.0%</td><td>65.1%</td><td>87.9%</td><td>98.8%</td><td>100%</td><td>100%</td></tr>
+<tr><td>Pool of 8, rule Q20</td><td>36.5%</td><td>60.4%</td><td>81.2%</td><td>98.3%</td><td>100%</td><td>100%</td></tr>
+<tr><td>Pool of 3, rule D</td><td>14.9%</td><td>69.4%</td><td>89.4%</td><td>99.2%</td><td>100%</td><td>100%</td></tr>
+<tr><td>Pool of 4, rule D</td><td>16.0%</td><td>67.0%</td><td>88.3%</td><td>99.1%</td><td>100%</td><td>100%</td></tr>
+<tr><td>Pool of 5, deconvolution (threshold 250)</td><td>56.3%</td><td>35.0%</td><td>62.5%</td><td>83.9%</td><td>95.6%</td><td>98.6%</td></tr>
+<tr><td>Pre-concentration of 4, no failures</td><td>6.3%</td><td>66.8%</td><td>89.0%</td><td>99.2%</td><td>100%</td><td>100%</td></tr>
+<tr><td>Pre-concentration of 4, 5% failures</td><td>7.4%</td><td>65.0%</td><td>88.7%</td><td>98.9%</td><td>99.9%</td><td>100%</td></tr>
 </tbody></table></div>
-<p>Across the 40 replicates, the pool of 4 with rule D used 37.9% fewer reactions (empirical interval 37.6% to 38.3%), with a difference of 0.1 point (−0.8 to 1.2) in detection between 200 and 499 cp/mL. Larger pools saved less, because more pools went to retest: with 8 samples, 60% of them. Quantitative deconvolution saved more, but detected only 38.5% of loads between 200 and 249 and 83.2% between 300 and 499.</p>
+<p>Across the 40 replicates, the pool of 4 with rule Q20 used 39.7% fewer reactions (empirical interval 39.5% to 40.0%), with a difference of −0.1 point (−1.3 to 0.8) in detection between 200 and 499 cp/mL. Pools of 5 saved almost the same, and pools of 8 saved less and detected less near the cutoff, because dilution brings more loads just above 200 below 20 in the pool. Rule D saved less than half as much as rule Q20, because residual RNA sends many pools to retest. Quantitative deconvolution saved more, but detected only 35.0% of loads between 200 and 249 and 83.9% between 300 and 499.</p>
 <div class="tblwrap"><p class="cap">Discordances between individual testing and the pool of 4, with independent measurements in both arms, main scenario. The last column is the loss caused by the retest rule.</p><table><thead><tr><th>Rule and subrange (cp/mL)</th><th>Samples</th><th>Only individual detects</th><th>Only pool detects</th><th>Individual detects and pool not retested</th></tr></thead><tbody>
-<tr><td>D, 200 to 249</td><td>1,106</td><td>247</td><td>220</td><td>0</td></tr>
-<tr><td>D, 250 to 299</td><td>894</td><td>83</td><td>71</td><td>0</td></tr>
-<tr><td>D, 300 to 499</td><td>2,567</td><td>16</td><td>13</td><td>0</td></tr>
-<tr><td>D, 500 to 999</td><td>3,512</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>Q20, 200 to 249</td><td>1,106</td><td>249</td><td>219</td><td>2</td></tr>
 <tr><td>Q20, 250 to 299</td><td>894</td><td>83</td><td>71</td><td>0</td></tr>
 <tr><td>Q20, 300 to 499</td><td>2,567</td><td>16</td><td>13</td><td>0</td></tr>
+<tr><td>Q20, 500 to 999</td><td>3,512</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>D, 200 to 249</td><td>1,106</td><td>247</td><td>220</td><td>0</td></tr>
+<tr><td>D, 250 to 299</td><td>894</td><td>83</td><td>71</td><td>0</td></tr>
+<tr><td>D, 300 to 499</td><td>2,567</td><td>16</td><td>13</td><td>0</td></tr>
 </tbody></table></div>
-<p>Discordances in both directions reflect the repeatability of the assay near the cutoff, which also appears between two individual measurements of the same sample. The loss caused by the retest rule was zero under rule D, in all subranges.</p>
+<p>Discordances in both directions reflect the repeatability of the assay near the cutoff, which also appears between two individual measurements of the same sample. The loss caused by the retest rule was 2 in 1,106 samples between 200 and 249 cp/mL under rule Q20, and zero above 250; under rule D, it was zero.</p>
+<h3>Sensitivity to residual RNA</h3>
+<div class="tblwrap"><p class="cap">Fewer reactions with pools of 4 under rules D and Q20, per collection and during follow-up, and confirmation within 60 days (individual, D and Q20), depending on the share of collections below 50 with residual RNA. Cobas 5800. The 0% row reproduces the premise of version 1.</p><table><thead><tr><th>Residual RNA</th><th>Per collection, D</th><th>Per collection, Q20</th><th>Follow-up, D</th><th>Follow-up, Q20</th><th>Within 60 days</th></tr></thead><tbody>
+<tr><td>0%</td><td>37.6%</td><td>41.6%</td><td>48.5%</td><td>52.9%</td><td>97.0%, 97.1% and 97.0%</td></tr>
+<tr><td>10%</td><td>28.1%</td><td>41.0%</td><td>37.7%</td><td>52.1%</td><td>96.8%, 96.9% and 97.1%</td></tr>
+<tr><td><b>25%</b></td><td>16.0%</td><td><b>39.5%</b></td><td>23.6%</td><td><b>50.5%</b></td><td>96.9%, 97.0% and 96.9%</td></tr>
+<tr><td>40%</td><td>6.1%</td><td>37.7%</td><td>11.9%</td><td>48.3%</td><td>97.1%, 97.0% and 96.9%</td></tr>
+</tbody></table></div>
+<p>The savings of rule D fall from 38% to 6% per collection when the share of residual RNA goes from 0% to 40%. Those of rule Q20 fall only from 42% to 38%. One person's residual RNA, diluted in four, almost always stays below 20 cp/mL in the pool, and therefore does not trigger rule Q20. In all shares, the losses from lack of retest under rule Q20 stayed at 2 samples between 200 and 999 cp/mL, and confirmation within 60 days did not change noticeably.</p>
 <h3>Pre-concentration</h3>
-<p>Pre-concentration brought no gain in reactions or in detection. Dilution was not what limited the savings: with a limit of detection of 13 to 14 cp/mL, a pool of 4 takes a sample of 200 cp/mL to about 50 in the pool, which is detected almost always. The limit came from viremia between 50 and 199 cp/mL, which sends pools to retest without indicating failure.</p>
+<p>Pre-concentration worsened the result. Without residual RNA, it tied with rule D (version 1). With residual RNA, concentrating 1 mL of each sample makes the residual RNA detectable almost always, and the savings fall to 6% to 7%. Dilution is not the bottleneck with the current kits: a pool of 4 takes a sample of 200 cp/mL to about 50 in the pool, which is quantified almost always.</p>
 <h3>24-month follow-up</h3>
-<div class="tblwrap"><p class="cap">Longitudinal stage, main scenario, 17,294 episodes: fewer reactions, confirmation within 60 days and by the next routine collection, and median days until confirmation. In bold, the main strategy.</p><table><thead><tr><th>Strategy</th><th>Fewer reactions</th><th>Confirmed within 60 days</th><th>By the next collection</th><th>Median until confirmation</th></tr></thead><tbody>
-<tr><td>Individual</td><td>0%</td><td>97.0%</td><td>98.5%</td><td>42 days</td></tr>
-<tr><td><b>Pool of 4, rule D</b></td><td><b>48.5%</b></td><td><b>97.1%</b></td><td><b>98.6%</b></td><td><b>47 days</b></td></tr>
-<tr><td>Pool of 4, rule Q20</td><td>52.9%</td><td>97.0%</td><td>98.7%</td><td>47 days</td></tr>
-<tr><td>Pool of 3, rule D</td><td>45.8%</td><td>97.0%</td><td>98.5%</td><td>47 days</td></tr>
+<div class="tblwrap"><p class="cap">Longitudinal stage, main scenario, 17,301 episodes common to both arms: fewer reactions, confirmation within 60 days and within 240 days, and median days until confirmation. In bold, the main strategy.</p><table><thead><tr><th>Strategy</th><th>Fewer reactions</th><th>Confirmed within 60 days</th><th>Within 240 days</th><th>Median until confirmation</th></tr></thead><tbody>
+<tr><td>Individual</td><td>0%</td><td>96.9%</td><td>98.5%</td><td>42 days</td></tr>
+<tr><td><b>Pool of 4, rule Q20</b></td><td><b>50.5%</b></td><td><b>96.9%</b></td><td><b>98.7%</b></td><td><b>47 days</b></td></tr>
+<tr><td>Pool of 3, rule Q20</td><td>45.1%</td><td>97.1%</td><td>98.6%</td><td>47 days</td></tr>
+<tr><td>Pool of 4, rule D</td><td>23.6%</td><td>97.0%</td><td>98.5%</td><td>47 days</td></tr>
 </tbody></table></div>
-<p>Across the 40 replicates, the pool of 4 with rule D used 48.5% fewer reactions (empirical interval 48.4% to 48.7%), with a difference of 0.0 point (−0.4 to 0.2) in confirmation within 60 days. The median of 47 days corresponds to the direct path: report in 7 days plus 5 for retest, new collection 28 days later and confirmation report in 7 days. The longitudinal savings are larger than the cross-sectional ones because the cohort only includes suppressed people, and those with confirmed failure leave the pools.</p>
+<p>Across the 40 replicates, the pool of 4 with rule Q20 used 50.4% fewer reactions (empirical interval 50.3% to 50.5%), with a difference of 0.0 point (−0.3 to 0.2) in confirmation within 60 days. The median of 47 days corresponds to the direct path: report in 7 days plus 5 for retest, new collection 28 days later and confirmation report in 7 days. The savings during follow-up are larger than those per collection because the cohort only includes suppressed people, and those with confirmed failure leave the pools.</p>
 <h3>Sensitivity</h3>
-<div class="tblwrap"><p class="cap">Main results in the three assay scenarios, pool of 4 with rule D: fewer reactions per collection, samples between 200 and 999 cp/mL without retest, fewer reactions during follow-up and confirmation within 60 days (individual and pool).</p><table><thead><tr><th>Scenario</th><th>Per collection</th><th>Without retest</th><th>During follow-up</th><th>Within 60 days</th></tr></thead><tbody>
-<tr><td>cobas 5800 (main)</td><td>37.6%</td><td>0</td><td>48.5%</td><td>97.0% and 97.1%</td></tr>
-<tr><td>cobas 4800</td><td>37.6%</td><td>0</td><td>48.6%</td><td>97.1% and 97.2%</td></tr>
-<tr><td>Robustness (greater imprecision)</td><td>37.6%</td><td>0</td><td>48.2%</td><td>95.0% and 95.1%</td></tr>
+<div class="tblwrap"><p class="cap">Main results in the three assay scenarios, pool of 4 with rule Q20 and residual RNA of 25%: fewer reactions per collection and during follow-up, and confirmation within 60 days (individual and pool).</p><table><thead><tr><th>Scenario</th><th>Per collection</th><th>During follow-up</th><th>Within 60 days</th></tr></thead><tbody>
+<tr><td>cobas 5800 (main)</td><td>39.4%</td><td>50.5%</td><td>96.9% and 96.9%</td></tr>
+<tr><td>cobas 4800</td><td>39.5%</td><td>50.7%</td><td>97.1% and 97.2%</td></tr>
+<tr><td>Robustness (greater imprecision)</td><td>39.2%</td><td>49.8%</td><td>95.1% and 94.9%</td></tr>
 </tbody></table></div>
-<p>In the robustness scenario, rule Q20 fell to 94.6% confirmation within 60 days, against 95.0% for individual testing.</p>
-<div class="tblwrap"><p class="cap">Longitudinal sensitivity, main scenario, pool of 4 with rule D: annual rebound risk, share of collections with transient viremia, fewer reactions and confirmation within 60 days (individual and pool).</p><table><thead><tr><th>Rebound</th><th>Transient viremia</th><th>Fewer reactions</th><th>Within 60 days</th></tr></thead><tbody>
-<tr><td>3%</td><td>4%</td><td>54%</td><td>96.9% and 96.9%</td></tr>
-<tr><td>3%</td><td>8%</td><td>42%</td><td>96.9% and 97.1%</td></tr>
-<tr><td>6%</td><td>4%</td><td>49%</td><td>97.0% and 97.1%</td></tr>
-<tr><td>6%</td><td>8%</td><td>37%</td><td>96.9% and 96.9%</td></tr>
-<tr><td>10%</td><td>4%</td><td>42%</td><td>96.7% and 96.9%</td></tr>
-<tr><td>10%</td><td>8%</td><td>32%</td><td>96.9% and 96.8%</td></tr>
+<p>In the robustness scenario, rule Q20 detected 56.2% of loads between 200 and 249, against 60.1% for individual testing, and confirmed 0.2 point less within 60 days. This is the loss just above the cutoff that greater imprecision produces when the pool is close to 20 cp/mL.</p>
+<div class="tblwrap"><p class="cap">Longitudinal sensitivity, main scenario, pool of 4 with rule Q20: annual rebound risk, share of collections with transient viremia, fewer reactions and confirmation within 60 days (individual and pool).</p><table><thead><tr><th>Rebound</th><th>Transient viremia</th><th>Fewer reactions</th><th>Within 60 days</th></tr></thead><tbody>
+<tr><td>3%</td><td>4%</td><td>56%</td><td>97.0% and 96.8%</td></tr>
+<tr><td>3%</td><td>8%</td><td>47%</td><td>96.8% and 97.1%</td></tr>
+<tr><td>6%</td><td>4%</td><td>51%</td><td>96.9% and 96.9%</td></tr>
+<tr><td>6%</td><td>8%</td><td>42%</td><td>96.9% and 96.9%</td></tr>
+<tr><td>10%</td><td>4%</td><td>44%</td><td>96.9% and 96.9%</td></tr>
+<tr><td>10%</td><td>8%</td><td>36%</td><td>96.8% and 97.0%</td></tr>
 </tbody></table></div>
-<p>In all combinations, the difference in confirmation within 60 days was 0.2 point or less. The reduction in reactions ranged from 32% to 54%, mainly depending on the frequency of transient viremia.</p>
+<p>In all combinations, the difference in confirmation within 60 days was 0.3 point or less, in either direction. The reduction in reactions ranged from 36% to 56%, mainly depending on the frequency of transient viremia.</p>
 <h3>Plasma volume</h3>
 <p>In the 500 μL workflow of the cobas 5800, the tube needs at least 650 μL <cite>10</cite>. A pool of 4 would require about 163 μL from each sample, and a possible individual retest another 650 μL. Each collection would need to yield at least about 0.8 mL of plasma, plus a reserve for repetition. On the cobas 4800, with 1,000 μL in the secondary tube, it would be about 1.25 mL <cite>11</cite>.</p>
 <h3>Conditional economic potential</h3>
-<div class="tblwrap"><p class="cap">Estimated annual cost reduction (R × w × V), with V of about R$ 74 million, for the reduction in reactions per collection (38%) and during follow-up of suppressed people (49%), depending on the weight of the reaction in the price (w).</p><table><thead><tr><th>Reaction weight (w)</th><th>With 38% fewer reactions</th><th>With 49% fewer reactions</th></tr></thead><tbody>
-<tr><td>30%</td><td>11.4% (R$ 8.4 million)</td><td>14.7% (R$ 10.9 million)</td></tr>
-<tr><td>50%</td><td>19.0% (R$ 14.1 million)</td><td>24.5% (R$ 18.1 million)</td></tr>
-<tr><td>60%</td><td>22.8% (R$ 16.9 million)</td><td>29.4% (R$ 21.8 million)</td></tr>
+<div class="tblwrap"><p class="cap">Gross scenario with 100% eligibility: estimated annual cost reduction (R × w × V), with V of about R$ 74 million, for the reduction in reactions per collection (39%) and during follow-up of suppressed people (50%), depending on the weight of the reaction in the price (w). Without deducting additional costs of the pooled workflow.</p><table><thead><tr><th>Reaction weight (w)</th><th>With 39% fewer reactions</th><th>With 50% fewer reactions</th></tr></thead><tbody>
+<tr><td>30%</td><td>11.8% (R$ 8.8 million)</td><td>15.2% (R$ 11.2 million)</td></tr>
+<tr><td>50%</td><td>19.7% (R$ 14.6 million)</td><td>25.2% (R$ 18.7 million)</td></tr>
+<tr><td>60%</td><td>23.6% (R$ 17.5 million)</td><td>30.3% (R$ 22.4 million)</td></tr>
 </tbody></table></div>
-<p>These values would only materialize if four conditions converged, none of them present today:</p>
+<p>The table assumes that the whole volume would be eligible, which is not realistic: the technique would only apply to routine tests of people already suppressed. With 60% eligibility, for example, the range would fall to 7.1% to 18.2% of the annual value, still before the additional costs. And these values would only materialize if four conditions converged, none of them present today:</p>
 <ul>
 <li><b>Laboratory validation</b> of the procedure on the equipment in use, with real samples.</li>
 <li><b>Admission of the procedure into the execution rules.</b> The current kits do not provide for sample pooling in their instructions for use <cite>10,11</cite>, and the most recent procurement requires an automated methodology with operator interventions restricted to those provided for by the manufacturer <cite>17</cite>. The procedure would need to enter the instructions for use or be admitted by the contracting party.</li>
@@ -162,47 +178,52 @@
 
 <h2>Discussion</h2>
 <h3>Main findings</h3>
-<p>In this simulation, pools of 4 with retest of any detected pool saved 38% of reactions per collection and 49% during follow-up of suppressed people, with no case that individual testing would detect failing to go to retest, and with a difference close to zero in confirmation of failure within 60 days. The cost was a median of 5 more days until confirmation. The result was repeated with both network kits and in the robustness scenario. Converted into cost, the reduction would be smaller than the reduction in reactions and would depend on conditions external to the technique.</p>
-<p>Two results contradicted the study's own hypotheses. Pre-concentration, designed to eliminate dilution, brought no gain, because dilution is not the bottleneck with the current kits. And rules with a higher trigger, which save a little more, start leaving cases just above the cutoff without retest when imprecision is greater.</p>
+<p>In this simulation, pools of 4 with retest only of quantified pools (rule Q20) saved 39% of reactions per collection and 50% during follow-up of suppressed people, with a difference close to zero in confirmation of failure within 60 days and a median of 5 more days until confirmation, which comes from the retest delay fixed in the model. The result was repeated with both network kits, in the robustness scenario and with shares of residual RNA from 0% to 40%. The loss caused by the rule was small and concentrated just above the cutoff: 2 of 1,106 samples between 200 and 249 cp/mL were not retested.</p>
+<p>The finding that changed from version 1 to 1.1 is the most important: the rule that retests any detection (D), presented in version 1 as the main one, depends on a premise that Brazilian public data do not inform. With residual RNA in 25% of collections below 50, it saves only 16% of reactions per collection. Pre-concentration, designed to eliminate dilution, went from neutral to harmful for the same reason.</p>
 <h3>Promising aspects and limits, side by side</h3>
 <p>This note does not use resampling of observed data or a registered success criterion; therefore, it does not calculate the chance of exceeding a reference. The promising aspects and the limits are these:</p>
 <ul>
-<li><b>Promising:</b> no loss from lack of retest under rule D, in all subranges and in the three scenarios.</li>
-<li><b>Promising:</b> difference of 0.2 point or less in confirmation within 60 days in all combinations of risk and transient viremia.</li>
+<li><b>Promising:</b> the savings of rule Q20 varied only from 38% to 42% per collection across the shares of residual RNA tested.</li>
+<li><b>Promising:</b> difference of 0.3 point or less in confirmation within 60 days in all combinations of risk, transient viremia and residual RNA.</li>
 <li><b>Promising:</b> a rule executable with the output the kit already delivers to the reporting systems.</li>
+<li><b>Limit:</b> rule Q20 leaves a small share of loads just above 200 without retest, larger when imprecision is greater.</li>
 <li><b>Limit:</b> the intervals describe only the simulation's variation, not the uncertainty of the parameters.</li>
-<li><b>Limit:</b> the reduction in reactions ranges from 32% to 54% depending on transient viremia and rebound risk, which have not been measured in routine tests of suppressed people in Brazil.</li>
-<li><b>Limit:</b> the weight of the reaction in the price per test is not public, and the conversion into cost is illustrative.</li>
+<li><b>Limit:</b> the share and shape of residual RNA in routine tests in Brazil are not known; the main scenario comes from studies in other countries.</li>
+<li><b>Limit:</b> the reduction in reactions ranges from 36% to 56% depending on transient viremia and rebound risk, which have not been measured in routine tests of suppressed people in Brazil.</li>
+<li><b>Limit:</b> the weight of the reaction in the price and the eligible fraction are not public, and the conversion into cost is illustrative.</li>
 <li><b>Limit:</b> the technique is off-label use of the kit.</li>
 <li><b>Limit:</b> the main configuration was chosen after comparing alternatives and after reviews, which requires confirmation with a registered protocol.</li>
 </ul>
 <h3>Comparison with the literature</h3>
-<p>Earlier studies reported from one third to more than half fewer reactions <cite>3,4,5,6</cite>, and the implementation in Cameroon reached 0.55 assays per result with pools of 3 <cite>8</cite>. The 38% to 49% in this simulation fall within that range. Many earlier studies prioritized thresholds higher than the Brazilian one, although the evaluation by Smith and colleagues included the 250 cp/mL cutoff <cite>3</cite>. With the 200 cutoff and the current kits, the simple rule of retest on any detection performed better than quantitative deconvolution, which missed a large part of the loads just above the cutoff. Pre-concentration has an operational precedent in blood banks <cite>2</cite> and in research with volumes of up to 30 mL <cite>18</cite>, but, in this simulation, it did not prove necessary.</p>
+<p>Earlier studies reported from one third to more than half fewer reactions <cite>3,4,5,6</cite>, and the implementation in Cameroon reached 0.55 assays per result with pools of 3 <cite>8</cite>. The 39% to 50% in this simulation fall within that range. Many earlier studies prioritized thresholds higher than the Brazilian one, although the evaluation by Smith and colleagues included the 250 cp/mL cutoff <cite>3</cite>. With the 200 cutoff and the current kits, a retest rule anchored in the limit of quantification performed better than quantitative deconvolution, which missed a large part of the loads just above the cutoff, and better than a rule anchored in simple detection, which is sensitive to the residual RNA that more sensitive kits have come to reveal <cite>21</cite>. Pre-concentration has an operational precedent in blood banks <cite>2</cite> and in research with volumes of up to 30 mL <cite>18</cite>, but, for this use, it would reveal precisely the residual RNA that should not trigger a retest.</p>
 <h3>Strengths</h3>
 <ul>
 <li>Assay parameters taken from the instructions for use of the two network kits, with the detection model checked against them.</li>
 <li>Retest rules restricted to those the kit allows to be executed.</li>
+<li>Explicit sensitivity analysis of the premise that weighed most on the savings (residual RNA below 50).</li>
 <li>Detection broken down by subrange and discordances in both directions.</li>
-<li>A longitudinal outcome that counts missed episodes in the denominator and separates bench delay from delay due to loss.</li>
+<li>A longitudinal outcome with the same episodes in both arms, which counts missed episodes in the denominator.</li>
 <li>Explicit separation between reduction in reactions and reduction in cost, with the conditions for the latter.</li>
-<li>A first-principles hypothesis tested and reported even with a negative result.</li>
+<li>Results contrary to the hypotheses reported, including the correction of version 1.</li>
 <li>Code and numbers reproducible with fixed seeds.</li>
 </ul>
 <h3>Weaknesses of the method</h3>
 <ul>
 <li><b>Denominator.</b> The distribution in Table II includes everyone on treatment for six months or more. The technique would apply to routine tests of adults already suppressed, whose distribution was not found. With less low-level viremia, the reduction in reactions tends to be larger; with more, smaller.</li>
+<li><b>Residual RNA.</b> The share was taken from studies in other countries, with different kits and definitions, and the shape (uniform on a log scale from 1 to 49) is assumed. Residual RNA was drawn again at each collection, with no persistence per person; if it is always concentrated in the same people, randomly assembled pools do not change the average result, but pools assembled by history could improve the savings.</li>
 <li><b>Shape within ranges.</b> The uniform draw on a log scale within each range is an assumption; detection between 200 and 249 depends on it.</li>
-<li><b>Imprecision at very low loads.</b> There are no data below 50 cp/mL on the 5800 or below 77 on the 4800; the value used is assumed. The robustness scenario suggests a small effect on rule D.</li>
+<li><b>Imprecision at very low loads.</b> There are no data below 50 cp/mL on the 5800 or below 77 on the 4800; the value used is assumed. Rule Q20 is more sensitive to this than rule D, because it decides near 20 cp/mL in the pool; the robustness scenario shows the effect.</li>
 <li><b>Dynamics.</b> Rebounds are sustained and at a constant level. Transient rebounds above 200, intermittent adherence failures and regimen changes are not included.</li>
 <li><b>Laboratory.</b> Cross-contamination between samples, pipetting error, handling cost, bench time beyond the 5 days and adaptation of the reporting systems are not included. All of them tend to reduce the real gain.</li>
-<li><b>Cost.</b> The cost structure of the price per test is not public; the reaction weight was assumed.</li>
+<li><b>Cost.</b> The cost structure of the price per test and the eligible fraction are not public; both were assumed.</li>
 <li><b>Choice after looking.</b> The main configuration emerged from exploration and reviews; confirmation requires a registered protocol.</li>
 </ul>
 <h3>What the result allows us to conclude</h3>
-<p>It allows us to conclude that, with the public parameters available, a simple strategy of pools of 4 with retest of any detected pool is compatible with detecting failure at the 200 cp/mL cutoff and with the confirmation time frame, saving 38% to 49% of reactions. It allows us to rule out, in this configuration, pre-concentration as a necessary improvement. It allows us to estimate, conditionally, a cost reduction of 11% to 29% of the annual reference value. It does not allow us to claim performance in a real laboratory, nor to claim that this reduction will occur: it depends on validation, on admission of the procedure and on payment linked to the number of reactions, conditions absent from current practice.</p>
+<p>It allows us to conclude that, with the public parameters available, a simple strategy of pools of 4 with retest of quantified pools is compatible with detecting failure at the 200 cp/mL cutoff and with the confirmation time frame, saving 39% to 50% of reactions, and that these savings hold up in the presence of residual RNA below 50. It also allows us to conclude that rules anchored in simple detection and pre-concentration are not suitable for this use with the current kits, because they depend on the absence of residual RNA. It does not allow us to claim performance in a real laboratory, nor to claim that there will be a cost reduction: that depends on the eligible fraction, on validation, on admission of the procedure and on payment linked to the number of reactions, conditions absent from current practice.</p>
 <h3>Next steps</h3>
 <p>Each path below only becomes work with a new protocol:</p>
 <ul>
+<li>obtain, from Brazilian routine data, the share of "detectado, inferior a 20" and "não detectado" results among suppressed people, and the persistence of these results per person;</li>
 <li>obtain the viral load distribution in routine tests of people who were already suppressed and the proportion of eligible tests;</li>
 <li>obtain imprecision data below 50 cp/mL;</li>
 <li>look for public estimates of the cost structure of viral load tests, to replace the illustrative reaction weight;</li>
@@ -212,11 +233,11 @@
 </ul>
 
 <h2>Conclusion</h2>
-<p>In this simulation with Brazilian public parameters, pools of 4 samples, with retest of any detected pool, used 37.9% fewer reactions per collection and 48.5% fewer during follow-up of suppressed adults. No case that individual testing would detect failed to go to retest, the difference in confirmation of failure within 60 days was close to zero (0.0 point; empirical interval −0.4 to 0.2) and the median until confirmation was 47 days, against 42. Retesting only quantified pools saved a little more, with small losses just above the cutoff. Quantitative deconvolution saved even more, but missed a large part of the loads between 200 and 499. Pre-concentration of plasma brought no gain. If laboratory validation, admission of the procedure into the execution rules and payment linked to the number of reactions converged, the cost reduction compared with current practice would be 11% to 29% of the annual reference value, depending on the weight of the reaction in the price. The note records the technique and these calculations for future studies.</p>
+<p>In this simulation with Brazilian public parameters and residual RNA in 25% of collections below 50 copies/mL, pools of 4 samples with retest only of quantified pools (20 cp/mL or more) used 39.7% fewer reactions per collection and 50.4% fewer during follow-up of suppressed adults. The difference in confirmation of failure within 60 days was close to zero (0.0 point; empirical interval −0.3 to 0.2), the median until confirmation was 47 days, against 42, and 2 of 1,106 loads between 200 and 249 were not retested. The savings of this rule varied little (38% to 42% per collection) when residual RNA went from 0% to 40%. In contrast, the rule that retests any detection, the main one in version 1, saved from 38% down to 6% depending on that share, and pre-concentration became harmful. The conversion into cost is conditional: with 100% eligibility, it would be 12% to 30% of the annual reference value, depending on the weight of the reaction in the price; with 60% eligibility, 7% to 18%; and it would only occur with laboratory validation, admission of the procedure and payment linked to the number of reactions. The note records the technique and these calculations for future studies.</p>
 
 <h2>Limitations</h2>
 <ul>
-<li>The research steps (literature search, reading of documents, code, simulation, analysis and writing) were carried out with artificial intelligence and did not undergo independent human validation. The results may contain errors or gaps because of this.</li>
+<li>The research steps (literature search, reading of documents, code, simulation, analysis and writing) were carried out with artificial intelligence and did not undergo independent human validation. The results may contain errors or gaps because of this; version 1 contained a premise that was only corrected after publication.</li>
 <li>The design weaknesses listed in the Discussion also count as limitations.</li>
 <li>The note has no protocol registered before the analyses, and the configurations were chosen during exploration.</li>
 <li>The instructions for use validate the test for EDTA plasma (and, in the case of the 4800, also for the plasma separation card), without providing for sample pooling. Pooled testing would be off-label use.</li>
@@ -229,6 +250,7 @@
 <li><b>Cohort:</b> group of people followed over time; here, simulated.</li>
 <li><b>Confirmed virological failure:</b> two consecutive results of 200 cp/mL or more, with at least 4 weeks between collections.</li>
 <li><b>Discordance:</b> a sample that one strategy classifies as 200 or more and the other does not.</li>
+<li><b>Eligibility:</b> share of the test volume that could be tested in pools; here, routine tests of people already suppressed.</li>
 <li><b>Empirical interval across replicates:</b> range of results obtained by repeating the simulation with different random draws.</li>
 <li><b>Imprecision:</b> variation between repeated measurements of the same sample; here, standard deviation in log10.</li>
 <li><b>Limit of detection:</b> lowest concentration detected in 95% of reactions.</li>
@@ -240,6 +262,7 @@
 <li><b>Quantitative deconvolution:</b> testing the samples of a positive pool one by one, subtracting the value of each from the estimated total, until the remainder falls below a threshold.</li>
 <li><b>Reaction:</b> each time the instrument processes a tube, whether of a single sample or of a pool.</li>
 <li><b>Reaction weight in the price:</b> share of the price per test that corresponds to the cost of the reaction (reagents and run), excluding equipment, collection, transport and services.</li>
+<li><b>Residual RNA:</b> HIV RNA at a very low level, below 50 cp/mL, in people on effective treatment; the kit may report it as "detectado, inferior a 20".</li>
 <li><b>Rule D:</b> retest individually the samples of every pool in which the kit detects virus.</li>
 <li><b>Rule Q20:</b> retest only the samples of pools quantified at 20 cp/mL or more.</li>
 <li><b>Seed:</b> number that fixes the sequence of random draws in a simulation, so that it can be repeated with the same result.</li>

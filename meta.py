@@ -42,7 +42,7 @@ ARTS=[dict(slug='janela-previsao-dengue', src='a01.html', part=1, code='MSA-01',
   ("Kelvins. municipios-brasileiros: coordenadas dos municípios (CSV).","https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/csv/municipios.csv"),
   ("Mosqlimate. API de dados e modelos de arboviroses, documentação.","https://api.mosqlimate.org/docs/"),
  ])]
-ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, code='MSA-02', date_iso='2026-11-09', version_num='1', refs=[
+ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, code='MSA-02', date_iso='2026-11-09', date_modified='2026-11-09', version_num='1.1', refs=[
   ("Dorfman R. The detection of defective members of large populations. Ann Math Stat. 1943;14:436-440.","https://doi.org/10.1214/aoms/1177731363"),
   ("Roth WK, Weber M, Seifried E. Feasibility and efficacy of routine PCR screening of blood donations for hepatitis C virus, hepatitis B virus, and HIV-1 in a blood-bank setting. Lancet. 1999;353:359-363.","https://doi.org/10.1016/S0140-6736(98)06318-1"),
   ("Smith DM, May SJ, Pérez-Santiago J et al. The use of pooled viral load testing to identify antiretroviral treatment failure. AIDS. 2009;23(16):2151-2158.","https://doi.org/10.1097/QAD.0b013e3283313ca9"),
@@ -63,4 +63,7 @@ ARTS.append(dict(slug='testagem-grupo-carga-viral-hiv', src='a02.html', part=2, 
   ("Yukl SA, Li P, Fujimoto K et al. Modification of the Abbott RealTime assay for detection of HIV-1 plasma RNA viral loads less than one copy per milliliter. J Virol Methods. 2011;175(2):261-265.","https://doi.org/10.1016/j.jviromet.2011.04.015"),
   ("Monks T, Currie CSM, Onggo BS et al. Strengthening the reporting of empirical simulation studies: introducing the STRESS guidelines. J Simul. 2019;13(1):55-67.","https://doi.org/10.1080/17477778.2018.1442155"),
   ("Husereau D, Drummond M, Augustovski F et al. Consolidated Health Economic Evaluation Reporting Standards 2022 (CHEERS 2022) statement. BMJ. 2022;376:e067975.","https://doi.org/10.1136/bmj-2021-067975"),
+  ("Wirden M, Palich R, Abdi B et al. More HIV-1 RNA detected and quantified with the Cobas 6800 system in patients on antiretroviral therapy. J Antimicrob Chemother. 2022;77(8):2251-2256.","https://doi.org/10.1093/jac/dkac174"),
+  ("Pascual-Pareja JF, Martínez-Prats L, Luczkowiak J et al. Detection of HIV-1 at between 20 and 49 copies per milliliter by the Cobas TaqMan HIV-1 v2.0 assay is associated with higher pretherapy viral load and less time on antiretroviral therapy. J Clin Microbiol. 2010;48(5):1911-1912.","https://doi.org/10.1128/JCM.02388-09"),
+  ("Helou E, Shenoi S, Kyriakides T et al. Characterizing patients with very-low-level HIV viremia: a community-based study. J Int Assoc Provid AIDS Care. 2016;16(3):261-266.","https://doi.org/10.1177/2325957416680028"),
  ]))
